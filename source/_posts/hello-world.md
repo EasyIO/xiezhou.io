@@ -1,5 +1,6 @@
 ---
 title: Hello World
+date: 2018-08-08
 tags: [a,b,c]
 categories: hello
 ---
