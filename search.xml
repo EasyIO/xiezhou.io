@@ -1,6 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Cookie参数简介]]></title>
+    <url>%2F2018%2F04%2F01%2Fcookie%2F</url>
+    <content type="text"><![CDATA[参数 简介 Domain 设置关联cookie的域名 Expires 通过给定一个过期时间来创建一个持久化cookie httponly 避免cookie被js访问 name cookie名称 path 关联到cookie的路径，默认为 / value 值 secure 用于指定cookie需要通过安全socket曾连接传递]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Cookie</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[BurpSuite组件简介]]></title>
+    <url>%2F2018%2F04%2F01%2Fburpsuite%2F</url>
+    <content type="text"><![CDATA[组件 简介 Proxy 是一个拦截HTTP/S的代理服务器，作为一个在浏览器和目标应用程序之间的中间人，允许你拦截，查看，修改在两个方向上的原始数据流 Spider 是一个应用智能感应的网络爬虫，它能完整的枚举应用程序的内容和功能 Scanner 是一个高级的工具，执行后，它能自动地发现web 应用程序的安全漏洞 Intruder 是一个定制的高度可配置的工具，对web应用程序进行自动化攻击，如：枚举标识符，收集有用的数据，以及使用fuzzing 技术探测常规漏洞 Repeater 是一个靠手动操作来补发单独的HTTP 请求，并分析应用程序响应的工具 Sequencer 是一个用来分析那些不可预知的应用程序会话令牌和重要数据项的随机性的工具 Decoder 是一个进行手动执行或对应用程序数据者智能解码编码的工具 Comparer 是一个实用的工具，通常是通过一些相关的请求和响应得到两项数据的一个可视化的“差异”]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>BurpSuite</tag>
+        <tag>安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Vim]]></title>
+    <url>%2F2018%2F04%2F01%2Fvim%2F</url>
+    <content type="text"><![CDATA[一般模式 : 删除、复制与粘贴类命令123456789101112131415x,X x为向后删除一个字符，X为先前删除一个字符nx(n代表数字) 向后删除n个字符dd 删除当前行D 删除当前行所有字符，试成为空行ndd(n代表数字) 删除光标所在行的向下n列d1G 删除光标所在行到第一行的所有数据dG 删除光标所在行到最后一行的所有数据yy 复制光标所在行y1G 复制光标所在行到第一行的所有数据yG 复制光标所在行到最后一行的所有数据ynj(n代表数字) 复制光标所在行向下n+1行dnj(n代表数字) 删除光标所在行向下n+1行p,P p为复制的数据粘贴在光标的下一行，P为复制的数据粘贴在光标的上一行J 将光标所在行与下一行的数据结合成一行u 恢复前一个动作(undo) 编辑模式123456i,I i为在当前光标所在处插入输入的文字，I为在光标所在行第一个非空字符插入输入的文字a,A a为在当前光标所在处下一个字符插入输入的文字，A为在光标所在行 最后一个字符的下一个字符处插入输入的文字o,O o为在光标所在行的下一行行首开始插入字符，O为在光标所在行的上一行行首开始插入字符r,R r为替换光标所在那一个字符，R为一直替换光标所指的文字，直到退出Esc 退出，回到一般模式 命令模式12345678910111213141516171819202122232425262728293031323334h 光标向左移一个字符j 光标向下移一个字符k 光标向上移一个字符l 光标向右移一个字符Ctrl+f 屏幕向下翻一页Ctrl+b 屏幕向上翻一页Ctrl+d 屏幕向下翻半页Ctrl+u 屏幕向上翻半页+ 光标移动到下一行的第一个非空字符- 光标移动到当前行的第一个非空字符n空格(n代表数字) 光标向当前行向右移动n个字符0(数字0) 光标移动到当前行的第一个字符(可以为空字符,注意与-区分）$ 光标移动到当前行的最后一个字符(可以为空字符,注意与-区分）H 光标移动到当前屏幕最上方的那一行的第一个非空字符M 光标移动到当前屏幕最中间那一行的第一个非空字符L 光标移动到当前屏幕最下方的那一行的第一个非空字符G 光标移动到该文章最后一行的第一个非空字符nG(n代表数字) 光标移动到该文章第n行的第一个非空字符n 光标从当前行向下移动n行的第一个非空字符/word 在光标之后查找word字符串?word 在光标之前查找word字符串:s/word1/word2/g 在光标当前行查找word1，并替换成word2:n1,n2s/word1/word2/g 在第n1行与第n2行之间查找word1，并替换成word2:%s/word1/word2/g 整个文章查找word1，并替换成word2:w 将编辑的数据保存到硬盘文件中:w [filename] 将编辑后的数据保存到硬盘的另一个文件中:r [filename] 在编辑数据时，读入另一个文件中的数据， 即将filename文件中的内容加到光标所在行下一行:wq或:x 保存并退出:q 退出，适用于未修改的文件:q! 强制退出，适用于修改文件后不保存退出:set nu 显示行号:set nonu 取消行号:n1,n2 w [filename] 将n1到n2行的内容保存到名为filename的文件中]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu设置应用在后台运行服务]]></title>
+    <url>%2F2018%2F04%2F01%2Fubuntu-bakcgroup%2F</url>
+    <content type="text"><![CDATA[12345678910111213141516# 方法一:$ setsid python xxx.py &gt;log.txt$ ps -aux $ ps -ef |grep run.py$ kill -9 [PID]# 方法二:$ nohup python run.py &gt;log.txt# 将打印内容重定向到/dev/null中，相当于直接丢弃，任何地方都找不到打印的内容$ python your_script.py &gt;&gt; /dev/null # 如果又要查看打印的内容，怎么让它输出(还在运行)？# 将输出重定向到当前目录下的log.txt文件中$ python your_script.py &gt;&gt; log.txt# cat log.txt # 查看截止目前所有的日志内容# tail log.txt # 查看截止目前，最后10行日志# tail -f log.txt # 从最后10行开始滚动输出，准实时刷新# tail -n 100 -f log.txt # 从最后100行开始滚动输出]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>Python</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Centos clean boot]]></title>
+    <url>%2F2018%2F04%2F01%2Fcentos-clean-boot%2F</url>
+    <content type="text"><![CDATA[12345678# 1.使用如下命令查询目前安装在系统里的全部内核（kernel）$ rpm -q kernel# 2.查询当前使用的内核（kernel）版本$ uname -a# 3.删除除当前内核以外所有的内核$ rpm -e '内核版本号'$ rpm -e kernel-2.6.32-358.el6.i686# 4.使用命令df -h 查看/boot分区的使用情况。]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>centos</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Maven]]></title>
+    <url>%2F2018%2F04%2F01%2Fmaven%2F</url>
+    <content type="text"><![CDATA[12345678910111213141516171819202122232425262728293031323334# 1.创建Maven的普通java项目$ mvn archetype:create -DgroupId=packageName -DartifactId=projectName # 2.创建Maven的Web项目$ mvn archetype:create -DgroupId=packageName -DartifactId= webappName-DarchetypeArtifactId=maven-archetype-webapp # 3.编译源代码： $ mvn compile # 4.编译测试代码：$ mvn test-compile # 5.运行测试：$ mvn test # 6.产生site：$ mvn site # 7.打包：$ mvn package # 8.在本地Repository中安装jar：$ mvn install # 9.清除产生的项目：$ mvn clean # 10.生成eclipse项目：$ mvn eclipse:eclipse # 11.生成idea项目：$ mvn idea:idea # 12.组合使用goal命令，如只打包不测试：$ mvn -Dtest package # 13.编译测试的内容：$ mvn test-compile # 14.只打jar包: $ mvn jar:jar # 15.只测试而不编译，也不测试编译：$ mvn test -skipping compile -skipping test-compile ( -skipping 的灵活运用，当然也可以用于其他组合命令) # 16.清除eclipse的一些系统设置:$ mvn eclipse:clean 1234567# 源更换&lt;mirror&gt; &lt;id&gt;nexus-aliyun&lt;/id&gt; &lt;mirrorOf&gt;*&lt;/mirrorOf&gt; &lt;name&gt;Nexus aliyun&lt;/name&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;&lt;/mirror&gt; 123456789101112131415161718192021# pom.xml&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt; # snapshot 快照 # alpha 内部测试 # beta 公测 # release 稳定 # GA 正式发布&lt;packaging&gt;jar&lt;/packaging&gt; #war zip pom &lt;profile&gt; &lt;id&gt;jdk1.8&lt;/id&gt; &lt;activation&gt; &lt;activeByDefault&gt;true&lt;/activeByDefault&gt; &lt;jdk&gt;1.8&lt;/jdk&gt; &lt;/activation&gt; &lt;properties&gt; &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt; &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt; &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt; &lt;/properties&gt; &lt;/profile&gt; ​]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker基础命令]]></title>
+    <url>%2F2018%2F04%2F01%2Fdocker-order%2F</url>
+    <content type="text"><![CDATA[1234567891011121314# 镜像$ docker images # 查看镜像$ docker pull$ docker inspect id # 详细信息$ docker search XXX # 搜索$ docker rmi XXX # 删除$ docker ps -a # 查看所有容器$ docker commit -a 作者 -m提交信息 -p 提交时暂停容器运行$ docker save -o ubuntu_14.04.tar ubuntu:14.04 # 存出镜像$ docker load &lt;ubuntu_14.04.tar # 载入镜像# 容器$ docker create it XXX # 新建容器$ docker run $ docker stop]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu常用命令]]></title>
+    <url>%2F2018%2F04%2F01%2Fubuntu-order%2F</url>
+    <content type="text"><![CDATA[文件/文件夹管理12345678910111213$ ls # 列出当前目录文件（不包括隐含文件） $ ls -a # 列出当前目录文件（包括隐含文件） $ ls -l # 列出当前目录下文件的详细信息 $ cd .. # 回当前目录的上一级目录 $ cd - # 回上一次所在的目录 $ cd ~ 或 cd # 回当前用户的宿主目录 $ mk 目录名 # 创建一个目录 $ rmdir 空目录名 # 删除一个空目录 $ rm 文件名 文件名 # 删除一个文件或多个文件 $ rm -rf 非空目录名 # 删除一个非空目录下的一切 $ mv 路经/文件 # /路经/文件移动相对路经下的文件到绝对路经下 $ mv 文件名 新名称 # 在当前目录下改名 $ find 路经 -name “字符串” # 查找路经所在范围内满足字符串匹配的文件和目录 系统管理123456789101112131415161718192021222324252627$ fdisk fdisk -l # 查看系统分区信息 $ fdisk fdisk /dev/sdb # 为一块新的SCSI硬盘进行分区 $ chown chown root /home # 把/home的属主改成root用户 $ chgrp chgrp root /home # 把/home的属组改成root组 $ Useradd # 创建一个新的用户 $ Groupadd 组名 # 创建一个新的组 $ Passwd 用户名 # 为用户创建密码 $ Passwd -d用户名 # 删除用户密码也能登陆 $ Passwd -S用户名 # 查询账号密码 $ Usermod -l 新用户名 老用户名 # 为用户改名 $ Userdel–r 用户名 # 删除用户一切 $ service [servicename] start/stop/restart # 系统服务控制操作 $ /etc/init.d/[servicename] start/stop/restart # 系统服务控制操作 $ uname -a # 查看内核版本 $ cat /etc/issue # 查看ubuntu版本 $ lsusb # 查看usb设备 $ sudo ethtool eth0 # 查看网卡状态 $ cat /proc/cpuinfo # 查看cpu信息 $ lshw # 查看当前硬件信息 $ sudo fdisk -l # 查看磁盘信息 $ df -h # 查看硬盘剩余空间 $ free -m # 查看当前的内存使用情况 $ ps -A # 查看当前有哪些进程 $ kill # 进程号(就是ps -A中的第一列的数字)或者 killall 进程名( 杀死一个进程) $ kill -9 进程号 # 强制杀死一个进程 $ reboot Init 6 # 重启LINUX系统 $ Halt Init 0 Shutdown –h now # 关闭LINUX系统 打包/解压12345$ tar -c 创建包 –x 释放包 -v 显示命令过程 –z 代表压缩包 $ tar –cvf benet.tar /home/benet # 把/home/benet目录打包 $ tar –zcvf benet.tar.gz /mnt # 把目录打包并压缩 $ tar –zxvf benet.tar.gz # 压缩包的文件解压恢复 $ tar –jxvf benet.tar.bz2 # 解压缩 make编译12$ make # 编译 $ make install # 安装编译好的源码包 apt命令123456789101112131415161718$ apt-cache search package # 搜索包 $ apt-cache show package # 获取包的相关信息，如说明、大小、版本等 $ sudo apt-get install package # 安装包 $ sudo apt-get install package - - reinstall # 重新安装包 $ sudo apt-get -f install # 修复安装”-f = –fix-missing” $ sudo apt-get remove package # 删除包 $ sudo apt-get remove package - - purge # 删除包，包括删除配置文件等 $ sudo apt-get update # 更新源 $ sudo apt-get upgrade # 更新已安装的包 $ sudo apt-get dist-upgrade # 升级系统 $ sudo apt-get dselect-upgrade # 使用 dselect 升级 $ apt-cache depends package # 了解使用依赖 $ apt-cache rdepends package # 是查看该包被哪些包依赖 $ sudo apt-get build-dep package # 安装相关的编译环境 $ apt-get source package # 下载该包的源代码 $ sudo apt-get clean &amp;&amp; sudo apt-get autoclean # 清理无用的包 $ sudo apt-get check # 检查是否有损坏的依赖 $ sudo apt-get clean # 清理所有软件缓存（即缓存在/var/cache/apt/archives目录里的deb包）]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Centos常用命令]]></title>
+    <url>%2F2018%2F04%2F01%2Fcentos-order%2F</url>
+    <content type="text"><![CDATA[关机 (系统的关机、重启以及登出 )的命令12345678$ shutdown -h now # 关闭系统(1) $ init 0 # 关闭系统(2) $ telinit 0 # 关闭系统(3) $ shutdown -h hours:minutes # 按预定时间关闭系统 $ shutdown -c # 取消按预定时间关闭系统 $ shutdown -r now # 重启(1) $ reboot # 重启(2) $ logout # 注销 文件和目录1234567891011121314151617181920212223242526$ cd /home # 进入 '/ home' 目录$ cd .. # 返回上一级目录 $ cd ../.. # 返回上两级目录 $ cd # 进入个人的主目录 $ cd ~user1 # 进入个人的主目录 $ cd - # 返回上次所在的目录 $ pwd # 显示工作路径 $ ls # 查看目录中的文件 $ ls -F # 查看目录中的文件 $ ls -l # 显示文件和目录的详细资料 $ ls -a # 显示隐藏文件 $ mkdir dir1 # 创建一个叫做 'dir1' 的目录$ mkdir dir1 dir2 # 同时创建两个目录 $ mkdir -p /tmp/dir1/dir2 # 创建一个目录树 $ rm -f file1 # 删除一个叫做 'file1' 的文件' $ rmdir dir1 # 删除一个叫做 'dir1' 的目录' $ rm -rf dir1 # 删除一个叫做 'dir1' 的目录并同时删除其内容 $ rm -rf dir1 dir2 # 同时删除两个目录及它们的内容 $ mv dir1 new_dir # 重命名/移动 一个目录 $ cp file1 file2 # 复制一个文件 $ cp dir/* . # 复制一个目录下的所有文件到当前工作目录 $ cp -a /tmp/dir1 . # 复制一个目录到当前工作目录 $ cp -a dir1 dir2 # 复制一个目录 $ ln -s file1 lnk1 # 创建一个指向文件或目录的软链接 $ ln file1 lnk1 # 创建一个指向文件或目录的物理链接 $ touch file1 # 创建一个文件 文件搜索命令123456789101112131415$ find / -name file1 # 从 '/' 开始进入根文件系统搜索文件和目录 $ find / -user user1 # 搜索属于用户 'user1' 的文件和目录 # 在目录 '/ home/user1' 中搜索带有'.bin' 结尾的文件 $ find /home/user1 -name \*.bin $ find /usr/bin -type f -atime +100 # 搜索在过去100天内未被使用过的执行文件 $ find /usr/bin -type f -mtime -10 # 搜索在10天内被创建或者修改过的文件 $ locate \*.ps # 寻找以 '.ps' 结尾的文件 - 先运行 'updatedb' 命令 $ whereis file # 显示一个二进制文件、源码或man的位置 $ which file # 显示一个二进制文件或可执行文件的完整路径 # 在当前目录及其子目录所有.c和.h文件中查找 'expr'$ find -name '*.[ch]' | xargs grep -E 'expr' # 在当前目录及其子目录的常规文件中查找 'expr'$ find -type f -print0 | xargs -r0 grep -F 'expr' # 在当前目录中查找 'expr'$ find -maxdepth 1 -type f | xargs grep -F 'expr' 查看文件内容123456$ cat file1 # 从第一个字节开始正向查看文件的内容 $ tac file1 # 从最后一行开始反向查看一个文件的内容 $ more file1 # 查看一个长文件的内容 $ less file1 # 类似于 'more' 命令，但是它允许在文件中和正向操作一样的反向操作 $ head -2 file1 # 查看一个文件的前两行 $ tail -2 file1 # 查看一个文件的最后两行 打包和解压缩文件123456789101112131415161718192021$ bunzip2 file1.bz2 # 解压一个叫做 'file1.bz2'的文件 $ bzip2 file1 # 压缩一个叫做 'file1' 的文件 $ gunzip file1.gz # 解压一个叫做 'file1.gz'的文件 $ gzip file1 # 压缩一个叫做 'file1'的文件 $ gzip -9 file1 # 最大程度压缩 $ rar a file1.rar test_file # 创建一个叫做 'file1.rar' 的包 $ rar a file1.rar file1 file2 dir1 # 打包 'file1', 'file2' 以及目录 'dir1' $ rar x file1.rar # 解rar包 $ unrar x file1.rar # 解rar包 $ tar -cvf archive.tar file1 # 创建一个非压缩的tar包 $ tar -cvf archive.tar file1 file2 dir1 # 创建一个包含了 'file1', 'file2' 'dir1'的包 $ tar -tf archive.tar # 显示一个包中的内容 $ tar -xvf archive.tar # 释放一个包 $ tar -xvf archive.tar -C /tmp # 将压缩包释放到 /tmp目录下 （-c是指定目录）$ tar -cvfj archive.tar.bz2 dir1 # 创建一个bzip2格式的压缩包 $ tar -xvfj archive.tar.bz2 # 解压一个bzip2格式的压缩包 $ tar -cvfz archive.tar.gz dir1 # 创建一个gzip格式的压缩包 $ tar -xvfz archive.tar.gz # 解压一个gzip格式的压缩包 $ zip file1.zip file1 # 创建一个zip格式的压缩包 $ zip -r file1.zip file1 file2 dir1 # 将几个文件和目录同时压缩成一个zip格式的压缩包 $ unzip file1.zip # 解压一个zip格式压缩包 磁盘空间操作的命令1234$ df -h # 显示已经挂载的分区列表 $ ls -lSr |more # 以尺寸大小排列文件和目录 $ du -sh dir1 # 估算目录 'dir1' 已经使用的磁盘空间$ du -sk * | sort -rn # 以容量大小为依据依次显示文件和目录的大小 RPM1234567891011121314151617181920212223242526272829$ rpm -ivh package.rpm # 安装一个rpm包 $ rpm -ivh --nodeeps package.rpm # 安装一个rpm包而忽略依赖关系警告 $ rpm -U package.rpm # 更新一个rpm包但不改变其配置文件 $ rpm -F package.rpm # 更新一个确定已经安装的rpm包 $ rpm -e package_name.rpm # 删除一个rpm包 $ rpm -qa # 显示系统中所有已经安装的rpm包 $ rpm -qa | grep httpd # 显示所有名称中包含 "httpd" 字样的rpm包 $ rpm -qi package_name # 获取一个已安装包的特殊信息 $ rpm -ql package_name # 显示一个已经安装的rpm包提供的文件列表 $ rpm -qc package_name # 显示一个已经安装的rpm包提供的配置文件列表 $ rpm -q package_name --whatrequires # 显示与一个rpm包存在依赖关系的列表 $ rpm -q package_name --whatprovides # 显示一个rpm包所占的体积 $ rpm -q package_name --scripts # 显示在安装/删除期间所执行的脚本l $ rpm -q package_name --changelog # 显示一个rpm包的修改历史 $ rpm -qf /etc/httpd/conf/httpd.conf # 确认所给的文件由哪个rpm包所提供 $ rpm -qp package.rpm -l # 显示由一个尚未安装的rpm包提供的文件列表 $ rpm --import /media/cdrom/RPM-GPG-KEY # 导入公钥数字证书 $ rpm --checksig package.rpm # 确认一个rpm包的完整性 $ rpm -qa gpg-pubkey # 确认已安装的所有rpm包的完整性 # 检查文件尺寸、 许可、类型、所有者、群组、MD5检查以及最后修改时间 $ rpm -V package_name $ rpm -Va # 检查系统中所有已安装的rpm包- 小心使用 $ rpm -Vp package.rpm # 确认一个rpm包还未安装 # 从一个rpm包运行可执行文件 $ rpm2cpio package.rpm | cpio --extract --make-directories *bin* # 从一个rpm源码安装一个构建好的包 $ rpm -ivh /usr/src/redhat/RPMS/`arch`/package.rpm # 从一个rpm源码构建一个 rpm 包 $ rpmbuild --rebuild package_name.src.rpm YUM1234567891011$ yum install package_name # 下载并安装一个rpm包 # 将安装一个rpm包使用你自己的软件仓库为你解决所有依赖关系 $ yum localinstall package_name.rpm $ yum update package_name.rpm # 更新当前系统中所有安装的rpm包 $ yum update package_name # 更新一个rpm包 $ yum remove package_name # 删除一个rpm包 $ yum list # 列出当前系统中安装的所有包 $ yum search package_name # 在rpm仓库中搜寻软件包 $ yum clean packages # 清理rpm缓存删除下载的包 $ yum clean headers # 删除所有头文件 $ yum clean all # 删除所有缓存的包和头文件 ​ 查看系统信息12345678910111213141516171819$ arch # 显示机器的处理器架构(1) $ uname -m # 显示机器的处理器架构(2) $ uname -r # 显示正在使用的内核版本 $ dmidecode -q # 显示硬件系统部件 - (SMBIOS / DMI) $ hdparm -i /dev/hda # 罗列一个磁盘的架构特性 $ hdparm -tT /dev/sda # 在磁盘上执行测试性读取操作 $ cat /proc/cpuinfo # 显示CPU info的信息 $ cat /proc/interrupts # 显示中断 $ cat /proc/meminfo # 校验内存使用 $ cat /proc/swaps # 显示哪些swap被使用 $ cat /proc/version # 显示内核的版本 $ cat /proc/net/dev # 显示网络适配器及统计 $ cat /proc/mounts # 显示已加载的文件系统 $ lspci -tv # 罗列 PCI 设备 $ lsusb -tv # 显示 USB 设备 $ date # 显示系统日期 $ cal 2007 # 显示2007年的日历表 $ date 041217002007.00 # 设置日期和时间 - 月日时分年.秒 $ clock -w # 将时间修改保存到 BIOS 挂载命令1234567891011121314151617# 挂载一个叫做hda2的盘 （注：确定目录 '/ mnt/hda2' 已经存在） $ mount /dev/hda2 /mnt/hda2 # 卸载一个叫做hda2的盘（先从挂载点 '/ mnt/hda2' 退出）$ umount /dev/hda2 # 当设备繁忙时强制卸载 $ fuser -km /mnt/hda2# 运行卸载操作而不写入 /etc/mtab 文件（当文件为只读或当磁盘写满时非常有用） $ umount -n /mnt/hda2 # $ mount /dev/fd0 /mnt/floppy # 挂载一个软盘 $ mount /dev/cdrom /mnt/cdrom # 挂载一个光盘$ mount /dev/hdc /mnt/cdrecorder # 挂载一个cdrw或dvdrom $ mount /dev/hdb /mnt/cdrecorder # 挂载一个cdrw或dvdrom $ mount -o loop file.iso /mnt/cdrom # 挂载一个文件或ISO镜像文件 $ mount -t vfat /dev/hda5 /mnt/hda5 # 挂载一个Windows FAT32文件系统 $ mount /dev/sda1 /mnt/usbdisk # 挂载一个usb 捷盘或闪存设备# 挂载一个windows网络共享 $ mount -t smbfs -o username=user,password=pass //WinClient/share /mnt/share 用户和群组1234567891011121314151617181920212223242526272829303132$ groupadd group_name # 创建一个新用户组 $ groupdel group_name # 删除一个用户组 $ groupmod -n new_group_name old_group_name # 重命名一个用户组 # 创建一个属于 "admin" 用户组的用户 $ useradd -c "Name Surname " -g admin -d /home/user1 -s /bin/bash user1 $ useradd user1 # 创建一个新用户 $ userdel -r user1 # 删除一个用户 ( '-r' 同时删除除主目录) $ passwd user1 # 修改一个用户的口令 (只允许root执行) $ chage -E 2005-12-31 user1 # 设置用户口令的失效期限 $ ls -lh # 显示权限 # 设置目录的所有人(u)、群组(g)以及其他人(o)以读(r)、写(w)和执行(x)的权限 $ chmod 777 directory1# 删除群组(g)与其他人(o)对目录的读写执行权限 $ chmod 700 directory1 # 改变一个文件的所有人属性，为use1$ chown user1 file1 # 改变一个目录的所有人属性并同时改变改目录下所有文件的属性都为use1所有 $ chown -R user1 directory1 # 改变文件的群组为group1 $ chgrp group1 file1# 改变一个文件的所有人和群组属性，所属组为group1，用户为use1。 $ chown user1:group1 file1 # 罗列一个系统中所有使用了SUID控制的文件 $ find / -perm -u+s # 设置一个二进制文件的 SUID 位 - 运行该文件的用户也被赋予和所有者同样的权限 $ chmod u+s /bin/file1 # 禁用一个二进制文件的 SUID位 $ chmod u-s /bin/file1 $ chmod g+s /home/public # 设置一个目录的SGID 位 - 类似SUID ，不过这是针对目录的 $ chmod g-s /home/public # 禁用一个目录的 SGID 位 $ chmod o+t /home/public # 设置一个文件的 STIKY 位 - 只允许合法所有人删除文件 $ chmod o-t /home/public # 禁用一个目录的 STIKY 位]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>centos</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Centos端口]]></title>
     <url>%2F2018%2F04%2F01%2Fcentos-port%2F</url>
     <content type="text"><![CDATA[12345678910111213141516171819202122232425262728293031323334# 查看80端口占用$ lsof -i tcp:80# 列出所有端口$ netstat -ntlp# 开启端口（以80端口为例）# 方法一：$ /sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT # 写入修改$ /etc/init.d/iptables save # 保存修改$ service iptables restart # 重启防火墙，修改生效# 方法二：$ vi /etc/sysconfig/iptables # 打开配置文件加入如下语句:-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT # 重启防火墙，修改完成# 关闭端口# 方法一：$ /sbin/iptables -I INPUT -p tcp --dport 80 -j DROP # 写入修改$ /etc/init.d/iptables save # 保存修改$ service iptables restart # 重启防火墙，修改生效# 方法二：$ vi /etc/sysconfig/iptables #打开配置文件加入如下语句:-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j DROP # 重启防火墙，修改完成# 查看端口状态$ /etc/init.d/iptables status# 查询防火墙状态:$ service iptables status# 停止防火墙:$ service iptables stop # 启动防火墙:$ service iptables start # 重启防火墙:$ service iptables restart # 永久关闭防火墙:$ chkconfig iptables off # 永久关闭后启用:$ chkconfig iptables on]]></content>
@@ -8,8 +108,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>centos</tag>
         <tag>linux</tag>
+        <tag>centos</tag>
       </tags>
   </entry>
   <entry>
@@ -20,8 +120,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>centos</tag>
         <tag>linux</tag>
+        <tag>centos</tag>
       </tags>
   </entry>
   <entry>
@@ -32,8 +132,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>centos</tag>
         <tag>linux</tag>
+        <tag>centos</tag>
         <tag>git</tag>
       </tags>
   </entry>
@@ -45,8 +145,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>centos</tag>
         <tag>linux</tag>
+        <tag>centos</tag>
         <tag>yum</tag>
         <tag>npm</tag>
       </tags>
@@ -83,9 +183,9 @@
       </categories>
       <tags>
         <tag>linux</tag>
+        <tag>ubuntu</tag>
         <tag>ip</tag>
         <tag>ssl</tag>
-        <tag>ubuntu</tag>
       </tags>
   </entry>
   <entry>
