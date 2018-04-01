@@ -100,7 +100,7 @@
 
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="时间," />
 
 
 
@@ -113,18 +113,25 @@
 
 
 
-<meta name="description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。">
-<meta name="keywords" content="Python">
+<meta name="description" content="时间管理有很多种方法，而GTD（全称：Getting Things Done）就是其中一套行之有效的方法，也是现在最受欢迎的方法。Getting Things Done 翻译成中文就是“把事情做完”，GTD的核心理念概括就是 “通过记录的方式把头脑中的各种事情移出来，然后整理安排自己去执行”。带着一些自己的理解，下面谈一谈我对GTD的理解以及方法论，GTD的核心步骤为五步：收集、处理、管理、执行、">
+<meta name="keywords" content="时间">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代码风格和PEP8">
-<meta property="og:url" content="http://oje.pw/2018/03/31/python-code-style-pep8/index.html">
+<meta property="og:title" content="时间管理与方法论">
+<meta property="og:url" content="http://oje.pw/2018/04/01/time-management/index.html">
 <meta property="og:site_name" content="Wish a Starbucks Coffee Here!">
-<meta property="og:description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。">
+<meta property="og:description" content="时间管理有很多种方法，而GTD（全称：Getting Things Done）就是其中一套行之有效的方法，也是现在最受欢迎的方法。Getting Things Done 翻译成中文就是“把事情做完”，GTD的核心理念概括就是 “通过记录的方式把头脑中的各种事情移出来，然后整理安排自己去执行”。带着一些自己的理解，下面谈一谈我对GTD的理解以及方法论，GTD的核心步骤为五步：收集、处理、管理、执行、">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-01T00:20:14.688Z">
+<meta property="og:image" content="http://oje.pw/img/时间管理与方法论.jpg">
+<meta property="og:image" content="http://oje.pw/img/四象限.jpg">
+<meta property="og:image" content="http://oje.pw/img/计划安排.jpg">
+<meta property="og:image" content="http://oje.pw/img/计划安排2.jpg">
+<meta property="og:image" content="http://oje.pw/img/番茄工作法.jpg">
+<meta property="og:image" content="http://oje.pw/img/PDCA.jpg">
+<meta property="og:updated_time" content="2018-04-01T00:21:57.887Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代码风格和PEP8">
-<meta name="twitter:description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。">
+<meta name="twitter:title" content="时间管理与方法论">
+<meta name="twitter:description" content="时间管理有很多种方法，而GTD（全称：Getting Things Done）就是其中一套行之有效的方法，也是现在最受欢迎的方法。Getting Things Done 翻译成中文就是“把事情做完”，GTD的核心理念概括就是 “通过记录的方式把头脑中的各种事情移出来，然后整理安排自己去执行”。带着一些自己的理解，下面谈一谈我对GTD的理解以及方法论，GTD的核心步骤为五步：收集、处理、管理、执行、">
+<meta name="twitter:image" content="http://oje.pw/img/时间管理与方法论.jpg">
 
 
 
@@ -154,13 +161,13 @@
 
 
 
-  <link rel="canonical" href="http://oje.pw/2018/03/31/python-code-style-pep8/"/>
+  <link rel="canonical" href="http://oje.pw/2018/04/01/time-management/"/>
 
 
 
 
 
-  <title>Python代码风格和PEP8 | Wish a Starbucks Coffee Here!</title>
+  <title>时间管理与方法论 | Wish a Starbucks Coffee Here!</title>
   
 
 
@@ -294,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://oje.pw/2018/03/31/python-code-style-pep8/">
+    <link itemprop="mainEntityOfPage" href="http://oje.pw/2018/04/01/time-management/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="oJe">
@@ -311,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python代码风格和PEP8</h1>
+          <h1 class="post-title" itemprop="name headline">时间管理与方法论</h1>
         
 
         <div class="post-meta">
@@ -323,8 +330,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T20:48:28+08:00">
-                2018-03-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T07:49:16+08:00">
+                2018-04-01
               </time>
             
 
@@ -356,8 +363,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/时间管理/" itemprop="url" rel="index">
+                    <span itemprop="name">时间管理</span>
                   </a>
                 </span>
 
@@ -393,62 +400,16 @@
       
 
       
-        <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
-<li>常量 : 大写加下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USER_CONSTANT</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>对于不会发生改变的全局变量，使用大写加下划线。<br><a id="more"></a> </p>
-<ul>
-<li>私有变量 : 小写和一个前导下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_private_value</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>Python 中不存在私有变量一说，若是遇到需要保护的变量，使用小写和一个前导下划线。但这只是程序员之间的一个约定，用于警告说明这是一个私有变量，外部类不要去访问它。但实际上，外部类还是可以访问到这个变量。</p>
-<ul>
-<li>内置变量 : 小写，两个前导下划线和两个后置下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__class__</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>两个前导下划线会导致变量在解释期间被更名。这是为了避免内置变量和其他变量产生冲突。用户定义的变量要严格避免这种风格。以免导致混乱。<br><!--more--> </p>
-<h2 id="函数和方法"><a href="#函数和方法" class="headerlink" title="函数和方法"></a>函数和方法</h2><p>总体而言应该使用，小写和下划线。但有些比较老的库使用的是混合大小写，即首单词小写，之后每个单词第一个字母大写，其余小写。但现在，小写和下划线已成为规范。</p>
-<ul>
-<li>私有方法 : 小写和一个前导下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def _secrete(self):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"Starbucks"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>这里和私有变量一样，并不是真正的私有访问权限。同时也应该注意一般函数不要使用两个前导下划线(当遇到两个前导下划线时，Python 的名称改编特性将发挥作用)。</p>
-<ul>
-<li>特殊方法 ：小写和两个前导下划线，两个后置下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def __add__(self, other):</span><br><span class="line">    <span class="built_in">return</span> int.__add__(other)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>这种风格只应用于特殊函数，比如操作符重载等。</p>
-<ul>
-<li>函数参数 : 小写和下划线，缺省值等号两边无空格<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def connect(self, user=None):</span><br><span class="line">    self._user = user</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>类总是使用驼峰格式命名，即所有单词首字母大写其余字母小写。类名应该简明，精确，并足以从中理解类所完成的工作。常见的一个方法是使用表示其类型或者特性的后缀，例如:SQLEngine、MimeTypes。对于基类而言，可以使用一个 Base 或者 Abstract 前缀，例如:BaseCookie、AbstractGroup<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class UserProfile(object):</span><br><span class="line">    def __init__(self, profile):</span><br><span class="line">        <span class="built_in">return</span> self._profile = profile</span><br><span class="line"></span><br><span class="line">    def profile(self):</span><br><span class="line">        <span class="built_in">return</span> self._profile</span><br></pre></td></tr></table></figure></p>
-<h2 id="模块和包"><a href="#模块和包" class="headerlink" title="模块和包"></a>模块和包</h2><p>除特殊模块 __init__ 之外，模块名称都使用不带下划线的小写字母。<br>若是它们实现一个协议，那么通常使用lib为后缀，例如:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import smtplib</span><br><span class="line">import os</span><br><span class="line">import sys</span><br></pre></td></tr></table></figure></p>
-<h2 id="关于参数"><a href="#关于参数" class="headerlink" title="关于参数"></a>关于参数</h2><ul>
-<li>不要用断言来实现静态类型检测<br>断言可以用于检查参数，但不应仅仅是进行静态类型检测。Python 是动态类型语言，静态类型检测违背了其设计思想。断言应该用于避免函数不被毫无意义的调用。</li>
-<li>不要滥用 *args 和 **kwargs<br>*args 和 **kwargs 参数可能会破坏函数的健壮性。它们使签名变得模糊，而且代码常常开始在不应该的地方构建小的参数解析器。</li>
-</ul>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
-<li><p>使用 has 或 is 前缀命名布尔元素</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">is_connect = True</span><br><span class="line">has_member = False</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用复数形式命名序列</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">members = [<span class="string">'user_1'</span>, <span class="string">'user_2'</span>]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用显式名称命名字典</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">person_address = &#123;<span class="string">'user_1'</span>:<span class="string">'10 road WD'</span>, <span class="string">'user_2'</span> : <span class="string">'20 street huafu'</span>&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>避免通用名称<br>诸如 list, dict, sequence 或者 element 这样的名称应该避免。</p>
-</li>
-<li>避免现有名称<br>诸如 os, sys 这种系统已经存在的名称应该避免。</li>
-</ul>
-<h2 id="一些数字"><a href="#一些数字" class="headerlink" title="一些数字"></a>一些数字</h2><ul>
-<li>一行列数 : PEP 8 规定为 79 列，这有些苛刻了。根据自己的情况，比如不要超过满屏时编辑器的显示列数。这样就可以在不动水平游标的情况下，方便的查看代码。</li>
-<li>一个函数 : 不要超过 30 行代码, 即可显示在一个屏幕类，可以不使用垂直游标即可看到整个函数。</li>
-<li>一个类 : 不要超过 200 行代码，不要有超过 10 个方法。</li>
-<li>一个模块 不要超过 500 行。</li>
-</ul>
+        <p>时间管理有很多种方法，而<a href="https://baike.baidu.com/item/GTD/7384910?fr=aladdin" target="_blank" rel="noopener">GTD</a>（全称：<em>Getting Things Done</em>）就是其中一套行之有效的方法，也是现在最受欢迎的方法。<em>Getting Things Done</em> 翻译成中文就是“把事情做完”，GTD的核心理念概括就是 “通过记录的方式把头脑中的各种事情移出来，然后整理安排自己去执行”。带着一些自己的理解，下面谈一谈我对GTD的理解以及方法论，GTD的核心步骤为五步：<strong>收集、处理、管理、执行、回顾。</strong><br><a id="more"></a><br><img src="/img/时间管理与方法论.jpg" alt="时间管理与方法论"></p>
+<h4 id="收集-——-收集记录"><a href="#收集-——-收集记录" class="headerlink" title="收集 —— 收集记录"></a>收集 —— 收集记录</h4><p>人的大脑能储存很多东西，但有限，不要相信某事情发生后过了一段时间你还能记得，释放大脑的储存负载，让大脑着重于去思考，平时有什么信息、任务和灵感要在忘记之前用工具记录下来，使用的工具要尽可能的方便，易用，便捷。</p>
+<h4 id="处理-——-处理分类"><a href="#处理-——-处理分类" class="headerlink" title="处理 —— 处理分类"></a>处理 —— 处理分类</h4><p>只有及时处理信息，对信息及时做出决定和归纳成类，你才能避免信息的堆积和碎片化，处理信息时采用二分钟法则和四象限法则，二分钟方法就是如果一件事情两分钟内能解决的事情，无论是何种事情，马上着手解决掉，如果不能再进行分类。分类则采用四象限法则，四象限法则是把工作按照重要和紧急两个不同的程度划分成四个“象限”：既紧急又重要、重要但不紧急、紧急但不重要、既不紧急也不重要。</p>
+<p><img src="/img/四象限.jpg" alt="四象限"></p>
+<h4 id="计划-——-计划安排"><a href="#计划-——-计划安排" class="headerlink" title="计划 —— 计划安排"></a>计划 —— 计划安排</h4><p>除了既有的日程安排外，可以设定每日，每周，每月，每年你需要完成的重大事件，把他们排进日程表。每天要做的事件采用三只青蛙理论，前天晚上睡觉前设定第二天最重要的三件事，起床后就可以开始着手这三件事了（同理可用于每月的“三只青蛙”, 每季度的“三只青蛙”，每年的“三只青蛙”）。每周要做的事采用习惯21天效应，一件事只要坚持21天就能习惯成自然，成为一种习惯。每月要做的事采用日历行程表的方法，将每月要做的事排进日程表。每年要做的事采用原望清单法，让自己每年都有收获和进步.</p>
+<p><img src="/img/计划安排.jpg" alt="计划安排"><br><img src="/img/计划安排2.jpg" alt="计划安排2"></p>
+<h4 id="执行-——-坚决执行"><a href="#执行-——-坚决执行" class="headerlink" title="执行 —— 坚决执行"></a>执行 —— 坚决执行</h4><p>执行是<em>Getting Things Done</em>最关键的一步，也是成功与否的关键，要言行一致，制定了计划就一定得做到，这能很好地提升你的自我认同感。执行时你应当在不分心的情境下，一次只执行一件事，既不要多线工作，也不要让你的工作突然中断。采用番茄工作法，将番茄时间设为25分钟，专注工作，中途不做任何与该任务无关的事，直到番茄时钟响起，然后短暂休息5分钟继续番茄时钟，每4个番茄时段可多休息一会儿。番茄工作法极大地提高了工作的效率，还会有意想不到的成就感。</p>
+<p><img src="/img/番茄工作法.jpg" alt="番茄工作法"></p>
+<h4 id="回顾-——-回顾检查"><a href="#回顾-——-回顾检查" class="headerlink" title="回顾 —— 回顾检查"></a>回顾 —— 回顾检查</h4><p>目前我采用的是一周回顾一次，采用PDCA循环法对长期目标、中期目标和短期目标进行回顾，对工作和其它事情进行回顾，看看哪里做的不好，需要改进，重新做出调整计划。这样能使得计划更有效地进行，更加合乎工作程序的逻辑。</p>
+<p><img src="/img/PDCA.jpg" alt="PDCA"></p>
 
       
     </div>
@@ -466,7 +427,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/时间/" rel="tag"># 时间</a>
           
         </div>
       
@@ -479,8 +440,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/31/python-anaconda/" rel="next" title="Anaconda">
-                <i class="fa fa-chevron-left"></i> Anaconda
+              <a href="/2018/03/31/g00gle-search/" rel="next" title="google search">
+                <i class="fa fa-chevron-left"></i> google search
               </a>
             
           </div>
@@ -489,8 +450,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/31/g00gle-search/" rel="prev" title="google search">
-                google search <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/01/kali-sources-list-and-ss/" rel="prev" title="kali源更换">
+                kali源更换 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -644,7 +605,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">1.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数和方法"><span class="nav-number">2.</span> <span class="nav-text">函数和方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类"><span class="nav-number">3.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块和包"><span class="nav-number">4.</span> <span class="nav-text">模块和包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于参数"><span class="nav-number">5.</span> <span class="nav-text">关于参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">6.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些数字"><span class="nav-number">7.</span> <span class="nav-text">一些数字</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#收集-——-收集记录"><span class="nav-number">1.</span> <span class="nav-text">收集 —— 收集记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#处理-——-处理分类"><span class="nav-number">2.</span> <span class="nav-text">处理 —— 处理分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计划-——-计划安排"><span class="nav-number">3.</span> <span class="nav-text">计划 —— 计划安排</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#执行-——-坚决执行"><span class="nav-number">4.</span> <span class="nav-text">执行 —— 坚决执行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#回顾-——-回顾检查"><span class="nav-number">5.</span> <span class="nav-text">回顾 —— 回顾检查</span></a></li></ol></div>
             
 
           </div>

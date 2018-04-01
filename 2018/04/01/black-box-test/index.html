@@ -100,7 +100,7 @@
 
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="测试,黑盒测试," />
 
 
 
@@ -113,18 +113,18 @@
 
 
 
-<meta name="description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。">
-<meta name="keywords" content="Python">
+<meta name="description" content="这个备忘单是一个对WEB应用程序执行黑盒测试的任务清单。这个清单可以当成有经验的测试老手的备忘录、结合OWASP测试指南一起使用。">
+<meta name="keywords" content="测试,黑盒测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python代码风格和PEP8">
-<meta property="og:url" content="http://oje.pw/2018/03/31/python-code-style-pep8/index.html">
+<meta property="og:title" content="黑盒测试清单">
+<meta property="og:url" content="http://oje.pw/2018/04/01/black-box-test/index.html">
 <meta property="og:site_name" content="Wish a Starbucks Coffee Here!">
-<meta property="og:description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。">
+<meta property="og:description" content="这个备忘单是一个对WEB应用程序执行黑盒测试的任务清单。这个清单可以当成有经验的测试老手的备忘录、结合OWASP测试指南一起使用。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-01T00:20:14.688Z">
+<meta property="og:updated_time" content="2018-04-01T02:13:51.702Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python代码风格和PEP8">
-<meta name="twitter:description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。">
+<meta name="twitter:title" content="黑盒测试清单">
+<meta name="twitter:description" content="这个备忘单是一个对WEB应用程序执行黑盒测试的任务清单。这个清单可以当成有经验的测试老手的备忘录、结合OWASP测试指南一起使用。">
 
 
 
@@ -154,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://oje.pw/2018/03/31/python-code-style-pep8/"/>
+  <link rel="canonical" href="http://oje.pw/2018/04/01/black-box-test/"/>
 
 
 
 
 
-  <title>Python代码风格和PEP8 | Wish a Starbucks Coffee Here!</title>
+  <title>黑盒测试清单 | Wish a Starbucks Coffee Here!</title>
   
 
 
@@ -294,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://oje.pw/2018/03/31/python-code-style-pep8/">
+    <link itemprop="mainEntityOfPage" href="http://oje.pw/2018/04/01/black-box-test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="oJe">
@@ -311,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python代码风格和PEP8</h1>
+          <h1 class="post-title" itemprop="name headline">黑盒测试清单</h1>
         
 
         <div class="post-meta">
@@ -323,8 +323,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T20:48:28+08:00">
-                2018-03-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T09:41:21+08:00">
+                2018-04-01
               </time>
             
 
@@ -393,61 +393,162 @@
       
 
       
-        <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
-<li>常量 : 大写加下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USER_CONSTANT</span><br></pre></td></tr></table></figure>
-</li>
+        <p>这个备忘单是一个对WEB应用程序执行黑盒测试的任务清单。<br>这个清单可以当成有经验的测试老手的备忘录、结合<a href="https://www.owasp.org/index.php/OWASP_Testing_Project" target="_blank" rel="noopener">OWASP测试指南</a>一起使用。<br><a id="more"></a></p>
+<h2 id="收集信息"><a href="#收集信息" class="headerlink" title="收集信息"></a>收集信息</h2><ul>
+<li>手动访问站点</li>
+<li>使用爬虫来抓取（手工）无法访问或隐藏的内容</li>
+<li>检查泄露信息的文件，如robots.txt, sitemap.xml, .DS_Store</li>
+<li>检查主要的搜索引擎索引的此站点的公开内容</li>
+<li>检查不同的浏览器UA获取的内容的差异（如使用爬虫的UA访问手机站点）</li>
+<li>检查WEB应用程序的指纹（Fingerprinting）</li>
+<li>确认使用的技术</li>
+<li>确认用户角色</li>
+<li>确认应用程序的入口地址</li>
+<li>确认客户端代码</li>
+<li>确认不同的版本的差异（如web, mobile web, mobile app, web services）</li>
+<li>确认位于同一主机或业务相关的应用程序</li>
+<li>确认所有的主机名和端口</li>
+<li>确认第三方的托管内容</li>
 </ul>
-<p>对于不会发生改变的全局变量，使用大写加下划线。<br><a id="more"></a> </p>
-<ul>
-<li>私有变量 : 小写和一个前导下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_private_value</span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="配置管理"><a href="#配置管理" class="headerlink" title="配置管理"></a>配置管理</h2><ul>
+<li>检查常用的应用程序和管理URL</li>
+<li>检查旧文件、备份文件和未引用文件是否存在</li>
+<li><a href="http://www.hackdig.com/?01/hack-11.htm" target="_blank" rel="noopener">检查支持的HTTP方法和XST漏洞</a></li>
+<li>检查对文件后缀的处理</li>
+<li><a href="http://www.hackdig.com/?07/hack-4958.htm" target="_blank" rel="noopener">检查安全HTTP头</a>（如CSP, X-Frame-Options, HSTS）</li>
+<li>测试安全策略（如Flash, Silverlight, robots）</li>
+<li>在线上环境测试非生产数据或做相反的操作</li>
+<li>检查客户端代码中的敏感信息（如API keys,凭据等）</li>
 </ul>
-<p>Python 中不存在私有变量一说，若是遇到需要保护的变量，使用小写和一个前导下划线。但这只是程序员之间的一个约定，用于警告说明这是一个私有变量，外部类不要去访问它。但实际上，外部类还是可以访问到这个变量。</p>
-<ul>
-<li>内置变量 : 小写，两个前导下划线和两个后置下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__class__</span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="安全传输"><a href="#安全传输" class="headerlink" title="安全传输"></a>安全传输</h2><ul>
+<li>检查SSL版本、算法和密钥长度</li>
+<li>检查数字证书有效性</li>
+<li>检查凭据是否只通过HTTPS传输数据</li>
+<li>检查登陆表单是否只通过HTTPS传输数据</li>
+<li>检查会话令牌是否只通过HTTPS传输</li>
+<li>检查是否使用了HSTS</li>
 </ul>
-<p>两个前导下划线会导致变量在解释期间被更名。这是为了避免内置变量和其他变量产生冲突。用户定义的变量要严格避免这种风格。以免导致混乱。<br><!--more--> </p>
-<h2 id="函数和方法"><a href="#函数和方法" class="headerlink" title="函数和方法"></a>函数和方法</h2><p>总体而言应该使用，小写和下划线。但有些比较老的库使用的是混合大小写，即首单词小写，之后每个单词第一个字母大写，其余小写。但现在，小写和下划线已成为规范。</p>
-<ul>
-<li>私有方法 : 小写和一个前导下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def _secrete(self):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"Starbucks"</span>)</span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="认证"><a href="#认证" class="headerlink" title="认证"></a>认证</h2><ul>
+<li>测试枚举用户</li>
+<li>测试认证绕过</li>
+<li>测试暴力破解保护</li>
+<li>测试密码规则的质量</li>
+<li>测试记住密码功能</li>
+<li>测试密码表单的自动完成的功能</li>
+<li>测试密码重置和找回</li>
+<li>测试密码修改流程</li>
+<li>测试验证码</li>
+<li>测试多因子认证</li>
+<li>测试注销功能</li>
+<li>测试HTTP的缓存管理（如Pragma, Expires, Max-age）</li>
+<li>测试默认登陆账号</li>
+<li>测试用户认证历史</li>
+<li>测试账号锁定和密码修改成功的通知渠道</li>
+<li>测试跨应用程序共享模式/SSO的一致性</li>
 </ul>
-<p>这里和私有变量一样，并不是真正的私有访问权限。同时也应该注意一般函数不要使用两个前导下划线(当遇到两个前导下划线时，Python 的名称改编特性将发挥作用)。</p>
-<ul>
-<li>特殊方法 ：小写和两个前导下划线，两个后置下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def __add__(self, other):</span><br><span class="line">    <span class="built_in">return</span> int.__add__(other)</span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="会话管理"><a href="#会话管理" class="headerlink" title="会话管理"></a>会话管理</h2><ul>
+<li>确定应用程序管理会话的方式（如将cookie tokens、url中的token）</li>
+<li>检查会话cookie的标示(httpOnly和secure)</li>
+<li>检查会话cookie的返回（path和domain）</li>
+<li>检查会话cookie的有效期（expires和 max-age）</li>
+<li>检查会话cookie的过期失效</li>
+<li>检查会话cookie的相对超时失效</li>
+<li>检查会话cookie退出后失效</li>
+<li>测试用户是否可以同时拥有多个会话</li>
+<li>测试会话cookie的随机性</li>
+<li>确认会话令牌在登陆、角色变化和退出时的更新</li>
+<li>测试跨应用共享session会话的一致性</li>
+<li><a href="https://www.owasp.org/index.php/Testing_for_Session_puzzling_&#40;OTG-SESS-010&#41;" target="_blank" rel="noopener">测试会话过载</a>（未限制会话应用范围）</li>
+<li>测试是否存在CSRF和点击劫持漏洞</li>
 </ul>
-<p>这种风格只应用于特殊函数，比如操作符重载等。</p>
-<ul>
-<li>函数参数 : 小写和下划线，缺省值等号两边无空格<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def connect(self, user=None):</span><br><span class="line">    self._user = user</span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="授权"><a href="#授权" class="headerlink" title="授权"></a>授权</h2><ul>
+<li>测试路径遍历</li>
+<li>测试绕过授权</li>
+<li>测试垂直访问控制问题</li>
+<li>测试水平访问控制问题</li>
+<li>测试授权检查缺失</li>
 </ul>
-<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>类总是使用驼峰格式命名，即所有单词首字母大写其余字母小写。类名应该简明，精确，并足以从中理解类所完成的工作。常见的一个方法是使用表示其类型或者特性的后缀，例如:SQLEngine、MimeTypes。对于基类而言，可以使用一个 Base 或者 Abstract 前缀，例如:BaseCookie、AbstractGroup<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class UserProfile(object):</span><br><span class="line">    def __init__(self, profile):</span><br><span class="line">        <span class="built_in">return</span> self._profile = profile</span><br><span class="line"></span><br><span class="line">    def profile(self):</span><br><span class="line">        <span class="built_in">return</span> self._profile</span><br></pre></td></tr></table></figure></p>
-<h2 id="模块和包"><a href="#模块和包" class="headerlink" title="模块和包"></a>模块和包</h2><p>除特殊模块 __init__ 之外，模块名称都使用不带下划线的小写字母。<br>若是它们实现一个协议，那么通常使用lib为后缀，例如:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import smtplib</span><br><span class="line">import os</span><br><span class="line">import sys</span><br></pre></td></tr></table></figure></p>
-<h2 id="关于参数"><a href="#关于参数" class="headerlink" title="关于参数"></a>关于参数</h2><ul>
-<li>不要用断言来实现静态类型检测<br>断言可以用于检查参数，但不应仅仅是进行静态类型检测。Python 是动态类型语言，静态类型检测违背了其设计思想。断言应该用于避免函数不被毫无意义的调用。</li>
-<li>不要滥用 *args 和 **kwargs<br>*args 和 **kwargs 参数可能会破坏函数的健壮性。它们使签名变得模糊，而且代码常常开始在不应该的地方构建小的参数解析器。</li>
+<h2 id="数据验证"><a href="#数据验证" class="headerlink" title="数据验证"></a>数据验证</h2><ul>
+<li>测试反射型XSS</li>
+<li>测试存储型XSS</li>
+<li>测试DOM型XSS</li>
+<li>测试CSF（flash XSS）</li>
+<li>测试HTML注入</li>
+<li>测试SQL注入</li>
+<li>测试LDAP注入</li>
+<li>测试ORM注入</li>
+<li><a href="http://www.hackdig.com/?03/hack-8921.htm" target="_blank" rel="noopener">测试XML注入</a></li>
+<li>测试XXE注入</li>
+<li><a href="http://www.hackdig.com/?01/hack-7955.htm" target="_blank" rel="noopener">测试SSI注入</a></li>
+<li>测试XPath注入</li>
+<li>测试XQuery注入</li>
+<li>测试IMAP/SMTP注入</li>
+<li>测试Code注入</li>
+<li><a href="https://www.owasp.org/index.php/Expression_Language_Injection" target="_blank" rel="noopener">测试EL注入</a></li>
+<li>测试Command注入</li>
+<li>测试Overflow （堆, 栈和整形溢出）</li>
+<li>测试Format String（错误的字符串格式化）</li>
+<li>测试incubated vulnerabilities（缺陷孵化）</li>
+<li>测试HTTP Splitting/Smuggling（协议层）</li>
+<li>测试HTTP Verb Tampering（权限干涉）</li>
+<li>测试Open Redirection</li>
+<li>测试本地文件包含</li>
+<li>测试远程文件包含</li>
+<li>比较客户端与服务端的验证规则</li>
+<li>测试NoSQL注入</li>
+<li>测试HTTP参数污染</li>
+<li><a href="auto-binding:https://click.apache.org/docs/user-guide/html/ch02s03.html" target="_blank" rel="noopener">测试自动绑定</a></li>
+<li>测试Mass Assignment（<a href="http://blog.xdite.net/posts/2012/03/05/github-hacked-rails-security/" target="_blank" rel="noopener">ror经典漏洞</a>）</li>
+<li>测试NULL/Invalid Session Cookie</li>
 </ul>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
-<li><p>使用 has 或 is 前缀命名布尔元素</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">is_connect = True</span><br><span class="line">has_member = False</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用复数形式命名序列</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">members = [<span class="string">'user_1'</span>, <span class="string">'user_2'</span>]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用显式名称命名字典</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">person_address = &#123;<span class="string">'user_1'</span>:<span class="string">'10 road WD'</span>, <span class="string">'user_2'</span> : <span class="string">'20 street huafu'</span>&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>避免通用名称<br>诸如 list, dict, sequence 或者 element 这样的名称应该避免。</p>
-</li>
-<li>避免现有名称<br>诸如 os, sys 这种系统已经存在的名称应该避免。</li>
+<h2 id="拒绝服务"><a href="#拒绝服务" class="headerlink" title="拒绝服务"></a>拒绝服务</h2><ul>
+<li>测试反自动化/机器请求</li>
+<li>测试账号锁定</li>
+<li>测试HTTP 协议DoS</li>
+<li>测试SQL通配符DoS/sleep Dos</li>
 </ul>
-<h2 id="一些数字"><a href="#一些数字" class="headerlink" title="一些数字"></a>一些数字</h2><ul>
-<li>一行列数 : PEP 8 规定为 79 列，这有些苛刻了。根据自己的情况，比如不要超过满屏时编辑器的显示列数。这样就可以在不动水平游标的情况下，方便的查看代码。</li>
-<li>一个函数 : 不要超过 30 行代码, 即可显示在一个屏幕类，可以不使用垂直游标即可看到整个函数。</li>
-<li>一个类 : 不要超过 200 行代码，不要有超过 10 个方法。</li>
-<li>一个模块 不要超过 500 行。</li>
+<h2 id="业务逻辑"><a href="#业务逻辑" class="headerlink" title="业务逻辑"></a>业务逻辑</h2><ul>
+<li>测试功能滥用</li>
+<li>测试缺乏不可否认性（非对称加密作用）</li>
+<li>测试信任关系</li>
+<li>测试数据完整性</li>
+<li>测试指责分离</li>
+</ul>
+<h2 id="密码学"><a href="#密码学" class="headerlink" title="密码学"></a>密码学</h2><ul>
+<li>检查应加密数据是否加密</li>
+<li>根据上下文检查是否使用了错误的算法</li>
+<li>检查使用弱算法</li>
+<li>检查是否合理使用盐</li>
+<li>检查随机函数（的随机性）</li>
+</ul>
+<h2 id="风险功能—文件上传"><a href="#风险功能—文件上传" class="headerlink" title="风险功能—文件上传"></a>风险功能—文件上传</h2><ul>
+<li>检查可接受的文件类型是否在白名单内</li>
+<li>检查文件尺寸限制、上传频率和总文件数的阈值与限制情况</li>
+<li>检查文件内容是否与定义的文件类型相符</li>
+<li>检查所有上传的文件都经过杀毒软件扫描</li>
+<li>检查不安全的文件名是否经过处理</li>
+<li>检查不能在web根目录下直接访问上传文件</li>
+<li>检查上传的文件是否存储在相同的主机名和端口</li>
+<li>检查文件和其他媒体继承了身份验证和授权功能</li>
+</ul>
+<h2 id="风险功能—支付信息"><a href="#风险功能—支付信息" class="headerlink" title="风险功能—支付信息"></a>风险功能—支付信息</h2><ul>
+<li>测试WEB服务器或应用程序是否存在已知漏洞和配置问题</li>
+<li>测试默认或易被猜到的密码</li>
+<li>测试生产环境的非生产数据或做相反的* 测试</li>
+<li>测试注入漏洞</li>
+<li>测试缓冲区溢出</li>
+<li>测试不安全的加密存储</li>
+<li>测试传输层保护不足</li>
+<li>测试不适当的错误处理</li>
+<li>测试CVSS v2 评分&gt; 4.0的全部漏洞</li>
+<li>测试身份验证和授权的问题</li>
+<li>测试CSRF</li>
+</ul>
+<h2 id="HTML-5"><a href="#HTML-5" class="headerlink" title="HTML 5"></a>HTML 5</h2><ul>
+<li>测试WEB消息传递</li>
+<li>测试WEB本地存储SQL注入</li>
+<li>检查CORS的实现</li>
+<li>检查离线的WEB应用程序</li>
 </ul>
 
       
@@ -466,7 +567,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/测试/" rel="tag"># 测试</a>
+          
+            <a href="/tags/黑盒测试/" rel="tag"># 黑盒测试</a>
           
         </div>
       
@@ -479,8 +582,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/31/python-anaconda/" rel="next" title="Anaconda">
-                <i class="fa fa-chevron-left"></i> Anaconda
+              <a href="/2018/04/01/sqlmap/" rel="next" title="SQLMap">
+                <i class="fa fa-chevron-left"></i> SQLMap
               </a>
             
           </div>
@@ -488,10 +591,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/31/g00gle-search/" rel="prev" title="google search">
-                google search <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -644,7 +743,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">1.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数和方法"><span class="nav-number">2.</span> <span class="nav-text">函数和方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类"><span class="nav-number">3.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块和包"><span class="nav-number">4.</span> <span class="nav-text">模块和包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于参数"><span class="nav-number">5.</span> <span class="nav-text">关于参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">6.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些数字"><span class="nav-number">7.</span> <span class="nav-text">一些数字</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#收集信息"><span class="nav-number">1.</span> <span class="nav-text">收集信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置管理"><span class="nav-number">2.</span> <span class="nav-text">配置管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全传输"><span class="nav-number">3.</span> <span class="nav-text">安全传输</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#认证"><span class="nav-number">4.</span> <span class="nav-text">认证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#会话管理"><span class="nav-number">5.</span> <span class="nav-text">会话管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#授权"><span class="nav-number">6.</span> <span class="nav-text">授权</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据验证"><span class="nav-number">7.</span> <span class="nav-text">数据验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拒绝服务"><span class="nav-number">8.</span> <span class="nav-text">拒绝服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#业务逻辑"><span class="nav-number">9.</span> <span class="nav-text">业务逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#密码学"><span class="nav-number">10.</span> <span class="nav-text">密码学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#风险功能—文件上传"><span class="nav-number">11.</span> <span class="nav-text">风险功能—文件上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#风险功能—支付信息"><span class="nav-number">12.</span> <span class="nav-text">风险功能—支付信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-5"><span class="nav-number">13.</span> <span class="nav-text">HTML 5</span></a></li></ol></div>
             
 
           </div>
