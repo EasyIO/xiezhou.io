@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Centos端口]]></title>
+    <url>%2F2018%2F04%2F01%2Fcentos-port%2F</url>
+    <content type="text"><![CDATA[12345678910111213141516171819202122232425262728293031323334# 查看80端口占用$ lsof -i tcp:80# 列出所有端口$ netstat -ntlp# 开启端口（以80端口为例）# 方法一：$ /sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT # 写入修改$ /etc/init.d/iptables save # 保存修改$ service iptables restart # 重启防火墙，修改生效# 方法二：$ vi /etc/sysconfig/iptables # 打开配置文件加入如下语句:-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT # 重启防火墙，修改完成# 关闭端口# 方法一：$ /sbin/iptables -I INPUT -p tcp --dport 80 -j DROP # 写入修改$ /etc/init.d/iptables save # 保存修改$ service iptables restart # 重启防火墙，修改生效# 方法二：$ vi /etc/sysconfig/iptables #打开配置文件加入如下语句:-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j DROP # 重启防火墙，修改完成# 查看端口状态$ /etc/init.d/iptables status# 查询防火墙状态:$ service iptables status# 停止防火墙:$ service iptables stop # 启动防火墙:$ service iptables start # 重启防火墙:$ service iptables restart # 永久关闭防火墙:$ chkconfig iptables off # 永久关闭后启用:$ chkconfig iptables on]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>centos</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Centos无法上网问题]]></title>
+    <url>%2F2018%2F04%2F01%2Fcentos-network%2F</url>
+    <content type="text"><![CDATA[1234$ cd /etc/sysconfig/network-scripts/# ls 查看一下ifcfg-eno后面对应的数字是什么，以eno32为例$ vim ifcfg-eno32 # 设置ONBOOT=yes 即开启自动启用网络连接$ service network restart 重启网络]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>centos</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Centos git升级]]></title>
+    <url>%2F2018%2F04%2F01%2Fcentos-git%2F</url>
+    <content type="text"><![CDATA[1234567891011121314151617# 安装编译git时需要的包$ yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel$ yum install gcc perl-ExtUtils-MakeMaker# 删除已有的git$ yum remove git# 下载git源码$ cd /usr/src$ wget https://www.kernel.org/pub/software/scm/git/git-2.0.5.tar.gz$ tar xzf git-2.0.5.tar.gz# 编译安装$ cd git-2.0.5$ make prefix=/usr/local/git all$ make prefix=/usr/local/git install$ echo "export PATH=$PATH:/usr/local/git/bin" &gt;&gt; /etc/bashrc$ source /etc/bashrc# 检查一下版本号$ git --version]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>centos</tag>
+        <tag>linux</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Centos yum,npm源更换]]></title>
+    <url>%2F2018%2F04%2F01%2Fcentos-yum-npm%2F</url>
+    <content type="text"><![CDATA[12345678# yum源更换# 备份$ mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup$ cd /etc/yum.repos.d/ ​$ wget http://mirrors.163.com/.help/CentOS7-Base-163.repo# 生成缓存：$ yum clean all$ yum makecache ​ 1234567# npm源更换$ alias cnpm="npm --registry=https://registry.npm.taobao.org \--cache=$HOME/.npm/.cache/cnpm \--disturl=https://npm.taobao.org/dist \--userconfig=$HOME/.cnpmrc" ​# npm升级$ npm update npm ​]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>centos</tag>
+        <tag>linux</tag>
+        <tag>yum</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ADB常用命令]]></title>
+    <url>%2F2018%2F04%2F01%2Fadb%2F</url>
+    <content type="text"><![CDATA[123456789101112131415161718192021$ adb devices # 查看设备$ adb install -r &lt;package&gt; #安装apk$ adb uninstall &lt;package&gt; #卸载apk$ adb -s 设备号 install xxx.apk #从模拟器或手机中复制一个文件或文件夹（递归的）使用：$ adb pull &lt;remote&gt; &lt;local&gt;#复制一个文件或文件夹（递归的）到模拟器或手机中使用：$ adb push &lt;local&gt; &lt;remote&gt;#在这个命令中和引用的是文件或文件夹的路径，在开发用电脑上的是local，在模拟器或手机上的是remote$ adb start-server #启动adb server$ adb kill-server #停止adb server# 列出系统应用的所有包名：$ adb shell pm list packages -s# 列出除了系统应用的第三方应用包名：$ adb shell pm list packages -3# 使用 grep 来过滤：$ adb shell pm list packages | grep qq# 清除应用数据与缓存$ adb shell pm clear &lt;packagename&gt;# 启动应用$ adb shell am start -n 包名/类名]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>adb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[airmon-ng简要操作]]></title>
+    <url>%2F2018%2F04%2F01%2Fkali-airmon-ng%2F</url>
+    <content type="text"><![CDATA[123456789101112131415161718$ airmon-ng check kill # 杀进程$ airmon-ng start wlan0 # 启动无效网卡$ airodump-ng wlan0mon # 探测# 抓包$ airodump-ng --bssid XX:XX:XX:XX:XX:XX -c 1 -w testap wlan0mon --bssid 是路由器的mac地址 -w 是写入到文件longas中 -c 11 是频道11# 攻击$ aireplay-ng -0 0 -a XX:XX:XX:XX:XX:XX -c XX:XX:XX:XX:XX:XX wlan0mon -0 采用deauth攻击模式，后面跟上攻击次数 -a 后跟路由器的mac地址 -c 后跟客户端的mac地址# 直接破解$ aircrack-ng -w Wordlists.txt CAP-01.cap# 转换后用hashcat跑$ cap2hccapx.exe testap.cap test.hccapx$ hashcat64.exe -m 2500 -D 2 test.hccapx pass.txt]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>kali</tag>
+        <tag>airmon-ng</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ubuntu静态ip和ssh配置]]></title>
+    <url>%2F2018%2F04%2F01%2Fubuntu-ip-xshell%2F</url>
+    <content type="text"><![CDATA[1234567891011121314# 修改静态ip$ vim /etc/network/interfaces auto eth0 iface eth0 inet static address 192.168.1.100 netmask 255.255.255.0 gateway 192.168.1.1# DNS解析$ vim /etc/resolv.conf nameserver 192.168.1.1$ vim /etc/resolvconf/resolv.conf.d/base nameserver 192.168.1.1# 要将/etc/NetworkManager/目录下的system-connections删除，或者移动到其他目录下$ sudo/etc/init.d/networking restart # 重启网卡 12345678# 安装ssh$ sudo apt-get install openssh-server # 安装$ ps -e |grep ssh # 查看$ /etc/init.d/ssh start # 启动# 如果无法启动$ vim /etc/ssh/sshd_config # 将 PermitRootLogin改为yes：$ sudo /etc/init.d/ssh restart]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>ip</tag>
+        <tag>ssl</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu安装ftp和smaba]]></title>
+    <url>%2F2018%2F04%2F01%2Fubuntu-ftp-smaba%2F</url>
+    <content type="text"><![CDATA[123456789101112131415161718192021# 安装 ftp$ apt-get install vsftpd# 添加用户和权限# 新建"/home/uftp"目录作为用户主目录# 新建用户uftp并设置密码$ sudo useradd -d /home/uftp -s /bin/bash uftp$ passwd uftp XXX$ vim /etc/vsftpd.conf # 配置文件 userlist_deny=NO userlist_enable=YES userlist_file=/etc/allowed_users seccomp_sandbox=NO chroot_list_enable=YES chroot_list_file=/etc/chroot_list# 添加用户uftp到allowed_users,chroot_list$ vim /etc/allowed_users$ vim /etc/chroot_list# 启动/关闭/重启服务$ sudo /etc/init.d/vsftpd start$ sudo /etc/init.d/vsftpd stop$ sudo /etc/init.d/vsftpd restart 123456789101112131415161718192021222324252627# 安装 samba$ sudo apt-get install samba# smbclient: $ sudo apt-get install smbclient# 修改配置文件$ vim /etc/samba/smb.conf# 在文件末尾加上如下[share]（相当于在home目录项增加了一个新用户） [share] comment = Share Folder require password browseable = yes path = /home/share create mask = 0777 directory mask = 0777 valid users = share force user = nobody force group = nogroup public = yes writable = yes available = yes# 保存退出后重启samba：$ sudo /etc/init.d/samba restart# 切换到 /home/目录下创建一个用户目录：$ sudo mkdir share# 设置目录的权限：（777代表最高权限，可读可写可执行）$ chmod 777 share# 添加用户到samba$ smbpasswd -a starbucks]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>ubuntu</tag>
+        <tag>ftp</tag>
+        <tag>smaba</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mysql简单安装配置]]></title>
+    <url>%2F2018%2F04%2F01%2Fmysql-init%2F</url>
+    <content type="text"><![CDATA[1234567891011121314151617my.ini[mysql]# 设置mysql客户端默认字符集default-character-set=utf8 [mysqld]#设置3306端口port = 3306 # 设置mysql的安装目录basedir=D:\mysql\mysql-5.6.17-winx64# 设置mysql数据库的数据的存放目录datadir=D:\mysql\mysql-5.6.17-winx64\data# 允许最大连接数max_connections=200# 服务端使用的字符集默认为8比特编码的latin1字符集character-set-server=utf8# 创建新表时将使用的默认存储引擎default-storage-engine=INNODB win-mysql安装服务123$ cd D:\mysql\mysql-5.6.17-winx64\bin$ mysqld install # 安装服务$ mysqld remove # 卸载服务 初始化123$ net start mysql # 启动服务# 先删除 mysql 下的data文件夹$ mysqld --initialize # 初始化 设置密码12345$ net stop MySQL # 关闭服务$ mysqld --skip-grant-tables # 用安全模式打开$ mysql -u root -p # 登录，密码为空，直接回车$ use mysql$ set password for root@localhost = password('123'); 登入12$ mysql -u root -p # 回车输入密码$ mysqladmin -u root -p password 密码 # 设置密码 远程登入1234567$ use mysql# 插入$ GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION; # 刷新$ flush privileges;# 查看是否成功$ select host,user from user; linux-mysql安装123$ wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm$ rpm -ivh mysql-community-release-el7-5.noarch.rpm$ yum install mysql-community-server 启动/关闭服务1$ service mysqld restart/stop 设置密码123$ mysql -u root # 首次无密$ use mysql$ set password for root@localhost = password('123'); 远程登录1234# 把在所有数据库的所有表的所有权限赋值给位于所有IP地址的root用户$ grant all privileges on *.* to root@'%'identified by 'password'# 如果是新用户而不是root，则要先新建用户$ create user 'username'@'%' identified by 'password']]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[IDEA top10热键]]></title>
+    <url>%2F2018%2F04%2F01%2Fidea-hot-key%2F</url>
+    <content type="text"><![CDATA[12345678910111213141516171819# Top 10 切来切去：Ctrl+Tab# Top 9 选你所想：Ctrl+W# Top 8 代码生成：Template/Postfix +Tab# Top 7 发号施令：Ctrl+Shift+A# Top 6 无处藏身：Shift+Shift# Top 5 自动完成：Ctrl+Shift+Enter# Top 4 创造万物：Alt+Insert# Top 3 自我修复：Alt+Enter# Top 2 重构一切：Ctrl+Shift+Alt+T# Top 1 智能补全：Ctrl+Shift+Space]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>idea</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MongoDB]]></title>
+    <url>%2F2018%2F04%2F01%2Fmongodb-basis%2F</url>
+    <content type="text"><![CDATA[123456$ cd d:/soft/mongodb/bin# 设置log和data路径，需要创建data文件夹$ mongod.exe --logpath E:\DB\MONGO_DB\mongodb.log --logappend --dbpath E:\DB\MONGO_DB\data --directoryperdb --serviceName MongoDB -install $ net start MongoDB # 启动服务$ net stop MongoDB # 停止服务 mongo基础使用123456$ db.getCollection('email_zero').find(&#123;&#125;) # 查询表$ db.email_zero.stats() # 表信息$ db.email_zero.ensureIndex(&#123;"email":1&#125;) # 建立索引$ db.email_zero.find(&#123;"email":"123@163.com"&#125;).pretty() # 查询例子# 导出数据$ mongoexport -d admin -c mydb --csv -f tid,uid,username,isupdate,phone -o mydb.dat 去重脚本12345678var rs = db.email_zero.aggregate([&#123;$group:&#123;_id:"email",count:&#123;$sum:1&#125;&#125;&#125;,&#123;$match:&#123;count:&#123;$gt:1&#125;&#125;&#125;])for(var i in rs.result)&#123; var r = rs.result[1].count; var k = rs.result[1]._id; for(var ii=0;ii&lt;r-1;ii++)&#123; db.biu.remove(&#123;"email":k&#125;,true) &#125; &#125;]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>mongodb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo]]></title>
+    <url>%2F2018%2F04%2F01%2Flearn-hexo%2F</url>
+    <content type="text"><![CDATA[12345$ npm install -g hexo-cli​ #hexo$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install$ git clone https://github.com/iissnan/hexo-theme-next themes/next 常用插件1234567891011# 安装 less# 主题默认使用 less 作为 css 预处理工具。$ npm install hexo-renderer-less --save# 安装 feed# 用于生成 rss。$ npm install hexo-generator-feed --save# 安装 json-content# 用于生成静态站点数据，用作站内搜索的数据源。$ npm install hexo-generator-json-content --save$ npm install hexo-deployer-git --save` hexo命令1234567891011121314$ hexo new post title$ hexo -d 提交只git$ hexo -w 监视文章文件变动$ hexo -s 启动服务$ hexo -g 生成页面$ hexo list &lt;type&gt;$ hexo --safe 安全模式$ hexo --debug 调试模式$ hexl --slient 简洁模式# 重新安装hexo-util $ npm install -- save-dev hexo-util# 如果出现# Block-scoped declarations (let, const, function, class) not yet supported outside strict mode$ 'use strict' 其他插件12345678910# hexo-addlink：在文章最末添加永久链接及版权声明，建议安装# hexo-generator-search: 本地搜索# hexo-index-anything: 更改首页为任意的页面# hexo-encrypt：加密你的博客# hexo-ruby-character 文字拼音# hexo Tag Cloud 标签云# hexo-uuid# sitemap 站点地图$ npm install hexo-generator-searchdb --save$ npm uninstall ​]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git]]></title>
+    <url>%2F2018%2F04%2F01%2Fgit%2F</url>
+    <content type="text"><![CDATA[12$ git config --global user.name "name"$ git config --global user.email "***@**.com" 12$ ssh-keygen -t rsa -C "email"$ ssh -T git@git.oschina.net $ ssh -T git@github.com 查看信息1$ git config --list 文本编辑器1$ git config --global core.editor emacs 代码比较1$ git config --global merge.tool vimdiff 创建版本库123456789101112131415161718192021222324252627282930# 选择一个合适的地方，创建一个空目录：$ mkdir xxoo$ cd xxoo$ pwd# 把这个目录变成Git可以管理的仓库：$ git init# 1.把文件添加到仓库$ git add readme.txt# 2.把文件提交到仓库$ git commit -m "wrote a readme file"# 检查文件状态$ git status# 忽略某些文件$ cat .gitignore *.[oa] *~# 查看尚未暂存的文件更新了哪些部分$ git diff# 要看已经暂存起来的文件和上次提交时的快照之间的差异$ git diff - staged# 提交更新$ git commit -m "xxx"# 跳过使用暂存区域$ git commit -a -m "xxx"# 移除文件 如果删除之前修改过并且已经放到暂存区域的话，则必须要用强删除选项 -f$ git rm xxx# 仅是从跟踪清单中删除$ git rm --cached XXX# 日志$ git log --pretty=oneline 版本123456789101112# 版本回退 git 用head表示当前版本 head^上一个版本$ git reset --hard HEAD^# 回到任意版本$ git reset --hard commitId# 用来记录你的每一次命令：$ git reflog# 撤销修改(文件在工作区的修改全部撤销)# 一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；# 一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。$ git checkout -- file# 暂存区的修改撤销掉（unstage），重新放回工作区$ git reset HEAD file 远程仓库github1234567$ git remote add origin git@oschina.net:***/***.git# 本地库push到github （第一次用-u，后面就不用）$ git push -u origin master # 克隆别人项目(mycode 自定义目录名称)$ git clone git://url mycode# 查看远程仓库(详情)$ git remote -v 分支管理12345678910111213141516171819202122232425262728# 参数表示创建并切换$ git checkout -b dev# 查看当前分支 *$ git branch# 切换分支$ git checkout master# 合并分支$ git merge dev# 删除分支$ git branch -d dev# 强行删除未合并分支$ git branch -D name# 分支合并图$ git log --graph --pretty=oneline --abbrev-commit# 禁用fast forward$ git merge --no--ff -m "xxoo" dev# 1.可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：# 2.创建bug分支，临时分支# 3.切回分支 查看工作区# 4.回复工作区$ git stash$ git checkout -b issue-101$ git stash list$ git stash apply $ git stash drop# 或者$ git stash pop# 多次stash，再恢复指定stash$ git stash apply stash&#123;*&#125; 推送分支到远程(多人管理)12345$ git push origin master# git pull把最新的提交从origin/dev抓下来，然后，在本地合并，解决冲突，再推送$ git pull# git pull也失败了，原因是没有指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接：$ git branch --set-upstream dev origin/dev 标签123456789101112131415# 打标签+id$ git tag v1.0 123456# 查看标签详情$ git show v1.0# 还可以创建带有说明的标签，用-a指定标签名，-m指定说明文字：$ git tag -a v1.0 -m 'xxoo' 123456# 删除$ git tag -d v1.0# 推到远程,一次性推送全部尚未推送到远程的本地标签：$ git push origin v1.0$ git push origin --tags# 如果标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除：$ git tag -d v1.0# 然后，从远程删除。删除命令也是push，但是格式如下：$ git push origin :refs/tags/v1.0 推送失败12345$ cd to .git/config$ vim vonfig # url = $ git pull --rebase origin master# 执行上面代码后可以看到本地代码库中多了README.md文件]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[黑盒测试清单]]></title>
+    <url>%2F2018%2F04%2F01%2Fblack-box-test%2F</url>
+    <content type="text"><![CDATA[这个备忘单是一个对WEB应用程序执行黑盒测试的任务清单,这个清单可以当成有经验的测试老手的备忘录、结合OWASP测试指南一起使用。 收集信息 手动访问站点 使用爬虫来抓取（手工）无法访问或隐藏的内容 检查泄露信息的文件，如robots.txt, sitemap.xml, .DS_Store 检查主要的搜索引擎索引的此站点的公开内容 检查不同的浏览器UA获取的内容的差异（如使用爬虫的UA访问手机站点） 检查WEB应用程序的指纹（Fingerprinting） 确认使用的技术 确认用户角色 确认应用程序的入口地址 确认客户端代码 确认不同的版本的差异（如web, mobile web, mobile app, web services） 确认位于同一主机或业务相关的应用程序 确认所有的主机名和端口 确认第三方的托管内容 配置管理 检查常用的应用程序和管理URL 检查旧文件、备份文件和未引用文件是否存在 检查支持的HTTP方法和XST漏洞 检查对文件后缀的处理 检查安全HTTP头（如CSP, X-Frame-Options, HSTS） 测试安全策略（如Flash, Silverlight, robots） 在线上环境测试非生产数据或做相反的操作 检查客户端代码中的敏感信息（如API keys,凭据等） 安全传输 检查SSL版本、算法和密钥长度 检查数字证书有效性 检查凭据是否只通过HTTPS传输数据 检查登陆表单是否只通过HTTPS传输数据 检查会话令牌是否只通过HTTPS传输 检查是否使用了HSTS 认证 测试枚举用户 测试认证绕过 测试暴力破解保护 测试密码规则的质量 测试记住密码功能 测试密码表单的自动完成的功能 测试密码重置和找回 测试密码修改流程 测试验证码 测试多因子认证 测试注销功能 测试HTTP的缓存管理（如Pragma, Expires, Max-age） 测试默认登陆账号 测试用户认证历史 测试账号锁定和密码修改成功的通知渠道 测试跨应用程序共享模式/SSO的一致性 会话管理 确定应用程序管理会话的方式（如将cookie tokens、url中的token） 检查会话cookie的标示(httpOnly和secure) 检查会话cookie的返回（path和domain） 检查会话cookie的有效期（expires和 max-age） 检查会话cookie的过期失效 检查会话cookie的相对超时失效 检查会话cookie退出后失效 测试用户是否可以同时拥有多个会话 测试会话cookie的随机性 确认会话令牌在登陆、角色变化和退出时的更新 测试跨应用共享session会话的一致性 测试会话过载（未限制会话应用范围） 测试是否存在CSRF和点击劫持漏洞 授权 测试路径遍历 测试绕过授权 测试垂直访问控制问题 测试水平访问控制问题 测试授权检查缺失 数据验证 测试反射型XSS 测试存储型XSS 测试DOM型XSS 测试CSF（flash XSS） 测试HTML注入 测试SQL注入 测试LDAP注入 测试ORM注入 测试XML注入 测试XXE注入 测试SSI注入 测试XPath注入 测试XQuery注入 测试IMAP/SMTP注入 测试Code注入 测试EL注入 测试Command注入 测试Overflow （堆, 栈和整形溢出） 测试Format String（错误的字符串格式化） 测试incubated vulnerabilities（缺陷孵化） 测试HTTP Splitting/Smuggling（协议层） 测试HTTP Verb Tampering（权限干涉） 测试Open Redirection 测试本地文件包含 测试远程文件包含 比较客户端与服务端的验证规则 测试NoSQL注入 测试HTTP参数污染 测试自动绑定 测试Mass Assignment（ror经典漏洞） 测试NULL/Invalid Session Cookie 拒绝服务 测试反自动化/机器请求 测试账号锁定 测试HTTP 协议DoS 测试SQL通配符DoS/sleep Dos 业务逻辑 测试功能滥用 测试缺乏不可否认性（非对称加密作用） 测试信任关系 测试数据完整性 测试指责分离 密码学 检查应加密数据是否加密 根据上下文检查是否使用了错误的算法 检查使用弱算法 检查是否合理使用盐 检查随机函数（的随机性） 风险功能—文件上传 检查可接受的文件类型是否在白名单内 检查文件尺寸限制、上传频率和总文件数的阈值与限制情况 检查文件内容是否与定义的文件类型相符 检查所有上传的文件都经过杀毒软件扫描 检查不安全的文件名是否经过处理 检查不能在web根目录下直接访问上传文件 检查上传的文件是否存储在相同的主机名和端口 检查文件和其他媒体继承了身份验证和授权功能 风险功能—支付信息 测试WEB服务器或应用程序是否存在已知漏洞和配置问题 测试默认或易被猜到的密码 测试生产环境的非生产数据或做相反的* 测试 测试注入漏洞 测试缓冲区溢出 测试不安全的加密存储 测试传输层保护不足 测试不适当的错误处理 测试CVSS v2 评分&gt; 4.0的全部漏洞 测试身份验证和授权的问题 测试CSRF HTML 5 测试WEB消息传递 测试WEB本地存储SQL注入 检查CORS的实现 检查离线的WEB应用程序]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>黑盒测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[SQLMap]]></title>
+    <url>%2F2018%2F04%2F01%2Fsqlmap%2F</url>
+    <content type="text"><![CDATA[12345678910111213# 判读是否有注入点 ​$ python sqlmap.py -u 'RUL'# 获取数据库$ python sqlmap.py -u 'RUL' --dbs# 当前使用数据库$ python sqlmap.py -u 'RUL' --current-db# 获取指定库的所有表$ python sqlmap.py -u 'RUL' --table -D "数据库名"#获取表中的字段$ python sqlmap.py -u 'RUL' --columns -T "表名" -D "数据库名"#读取指定字段内容$ python sqlmap.py -u 'RUL' --dump -C "字段，字段，字段" -T "表名" -D "数据库名"#(dump为转存数据） 常用参数12345678910111213141516171819202122232425262728293031323334353637# 测试注入点权限$ python sqlmap.py -u 'RUL' --privileges #所有用户权限$ python sqlmap.py -u 'RUL' --privileges -U sa #sa用户权限# 执行shell命令$ python sqlmap.py -u 'RUL' --os-cmd="net user" #执行net user命令$ python sqlmap.py -u 'RUL' --os-shell #系统交互的shell#执行sql命令$ python sqlmap.py -u 'RUL' --sql-shell #sql交互shell$ python sqlmap.py -u 'RUL' --sql-query="sql语句"# post提交方式$ python sqlmap.py -u 'RUL' --data "post参数"# 显示详细等级 # 0：只显示Python的回溯，错误和关键消息。 # 1：显示信息和警告消息。 # 2：显示调试消息。 # 3：有效载荷注入。 # 4：显示HTTP请求。 # 5：显示HTTP响应头。 # 6：显示HTTP响应页面的内容 $ python sqlmap.py -u 'RUL' -v 1 #注入http请求$ python sqlmap.py -r head.txt --dbs [head.txt POST /login.php HTTP/1.1 Host:www.secbug.org User-Agent:Mozilla/5.0 username=admin&amp;password=admin888]# 直接连接数据库$ python sqlmap.py -d "mysql://admin:admin@127.0.0.1:3306/test" --dbs# 注入等级$ python sqlmap.py -u 'RUL' --leavl 3# 语句插入到指定位置$ python sqlmap.py -u 'http://www.xxser.com/id/2*.html' --dbs# 使用插件$ python sqlmap.py -u 'RUL' -tamper "插件名"# 获取帮助$ python sqlmap.py -h 🌰🌰🌰1234567891011121314151617181920212223242526272829# 🌰：$ SELCECT *$ FORM products$ WHERE category = 'bike' AND '1'='2'$ UNION SELECT *$ FROM new_products;# 🌰：$ SELECT *$ FROM products$ WHERE idproduct = 1+1 (?id=%2B1)(+的url编码%2B)# 数据库注释# SQLserver Oracle Postgresql --(双联字符) /* */# Mysql -- # /* */# 数据库服务器版本# SQLserver $ select @@version# Mysql$ select version()$ select @@version# Oracle$ select banner from v$version$ select banner from v$version where rownum=1# Postgresql$ select version()]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>kali</tag>
+        <tag>sqlmap</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[kali源更换]]></title>
+    <url>%2F2018%2F04%2F01%2Fkali-sources-list-and-ss%2F</url>
+    <content type="text"><![CDATA[12345678$ vim /etc/apt/sources.list​#中科大deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contribdeb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib​$ apt-get update &amp;&amp; apt-get upgrade &amp;&amp; apt-get dist-upgrade ​$ apt-get clean ​# apt-get dist-upgrade 更新系统以及所有依赖包$ apt-get installopen-vm-tools-desktop fuse #安装开源vm tools kali-ss12345678$ apt-get install qt5-qmake qtbase5-dev libbotan1.10-dev pkg-config debhelper libqrencode-dev libzbar-dev libappindicator-dev cmake # 安装编译环境$ git clone https://github.com/shadowsocks/libQtShadowsocks.git #克隆项目$ dpkg-buildpackage -uc -us -b$ dpkg -i ../libqtshadowsocks_1.10.0-1_amd64.deb ../libqtshadowsocks-dev_1.10.0-1_amd64.deb# 若出错，则更改版本信息$ git clone https://github.com/shadowsocks/shadowsocks-qt5.git$ dpkg-buildpackage -uc -us -b$ dpkg -i ../shadowsocks-qt5_2.8.0-1_amd64.deb win-ss1$ wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh tor-network-bridgeobfs2网桥 、obfs3网桥、obfs4网桥（推荐） 、scramblesuit网桥]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>kali</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[时间管理与方法论]]></title>
+    <url>%2F2018%2F04%2F01%2Ftime-management%2F</url>
+    <content type="text"><![CDATA[时间管理有很多种方法，而GTD（全称：Getting Things Done）就是其中一套行之有效的方法，也是现在最受欢迎的方法。Getting Things Done 翻译成中文就是“把事情做完”，GTD的核心理念概括就是 “通过记录的方式把头脑中的各种事情移出来，然后整理安排自己去执行”。带着一些自己的理解，下面谈一谈我对GTD的理解以及方法论，GTD的核心步骤为五步：收集、处理、管理、执行、回顾。 收集 —— 收集记录人的大脑能储存很多东西，但有限，不要相信某事情发生后过了一段时间你还能记得，释放大脑的储存负载，让大脑着重于去思考，平时有什么信息、任务和灵感要在忘记之前用工具记录下来，使用的工具要尽可能的方便，易用，便捷。 处理 —— 处理分类只有及时处理信息，对信息及时做出决定和归纳成类，你才能避免信息的堆积和碎片化，处理信息时采用二分钟法则和四象限法则，二分钟方法就是如果一件事情两分钟内能解决的事情，无论是何种事情，马上着手解决掉，如果不能再进行分类。分类则采用四象限法则，四象限法则是把工作按照重要和紧急两个不同的程度划分成四个“象限”：既紧急又重要、重要但不紧急、紧急但不重要、既不紧急也不重要。 计划 —— 计划安排除了既有的日程安排外，可以设定每日，每周，每月，每年你需要完成的重大事件，把他们排进日程表。每天要做的事件采用三只青蛙理论，前天晚上睡觉前设定第二天最重要的三件事，起床后就可以开始着手这三件事了（同理可用于每月的“三只青蛙”, 每季度的“三只青蛙”，每年的“三只青蛙”）。每周要做的事采用习惯21天效应，一件事只要坚持21天就能习惯成自然，成为一种习惯。每月要做的事采用日历行程表的方法，将每月要做的事排进日程表。每年要做的事采用原望清单法，让自己每年都有收获和进步. 执行 —— 坚决执行执行是Getting Things Done最关键的一步，也是成功与否的关键，要言行一致，制定了计划就一定得做到，这能很好地提升你的自我认同感。执行时你应当在不分心的情境下，一次只执行一件事，既不要多线工作，也不要让你的工作突然中断。采用番茄工作法，将番茄时间设为25分钟，专注工作，中途不做任何与该任务无关的事，直到番茄时钟响起，然后短暂休息5分钟继续番茄时钟，每4个番茄时段可多休息一会儿。番茄工作法极大地提高了工作的效率，还会有意想不到的成就感。 回顾 —— 回顾检查目前我采用的是一周回顾一次，采用PDCA循环法对长期目标、中期目标和短期目标进行回顾，对工作和其它事情进行回顾，看看哪里做的不好，需要改进，重新做出调整计划。这样能使得计划更有效地进行，更加合乎工作程序的逻辑。]]></content>
+      <categories>
+        <category>时间管理</category>
+      </categories>
+      <tags>
+        <tag>时间</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[google search]]></title>
+    <url>%2F2018%2F03%2F31%2Fg00gle-search%2F</url>
+    <content type="text"><![CDATA[搜索知乎上的相关话题：1intext:"星巴克" site:zhihu.com/question/ 搜索百度网盘上的资料1intitle:"星巴克" site:pan.baidu.com 日常生活类1weather/time/sunrise/sundown+Seattle 查询作者的全部作品1books by Starbucks 查询几个信息（ + 、or 号的运用）12“星巴克 + Starbucks”“星巴克 or Starbucks” 找图片1234可以使用inurl语法迅速找到想要的图片搜索：“星巴克” inurl:photo可以用intitle语法找到这类网页。搜索：“intitle:“星巴克” picture” 找软件123451）直接以软件名称以及版本号为关键字查询。2）可以增加“下载”或者“download”为关键字。3）用“” 精确搜索，如：搜索：“winzip 8.0 下载”4）可以用inurl语法直接搜索这些下载目录搜索：PS inurl:download （搜索PS 软件下载） “” 双引号表示完全匹配，搜索：“星巴克” A -B搜索包含A但不包含B的结果（请注意A后面的空格不能省略） 模糊搜索：很多时候想搜一个东西但是不确定具体名字，可以用星号代替忘了的字，像搜 [星*克]； site 搜索结果局限于某个具体网站1site:starbucks.com.cn 注意：site后的冒号为英文字符，而且，冒号后不能有空格，否则，“site:”将被作为一个搜索的关键字。此外，网站域名不能有“http”以及“www”前缀，也不能有任何“/”的目录后缀； link 返回所有链接到某个URL地址的网页。12示例：搜索所有含指向星巴克“www.starbucks.com.cn”链接的网页。搜索：“link:www.starbucks.com.cn” inurl 用于搜索查询词出现在url 中的页面12345搜索：inurl:搜索引擎优化返回的结果都是网址url中包含“搜索引擎优化”的页面。由于关键词出现在url中对排名有一定影响，使用inurl:搜索可以更准确地找到竞争对手示例：搜索关于星巴克公司的PDF文档。搜索：inurl:pdf 星巴克 或者inurl:pdf 星巴克 简介 intitle 返回的是页面title 中包含关键词的页面1intitle:“星巴克” Allintitle 搜索返回的是页面标题中包含多组关键词的文件12搜索：allintitle:Starbucks 星巴克就相当于：intitle:Starbucks intitle:星巴克 filetype 用于搜索特定文件格式。12搜索：filetype:pdf Starbucks返回的就是包含Starbucks 这个关键词的所有pdf文件。 一些好玩的1zerg rush # 页面上方降下很多圆圈]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>google</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python代码风格和PEP8]]></title>
+    <url>%2F2018%2F03%2F31%2Fpython-code-style-pep8%2F</url>
+    <content type="text"><![CDATA[变量 常量 : 大写加下划线1USER_CONSTANT 对于不会发生改变的全局变量，使用大写加下划线。 私有变量 : 小写和一个前导下划线1_private_value Python 中不存在私有变量一说，若是遇到需要保护的变量，使用小写和一个前导下划线。但这只是程序员之间的一个约定，用于警告说明这是一个私有变量，外部类不要去访问它。但实际上，外部类还是可以访问到这个变量。 内置变量 : 小写，两个前导下划线和两个后置下划线1__class__ 两个前导下划线会导致变量在解释期间被更名。这是为了避免内置变量和其他变量产生冲突。用户定义的变量要严格避免这种风格。以免导致混乱。 函数和方法总体而言应该使用，小写和下划线。但有些比较老的库使用的是混合大小写，即首单词小写，之后每个单词第一个字母大写，其余小写。但现在，小写和下划线已成为规范。 私有方法 : 小写和一个前导下划线12def _secrete(self): print("Starbucks") 这里和私有变量一样，并不是真正的私有访问权限。同时也应该注意一般函数不要使用两个前导下划线(当遇到两个前导下划线时，Python 的名称改编特性将发挥作用)。 特殊方法 ：小写和两个前导下划线，两个后置下划线12def __add__(self, other): return int.__add__(other) 这种风格只应用于特殊函数，比如操作符重载等。 函数参数 : 小写和下划线，缺省值等号两边无空格12def connect(self, user=None): self._user = user 类类总是使用驼峰格式命名，即所有单词首字母大写其余字母小写。类名应该简明，精确，并足以从中理解类所完成的工作。常见的一个方法是使用表示其类型或者特性的后缀，例如:SQLEngine、MimeTypes。对于基类而言，可以使用一个 Base 或者 Abstract 前缀，例如:BaseCookie、AbstractGroup123456class UserProfile(object): def __init__(self, profile): return self._profile = profile def profile(self): return self._profile 模块和包除特殊模块 __init__ 之外，模块名称都使用不带下划线的小写字母。若是它们实现一个协议，那么通常使用lib为后缀，例如:123import smtplibimport osimport sys 关于参数 不要用断言来实现静态类型检测断言可以用于检查参数，但不应仅仅是进行静态类型检测。Python 是动态类型语言，静态类型检测违背了其设计思想。断言应该用于避免函数不被毫无意义的调用。 不要滥用 *args 和 **kwargs*args 和 **kwargs 参数可能会破坏函数的健壮性。它们使签名变得模糊，而且代码常常开始在不应该的地方构建小的参数解析器。 其他 使用 has 或 is 前缀命名布尔元素 12is_connect = Truehas_member = False 用复数形式命名序列 1members = ['user_1', 'user_2'] 用显式名称命名字典 1person_address = &#123;'user_1':'10 road WD', 'user_2' : '20 street huafu'&#125; 避免通用名称诸如 list, dict, sequence 或者 element 这样的名称应该避免。 避免现有名称诸如 os, sys 这种系统已经存在的名称应该避免。 一些数字 一行列数 : PEP 8 规定为 79 列，这有些苛刻了。根据自己的情况，比如不要超过满屏时编辑器的显示列数。这样就可以在不动水平游标的情况下，方便的查看代码。 一个函数 : 不要超过 30 行代码, 即可显示在一个屏幕类，可以不使用垂直游标即可看到整个函数。 一个类 : 不要超过 200 行代码，不要有超过 10 个方法。 一个模块 不要超过 500 行。]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Anaconda]]></title>
+    <url>%2F2018%2F03%2F31%2Fpython-anaconda%2F</url>
+    <content type="text"><![CDATA[创建一个名为python36的环境，指定Python版本是3.61$ conda create --name python36 python=3.6 # conda会为我们自动寻找3.6.x中的最新版本 安装好后，使用activate激活某个环境12$ activate python36 # for Windows$ source activate python36 # for Linux &amp; Mac 查看当前版本1$ python --version 如果想返回默认的python 2.7环境，运行12$ deactivate python27 # for Windows$ source deactivate python27 # for Linux &amp; Mac 删除一个已有的环境1$ conda remove --name python34 --all 添加Anaconda的TUNA镜像1$ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ 设置搜索时显示通道地址1$ conda config --set show_channel_urls yes 查看当前环境下已安装的包1$ conda list 查看某个指定环境的已安装包1$ conda list -n python36 查找package信息1$ conda search numpy 安装package1$ conda install -n python36 numpy # 如果不用-n指定环境名称，则被安装在当前活跃环境 更新package1$ conda update -n python36 numpy 删除package1$ conda remove -n python36 numpy 更新conda，保持conda最新1$ conda update conda 更新anaconda1$ conda update anaconda 更新python1$ conda update python]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[星巴克入门·咖啡篇]]></title>
+    <url>%2F2018%2F01%2F30%2Fstarbucks-quickstart-guide-coffee%2F</url>
+    <content type="text"><![CDATA[在星巴克常见的几款咖啡有美式咖啡、拿铁咖啡、卡布奇诺、摩卡咖啡、焦糖玛奇朵、馥芮白，通过定制可以做出适合自己口味的咖啡。以下就介绍这几款咖啡的制作和特点。 Espresso 意式浓缩咖啡以7-8公克深度烘焙的综合咖啡豆，研磨成极细的咖啡粉，经过9个大气压与摄氏92度左右的高温热水，在15秒的短时间内急速萃取30毫升的浓烈咖啡液体称之为「Espresso」，也是其他咖啡饮料的基底 Caffè Americano 美式咖啡成分：浓缩咖啡 + 热水,一杯美式咖啡由两份意式浓缩咖啡加30到470ml热水混合而成特点：较好的保留咖啡原有的醇香，提神效果较好Bigger：夏天可以点一杯冰美式，巨苦巨提神，味道不是一般人可接受 Caffè Latte 拿铁咖啡成分：浓缩咖啡 + 牛奶 + 奶泡(较少)特点：无糖，奶泡轻柔。传统的经典饮料，美妙之处也在于它的简单Bigger：Latte Art 「拉花拿铁」，点咖啡时可以要求使用马克杯装，这样咖啡师就会为你拉出不同样式 Cappuccino 卡布奇诺成分：浓缩咖啡 + 牛奶 + 奶泡(较多)特点：与拿铁的区别就在于有一半奶泡，因此口感比拿铁浓郁，奶泡越细腻越好，但是要及时喝完，时间久了奶泡没了比较难喝Bigger：在奶泡上洒上些许肉桂粉、可可粉或是橙橘柠檬类的果皮丝用以装饰或增加风味 Café Mocha 摩卡咖啡成分：浓缩咖啡 + 牛奶 + 巧克力酱 + 鲜奶油(whipped cream)Bigger：White Chocolate Mocha 白巧克力摩卡咖啡，这款饮料特别温暖，适合女生，适合冬季 Caramel Macchiato 焦糖玛奇朵成分：香草糖浆 + 牛奶 + 奶泡 + 浓缩咖啡 + 焦糖糖浆Bigger：推荐搭配 Chocolate Old Fashion（巧克力甜甜圈） Flat White 馥芮白成分：精萃浓缩咖啡（ristretto）+ 牛奶 + 奶泡特点：特有的白点]]></content>
+      <categories>
+        <category>Starbucks</category>
+      </categories>
+      <tags>
+        <tag>星巴克</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[星巴克入门·基础篇]]></title>
+    <url>%2F2018%2F01%2F30%2Fstarbucks-quickstart-guide%2F</url>
+    <content type="text"><![CDATA[星巴克股份有限公司（英语：Starbucks Corporation，简称：星巴克，英语：Starbucks）是美国一家跨国连锁咖啡店，也是全球最大的连锁咖啡店，发源地与总部位于美国华盛顿州西雅图。除咖啡之外，亦有茶饮等饮料，以及三明治、糕点等点心类食品。其成立于1971年，最初仅专卖咖啡豆，在转型为现行的经营型态后开始快速展店，并成为美式生活的象征之一，部分店铺甚至与超级市场、书店等异业结盟，以复合式商店经营。目前，星巴克已经在中国130个城市开设了2,800家门店，拥有近40,000名身穿绿围裙的星巴克伙伴。 Q&amp;A星巴克有哪些店面类型？ 普通店：只出售以9个大气压冲泡出来的意式浓缩咖啡，及其衍生咖啡及饮品 手冲店：提供高温高压的冲泡方式，也可按客人要求，以手冲壶来冲咖啡 臻选店：提供一般店所没有的臻选咖啡豆供客人选择，臻选店特有「★|R」标志 Q&amp;A星巴克有哪些颜色的围裙？ 「绿色」这是最普遍的围裙颜色，一般兼职员工及正职员工穿的都是绿色围裙，这代表的是他们受过公司的统一训练，能够独自为客人服务 「黑色」穿著黑色围裙的店员被称为「咖啡大师 Coffee Master」，只有通过每年一度「精品咖啡大使」选拔的人才能够穿上，这些店员都具备丰富的咖啡知识，并且能准确调配出客户所点选的咖啡。在臻选店中所有员工都是穿黑色围裙，但是不一定都是Coffee Master 「咖啡色」最稀有的咖啡色围裙则是星巴克在世界各地比赛，选出代表全球的「咖啡大使 Coffee Ambassdor」，他们可说是来自全球各地的星巴克咖啡团队代表 「紫色」2016 年葡萄牙店的助理经理 Fabio da Silva Neno 拿下了星巴克集团举办的 EMEA Barista Championship 的总冠军，因此被加冕「紫色围裙」的殊荣 Q&amp;A星巴克有哪几种杯型？总共有5种，小杯「Short,8oz」，中杯「Tall,12oz」，大杯「Grande 16oz」，超大杯「Venti,20oz」，特大杯「Trenta,30oz」。oz是重量单位盎司，1盎司=28.35g。Short size仅供kid’s drinks和espresso使用，并且没有展示。Trenta size只用于iced coffee &amp; iced tea，这里的”iced coffee”不包括espresso drinks，目前国内似乎没有这个size的杯子。 Q&amp;A星巴克杯子上的英文是什么意思？「Decaf :: 咖啡因」 X : 无咖啡因 1/2 : 一半 「Shots :: 几份espresso」（除了美式以外，其他意式饮料espresso的份量均为：tall(一份浓缩）grand(两份浓缩）venti（两份浓缩）） 1 : 1 Shot 2 : 2 Shots… 「Syrup :: 糖浆」 A : Almond 杏仁 C : Caramel 焦糖 CH : Chai 印度茶 S/CL : Signature/Classic 经典糖浆 CN : Cinnamon 肉桂 H : Hazelnut 榛果 I : Irish Cream 爱尔兰奶油 MO : Mocha Syrup 摩卡糖浆 P : Peppermint 薄荷 R : Raspberry 覆盆子糖浆 SFH : Sugar Free Hazelnut 无糖榛子 SFV : Sugar Free Vanilla 无糖香草 V : Vanilla 香草 WM : White Chocolate Mocha Syrup 白巧克力摩卡糖浆 「Milk :: 牛奶」 B : Breve(half-and-half) 一半奶油一半牛奶 E : Eggnog(seasonal) 蛋酒 % : 50% whole, 50% non-fat 全脂50％，无脂50％ N : Nonfat 脱脂 L : Lowfat 低脂 S : Soy 豆奶 O : Organic Milk 有机牛奶 「Custom :: 定制」 CR : Caramel Sauce 焦糖酱 D : Dry 干 DB|2xB : Double Blended 双混合 F : Foamy 泡沫的 H : Hot 热的 HANDOFF : Deliver to customer’s table 送到客户桌边 K : Kid’s Beverage(tiny size, cooler temperature) 小孩类型的… NW : No Water 不要水 NF : No Foamy 不要奶泡 SL : Sweet’n Low 糖精 SP : Splenda 蔗糖素 STRAB : Strawberry Fruit Sauce 草莓水果酱 SR : Sugar in the raw 原糖 VBEAN : Vanilla Bean Powder 香草豆粉 W : Wet 湿 WC : Whipped Cream 奶油 L : Little 少加 X : Extra 多加 = : Equal 等于 / : Delete 去除 「Drink :: 类型」 A : Caffè Americano 美式咖啡 C : Cappuccino 卡布奇诺 CM : Caramel Macchiato 焦糖玛奇朵 E : Espresso 意式浓缩 L : Caffè Latte 拿铁咖啡 M : Café Mocha 摩卡咖啡 FW : Flat White 馥芮白 F : Frappuccino 星冰乐]]></content>
+      <categories>
+        <category>Starbucks</category>
+      </categories>
+      <tags>
+        <tag>星巴克</tag>
+      </tags>
+  </entry>
+</search>
