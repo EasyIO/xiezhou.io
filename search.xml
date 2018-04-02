@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Markdown常用命令]]></title>
+    <url>%2F2018%2F04%2F02%2Fmarkdown%2F</url>
+    <content type="text"><![CDATA[# 一级标题 一级标题## 二级标题 二级标题 > 区块引用 区块引用 >嵌套区块>> 嵌套区块>>> 嵌套区块 嵌套区块 嵌套区块 嵌套区块 有序列表 有序列表 有序列表 * * * *** ------- * 无序列表+ 无序列表- 无序列表 无序列表 无序列表 无序列表 THIS IS [链接](https://www.starbucks.com.cn/ “星巴克”).THIS IS 链接. *斜体*斜体**加粗**加粗_斜体_斜体__加粗__加粗\*转义\**转义* ``` bash$ cd```1$ cd ![img](/images/coffe-touch-icon-next.png “logo”) | 链接 | 结果 | 原因 ||:—–|:—:|———-:||文本内容| 是 |同协议同域名同端口||文本内容| 是 |同协议同域名同端口||文本内容| 是 |同协议同域名同端口| 链接 结果 原因 文本内容 是 同协议同域名同端口 文本内容 是 同协议同域名同端口 文本内容 是 同协议同域名同端口]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Cookie参数简介]]></title>
     <url>%2F2018%2F04%2F01%2Fcookie%2F</url>
     <content type="text"><![CDATA[参数 简介 Domain 设置关联cookie的域名 Expires 通过给定一个过期时间来创建一个持久化cookie httponly 避免cookie被js访问 name cookie名称 path 关联到cookie的路径，默认为 / value 值 secure 用于指定cookie需要通过安全socket曾连接传递]]></content>
@@ -38,7 +49,7 @@
   <entry>
     <title><![CDATA[Ubuntu设置应用在后台运行服务]]></title>
     <url>%2F2018%2F04%2F01%2Fubuntu-bakcgroup%2F</url>
-    <content type="text"><![CDATA[12345678910111213141516# 方法一:$ setsid python xxx.py &gt;log.txt$ ps -aux $ ps -ef |grep run.py$ kill -9 [PID]# 方法二:$ nohup python run.py &gt;log.txt# 将打印内容重定向到/dev/null中，相当于直接丢弃，任何地方都找不到打印的内容$ python your_script.py &gt;&gt; /dev/null # 如果又要查看打印的内容，怎么让它输出(还在运行)？# 将输出重定向到当前目录下的log.txt文件中$ python your_script.py &gt;&gt; log.txt# cat log.txt # 查看截止目前所有的日志内容# tail log.txt # 查看截止目前，最后10行日志# tail -f log.txt # 从最后10行开始滚动输出，准实时刷新# tail -n 100 -f log.txt # 从最后100行开始滚动输出]]></content>
+    <content type="text"><![CDATA[12345678910111213141516# 方法一:$ setsid python xxx.py &gt;log.txt$ ps -aux $ ps -ef |grep run.py$ kill -9 [PID]# 方法二:$ nohup python run.py &gt;log.txt# 将打印内容重定向到/dev/null中，相当于直接丢弃，任何地方都找不到打印的内容$ python your_script.py &gt;&gt; /dev/null # 如果又要查看打印的内容，怎么让它输出(还在运行)？# 将输出重定向到当前目录下的log.txt文件中$ python your_script.py &gt;&gt; log.txt$ cat log.txt # 查看截止目前所有的日志内容$ tail log.txt # 查看截止目前，最后10行日志$ tail -f log.txt # 从最后10行开始滚动输出，准实时刷新$ tail -n 100 -f log.txt # 从最后100行开始滚动输出]]></content>
       <categories>
         <category>技术</category>
       </categories>

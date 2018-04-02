@@ -121,7 +121,7 @@
 <meta property="og:site_name" content="Wish a Starbucks Coffee Here!">
 <meta property="og:description" content="12345678910111213141516# 方法一:$ setsid python xxx.py &amp;gt;log.txt$ ps -aux $ ps -ef |grep run.py$ kill -9 [PID]# 方法二:$ nohup python run.py &amp;gt;log.txt# 将打印内容重定向到/dev/null中，相当于直接丢弃，任何地方都找不到打印的内容$ python">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-01T11:40:43.735Z">
+<meta property="og:updated_time" content="2018-04-02T00:43:19.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu设置应用在后台运行服务">
 <meta name="twitter:description" content="12345678910111213141516# 方法一:$ setsid python xxx.py &amp;gt;log.txt$ ps -aux $ ps -ef |grep run.py$ kill -9 [PID]# 方法二:$ nohup python run.py &amp;gt;log.txt# 将打印内容重定向到/dev/null中，相当于直接丢弃，任何地方都找不到打印的内容$ python">
@@ -427,7 +427,7 @@
       
 
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法一:</span></span><br><span class="line">$ setsid python xxx.py &gt;log.txt</span><br><span class="line">$ ps -aux </span><br><span class="line">$ ps -ef |grep run.py</span><br><span class="line">$ <span class="built_in">kill</span> -9 [PID]</span><br><span class="line"><span class="comment"># 方法二:</span></span><br><span class="line">$ nohup python run.py &gt;log.txt</span><br><span class="line"><span class="comment"># 将打印内容重定向到/dev/null中，相当于直接丢弃，任何地方都找不到打印的内容</span></span><br><span class="line">$ python your_script.py &gt;&gt; /dev/null </span><br><span class="line"><span class="comment"># 如果又要查看打印的内容，怎么让它输出(还在运行)？</span></span><br><span class="line"><span class="comment"># 将输出重定向到当前目录下的log.txt文件中</span></span><br><span class="line">$ python your_script.py &gt;&gt; log.txt</span><br><span class="line"><span class="comment"># cat log.txt  # 查看截止目前所有的日志内容</span></span><br><span class="line"><span class="comment"># tail log.txt # 查看截止目前，最后10行日志</span></span><br><span class="line"><span class="comment"># tail -f log.txt # 从最后10行开始滚动输出，准实时刷新</span></span><br><span class="line"><span class="comment"># tail -n 100 -f log.txt  # 从最后100行开始滚动输出</span></span><br></pre></td></tr></table></figure>
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法一:</span></span><br><span class="line">$ setsid python xxx.py &gt;log.txt</span><br><span class="line">$ ps -aux </span><br><span class="line">$ ps -ef |grep run.py</span><br><span class="line">$ <span class="built_in">kill</span> -9 [PID]</span><br><span class="line"><span class="comment"># 方法二:</span></span><br><span class="line">$ nohup python run.py &gt;log.txt</span><br><span class="line"><span class="comment"># 将打印内容重定向到/dev/null中，相当于直接丢弃，任何地方都找不到打印的内容</span></span><br><span class="line">$ python your_script.py &gt;&gt; /dev/null </span><br><span class="line"><span class="comment"># 如果又要查看打印的内容，怎么让它输出(还在运行)？</span></span><br><span class="line"><span class="comment"># 将输出重定向到当前目录下的log.txt文件中</span></span><br><span class="line">$ python your_script.py &gt;&gt; log.txt</span><br><span class="line">$ cat log.txt  <span class="comment"># 查看截止目前所有的日志内容</span></span><br><span class="line">$ tail log.txt <span class="comment"># 查看截止目前，最后10行日志</span></span><br><span class="line">$ tail -f log.txt <span class="comment"># 从最后10行开始滚动输出，准实时刷新</span></span><br><span class="line">$ tail -n 100 -f log.txt  <span class="comment"># 从最后100行开始滚动输出</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -545,7 +545,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -567,7 +567,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

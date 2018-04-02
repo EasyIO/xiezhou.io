@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://oje.pw/"/>
-  <updated>2018-04-01T12:28:39.546Z</updated>
+  <updated>2018-04-02T01:12:53.790Z</updated>
   <id>http://oje.pw/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Markdown常用命令</title>
+    <link href="http://oje.pw/2018/04/02/markdown/"/>
+    <id>http://oje.pw/2018/04/02/markdown/</id>
+    <published>2018-04-02T00:50:55.000Z</published>
+    <updated>2018-04-02T01:12:53.790Z</updated>
+    
+    <content type="html"><![CDATA[<p># 一级标题 </p><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><p><br><br>## 二级标题</p><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><a id="more"></a><p>> 区块引用</p><blockquote><p>区块引用  </p></blockquote><p>>嵌套区块<br>>> 嵌套区块<br>>>> 嵌套区块</p><blockquote><p>嵌套区块</p><blockquote><p>嵌套区块</p><blockquote><p>嵌套区块</p></blockquote></blockquote></blockquote><ol><li>有序列表</li><li>有序列表</li><li>有序列表</li></ol><p>* * *</p><hr><p>***</p><hr><p>-------</p><hr><p>* 无序列表<br>+ 无序列表<br>- 无序列表 </p><ul><li>无序列表</li></ul><ul><li>无序列表</li></ul><ul><li>无序列表 </li></ul><p>THIS IS [链接](<a href="https://www.starbucks.com.cn/" target="_blank" rel="noopener">https://www.starbucks.com.cn/</a> “星巴克”).<br>THIS IS <a href="https://www.starbucks.com.cn/" title="星巴克" target="_blank" rel="noopener">链接</a>.</p><p>*斜体*<br><em>斜体</em><br>**加粗**<br><strong>加粗</strong><br>_斜体_<br><em>斜体</em><br>__加粗__<br><strong>加粗</strong><br>\*转义\*<br>*转义*</p><p>``` bash<br>$ cd<br>```<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span></span><br></pre></td></tr></table></figure></p><p>![img](/images/coffe-touch-icon-next.png “logo”)<br><img src="/images/coffe-touch-icon-next.png" alt="img" title="logo"></p><p>| 链接 | 结果 | 原因 |<br>|:—–|:—:|———-:|<br>|文本内容| <strong><code>是</code></strong> |同协议同域名同端口|<br>|文本内容| <strong><code>是</code></strong> |同协议同域名同端口|<br>|文本内容| <strong><code>是</code></strong> |同协议同域名同端口|</p><table><thead><tr><th style="text-align:left">链接</th><th style="text-align:center">结果</th><th style="text-align:right">原因</th></tr></thead><tbody><tr><td style="text-align:left">文本内容</td><td style="text-align:center"><strong><code>是</code></strong></td><td style="text-align:right">同协议同域名同端口</td></tr><tr><td style="text-align:left">文本内容</td><td style="text-align:center"><strong><code>是</code></strong></td><td style="text-align:right">同协议同域名同端口</td></tr><tr><td style="text-align:left">文本内容</td><td style="text-align:center"><strong><code>是</code></strong></td><td style="text-align:right">同协议同域名同端口</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;# 一级标题 &lt;/p&gt;
+&lt;h1 id=&quot;一级标题&quot;&gt;&lt;a href=&quot;#一级标题&quot; class=&quot;headerlink&quot; title=&quot;一级标题&quot;&gt;&lt;/a&gt;一级标题&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;br&gt;## 二级标题&lt;/p&gt;
+&lt;h2 id=&quot;二级标题&quot;&gt;&lt;a href=&quot;#二级标题&quot; class=&quot;headerlink&quot; title=&quot;二级标题&quot;&gt;&lt;/a&gt;二级标题&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://oje.pw/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="markdown" scheme="http://oje.pw/tags/markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>Cookie参数简介</title>
@@ -115,9 +139,9 @@
     <link href="http://oje.pw/2018/04/01/ubuntu-bakcgroup/"/>
     <id>http://oje.pw/2018/04/01/ubuntu-bakcgroup/</id>
     <published>2018-04-01T11:36:00.000Z</published>
-    <updated>2018-04-01T11:40:43.735Z</updated>
+    <updated>2018-04-02T00:43:19.659Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法一:</span></span><br><span class="line">$ setsid python xxx.py &gt;log.txt</span><br><span class="line">$ ps -aux </span><br><span class="line">$ ps -ef |grep run.py</span><br><span class="line">$ <span class="built_in">kill</span> -9 [PID]</span><br><span class="line"><span class="comment"># 方法二:</span></span><br><span class="line">$ nohup python run.py &gt;log.txt</span><br><span class="line"><span class="comment"># 将打印内容重定向到/dev/null中，相当于直接丢弃，任何地方都找不到打印的内容</span></span><br><span class="line">$ python your_script.py &gt;&gt; /dev/null </span><br><span class="line"><span class="comment"># 如果又要查看打印的内容，怎么让它输出(还在运行)？</span></span><br><span class="line"><span class="comment"># 将输出重定向到当前目录下的log.txt文件中</span></span><br><span class="line">$ python your_script.py &gt;&gt; log.txt</span><br><span class="line"><span class="comment"># cat log.txt  # 查看截止目前所有的日志内容</span></span><br><span class="line"><span class="comment"># tail log.txt # 查看截止目前，最后10行日志</span></span><br><span class="line"><span class="comment"># tail -f log.txt # 从最后10行开始滚动输出，准实时刷新</span></span><br><span class="line"><span class="comment"># tail -n 100 -f log.txt  # 从最后100行开始滚动输出</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方法一:</span></span><br><span class="line">$ setsid python xxx.py &gt;log.txt</span><br><span class="line">$ ps -aux </span><br><span class="line">$ ps -ef |grep run.py</span><br><span class="line">$ <span class="built_in">kill</span> -9 [PID]</span><br><span class="line"><span class="comment"># 方法二:</span></span><br><span class="line">$ nohup python run.py &gt;log.txt</span><br><span class="line"><span class="comment"># 将打印内容重定向到/dev/null中，相当于直接丢弃，任何地方都找不到打印的内容</span></span><br><span class="line">$ python your_script.py &gt;&gt; /dev/null </span><br><span class="line"><span class="comment"># 如果又要查看打印的内容，怎么让它输出(还在运行)？</span></span><br><span class="line"><span class="comment"># 将输出重定向到当前目录下的log.txt文件中</span></span><br><span class="line">$ python your_script.py &gt;&gt; log.txt</span><br><span class="line">$ cat log.txt  <span class="comment"># 查看截止目前所有的日志内容</span></span><br><span class="line">$ tail log.txt <span class="comment"># 查看截止目前，最后10行日志</span></span><br><span class="line">$ tail -f log.txt <span class="comment"># 从最后10行开始滚动输出，准实时刷新</span></span><br><span class="line">$ tail -n 100 -f log.txt  <span class="comment"># 从最后100行开始滚动输出</span></span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -531,30 +555,6 @@
     
     
       <category term="idea" scheme="http://oje.pw/tags/idea/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MongoDB</title>
-    <link href="http://oje.pw/2018/04/01/mongodb-basis/"/>
-    <id>http://oje.pw/2018/04/01/mongodb-basis/</id>
-    <published>2018-04-01T04:16:24.000Z</published>
-    <updated>2018-04-01T05:04:56.903Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> d:/soft/mongodb/bin</span><br><span class="line"><span class="comment"># 设置log和data路径，需要创建data文件夹</span></span><br><span class="line">$ mongod.exe --logpath E:\DB\MONGO_DB\mongodb.log --logappend</span><br><span class="line"> --dbpath E:\DB\MONGO_DB\data --directoryperdb --serviceName MongoDB -install </span><br><span class="line">$ net start MongoDB <span class="comment"># 启动服务</span></span><br><span class="line">$ net stop MongoDB <span class="comment"># 停止服务</span></span><br></pre></td></tr></table></figure><a id="more"></a><h4 id="mongo基础使用"><a href="#mongo基础使用" class="headerlink" title="mongo基础使用"></a>mongo基础使用</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ db.getCollection(<span class="string">'email_zero'</span>).find(&#123;&#125;) <span class="comment"># 查询表</span></span><br><span class="line">$ db.email_zero.stats() <span class="comment"># 表信息</span></span><br><span class="line">$ db.email_zero.ensureIndex(&#123;<span class="string">"email"</span>:1&#125;) <span class="comment"># 建立索引</span></span><br><span class="line">$ db.email_zero.find(&#123;<span class="string">"email"</span>:<span class="string">"123@163.com"</span>&#125;).pretty() <span class="comment"># 查询例子</span></span><br><span class="line"><span class="comment"># 导出数据</span></span><br><span class="line">$ mongoexport -d admin -c mydb --csv -f tid,uid,username,isupdate,phone -o mydb.dat</span><br></pre></td></tr></table></figure><h4 id="去重脚本"><a href="#去重脚本" class="headerlink" title="去重脚本"></a>去重脚本</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var rs = db.email_zero.aggregate([&#123;<span class="variable">$group</span>:&#123;_id:<span class="string">"email"</span>,count:&#123;<span class="variable">$sum</span>:1&#125;&#125;&#125;,&#123;<span class="variable">$match</span>:&#123;count:&#123;<span class="variable">$gt</span>:1&#125;&#125;&#125;])</span><br><span class="line"><span class="keyword">for</span>(var i <span class="keyword">in</span> rs.result)&#123;</span><br><span class="line">    var r = rs.result[1].count;</span><br><span class="line">    var k = rs.result[1]._id;</span><br><span class="line">    <span class="keyword">for</span>(var ii=0;ii&lt;r-1;ii++)&#123;</span><br><span class="line">        db.biu.remove(&#123;<span class="string">"email"</span>:k&#125;,<span class="literal">true</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; d:/soft/mongodb/bin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置log和data路径，需要创建data文件夹&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mongod.exe --logpath E:\DB\MONGO_DB\mongodb.log --logappend&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; --dbpath E:\DB\MONGO_DB\data --directoryperdb --serviceName MongoDB -install &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ net start MongoDB &lt;span class=&quot;comment&quot;&gt;# 启动服务&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ net stop MongoDB &lt;span class=&quot;comment&quot;&gt;# 停止服务&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://oje.pw/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="数据库" scheme="http://oje.pw/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-      <category term="mongodb" scheme="http://oje.pw/tags/mongodb/"/>
     
   </entry>
   
