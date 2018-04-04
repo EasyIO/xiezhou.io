@@ -5,7 +5,7 @@
     <url>%2F2018%2F04%2F03%2Fmusic-panama-mattleo%2F</url>
     <content type="text"><![CDATA[]]></content>
       <categories>
-        <category>音乐</category>
+        <category>音乐π</category>
       </categories>
       <tags>
         <tag>Music</tag>
@@ -210,10 +210,10 @@
         <category>安全π</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
         <tag>Airmon-ng</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -333,9 +333,9 @@
         <category>安全π</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
-        <tag>Linux</tag>
         <tag>SSR</tag>
       </tags>
   </entry>
@@ -344,7 +344,7 @@
     <url>%2F2018%2F04%2F01%2Ftime-management%2F</url>
     <content type="text"><![CDATA[时间管理有很多种方法，而GTD（全称：Getting Things Done）就是其中一套行之有效的方法，也是现在最受欢迎的方法。Getting Things Done 翻译成中文就是“把事情做完”，GTD的核心理念概括就是 “通过记录的方式把头脑中的各种事情移出来，然后整理安排自己去执行”。带着一些自己的理解，下面谈一谈我对GTD的理解以及方法论，GTD的核心步骤为五步：收集、处理、管理、执行、回顾。 收集 —— 收集记录人的大脑能储存很多东西，但有限，不要相信某事情发生后过了一段时间你还能记得，释放大脑的储存负载，让大脑着重于去思考，平时有什么信息、任务和灵感要在忘记之前用工具记录下来，使用的工具要尽可能的方便，易用，便捷。 处理 —— 处理分类只有及时处理信息，对信息及时做出决定和归纳成类，你才能避免信息的堆积和碎片化，处理信息时采用二分钟法则和四象限法则，二分钟方法就是如果一件事情两分钟内能解决的事情，无论是何种事情，马上着手解决掉，如果不能再进行分类。分类则采用四象限法则，四象限法则是把工作按照重要和紧急两个不同的程度划分成四个“象限”：既紧急又重要、重要但不紧急、紧急但不重要、既不紧急也不重要。 计划 —— 计划安排除了既有的日程安排外，可以设定每日，每周，每月，每年你需要完成的重大事件，把他们排进日程表。每天要做的事件采用三只青蛙理论，前天晚上睡觉前设定第二天最重要的三件事，起床后就可以开始着手这三件事了（同理可用于每月的“三只青蛙”, 每季度的“三只青蛙”，每年的“三只青蛙”）。每周要做的事采用习惯21天效应，一件事只要坚持21天就能习惯成自然，成为一种习惯。每月要做的事采用日历行程表的方法，将每月要做的事排进日程表。每年要做的事采用原望清单法，让自己每年都有收获和进步. 执行 —— 坚决执行执行是Getting Things Done最关键的一步，也是成功与否的关键，要言行一致，制定了计划就一定得做到，这能很好地提升你的自我认同感。执行时你应当在不分心的情境下，一次只执行一件事，既不要多线工作，也不要让你的工作突然中断。采用番茄工作法，将番茄时间设为25分钟，专注工作，中途不做任何与该任务无关的事，直到番茄时钟响起，然后短暂休息5分钟继续番茄时钟，每4个番茄时段可多休息一会儿。番茄工作法极大地提高了工作的效率，还会有意想不到的成就感。 回顾 —— 回顾检查目前我采用的是一周回顾一次，采用PDCA循环法对长期目标、中期目标和短期目标进行回顾，对工作和其它事情进行回顾，看看哪里做的不好，需要改进，重新做出调整计划。这样能使得计划更有效地进行，更加合乎工作程序的逻辑。]]></content>
       <categories>
-        <category>时间管理</category>
+        <category>时间π</category>
       </categories>
       <tags>
         <tag>时间</tag>
@@ -388,7 +388,7 @@
     <url>%2F2018%2F01%2F30%2Fstarbucks-quickstart-guide-coffee%2F</url>
     <content type="text"><![CDATA[在星巴克常见的几款咖啡有美式咖啡、拿铁咖啡、卡布奇诺、摩卡咖啡、焦糖玛奇朵、馥芮白，通过定制可以做出适合自己口味的咖啡。以下就介绍这几款咖啡的制作和特点。 Espresso 意式浓缩咖啡以7-8公克深度烘焙的综合咖啡豆，研磨成极细的咖啡粉，经过9个大气压与摄氏92度左右的高温热水，在15秒的短时间内急速萃取30毫升的浓烈咖啡液体称之为「Espresso」，也是其他咖啡饮料的基底 Caffè Americano 美式咖啡成分：浓缩咖啡 + 热水,一杯美式咖啡由两份意式浓缩咖啡加30到470ml热水混合而成特点：较好的保留咖啡原有的醇香，提神效果较好Bigger：夏天可以点一杯冰美式，巨苦巨提神，味道不是一般人可接受 Caffè Latte 拿铁咖啡成分：浓缩咖啡 + 牛奶 + 奶泡(较少)特点：无糖，奶泡轻柔。传统的经典饮料，美妙之处也在于它的简单Bigger：Latte Art 「拉花拿铁」，点咖啡时可以要求使用马克杯装，这样咖啡师就会为你拉出不同样式 Cappuccino 卡布奇诺成分：浓缩咖啡 + 牛奶 + 奶泡(较多)特点：与拿铁的区别就在于有一半奶泡，因此口感比拿铁浓郁，奶泡越细腻越好，但是要及时喝完，时间久了奶泡没了比较难喝Bigger：在奶泡上洒上些许肉桂粉、可可粉或是橙橘柠檬类的果皮丝用以装饰或增加风味 Café Mocha 摩卡咖啡成分：浓缩咖啡 + 牛奶 + 巧克力酱 + 鲜奶油(whipped cream)Bigger：White Chocolate Mocha 白巧克力摩卡咖啡，这款饮料特别温暖，适合女生，适合冬季 Caramel Macchiato 焦糖玛奇朵成分：香草糖浆 + 牛奶 + 奶泡 + 浓缩咖啡 + 焦糖糖浆Bigger：推荐搭配 Chocolate Old Fashion（巧克力甜甜圈） Flat White 馥芮白成分：精萃浓缩咖啡（ristretto）+ 牛奶 + 奶泡特点：特有的白点]]></content>
       <categories>
-        <category>Starbucks</category>
+        <category>Starbucksπ</category>
       </categories>
       <tags>
         <tag>星巴克</tag>
@@ -399,7 +399,7 @@
     <url>%2F2018%2F01%2F30%2Fstarbucks-quickstart-guide%2F</url>
     <content type="text"><![CDATA[星巴克股份有限公司（英语：Starbucks Corporation，简称：星巴克，英语：Starbucks）是美国一家跨国连锁咖啡店，也是全球最大的连锁咖啡店，发源地与总部位于美国华盛顿州西雅图。除咖啡之外，亦有茶饮等饮料，以及三明治、糕点等点心类食品。其成立于1971年，最初仅专卖咖啡豆，在转型为现行的经营型态后开始快速展店，并成为美式生活的象征之一，部分店铺甚至与超级市场、书店等异业结盟，以复合式商店经营。目前，星巴克已经在中国130个城市开设了2,800家门店，拥有近40,000名身穿绿围裙的星巴克伙伴。 Q&amp;A星巴克有哪些店面类型？ 普通店：只出售以9个大气压冲泡出来的意式浓缩咖啡，及其衍生咖啡及饮品 手冲店：提供高温高压的冲泡方式，也可按客人要求，以手冲壶来冲咖啡 臻选店：提供一般店所没有的臻选咖啡豆供客人选择，臻选店特有「★|R」标志 Q&amp;A星巴克有哪些颜色的围裙？ 「绿色」这是最普遍的围裙颜色，一般兼职员工及正职员工穿的都是绿色围裙，这代表的是他们受过公司的统一训练，能够独自为客人服务 「黑色」穿著黑色围裙的店员被称为「咖啡大师 Coffee Master」，只有通过每年一度「精品咖啡大使」选拔的人才能够穿上，这些店员都具备丰富的咖啡知识，并且能准确调配出客户所点选的咖啡。在臻选店中所有员工都是穿黑色围裙，但是不一定都是Coffee Master 「咖啡色」最稀有的咖啡色围裙则是星巴克在世界各地比赛，选出代表全球的「咖啡大使 Coffee Ambassdor」，他们可说是来自全球各地的星巴克咖啡团队代表 「紫色」2016 年葡萄牙店的助理经理 Fabio da Silva Neno 拿下了星巴克集团举办的 EMEA Barista Championship 的总冠军，因此被加冕「紫色围裙」的殊荣 Q&amp;A星巴克有哪几种杯型？总共有5种，小杯「Short,8oz」，中杯「Tall,12oz」，大杯「Grande 16oz」，超大杯「Venti,20oz」，特大杯「Trenta,30oz」。oz是重量单位盎司，1盎司=28.35g。Short size仅供kid’s drinks和espresso使用，并且没有展示。Trenta size只用于iced coffee &amp; iced tea，这里的”iced coffee”不包括espresso drinks，目前国内似乎没有这个size的杯子。 Q&amp;A星巴克杯子上的英文是什么意思？「Decaf :: 咖啡因」 X : 无咖啡因 1/2 : 一半 「Shots :: 几份espresso」（除了美式以外，其他意式饮料espresso的份量均为：tall(一份浓缩）grand(两份浓缩）venti（两份浓缩）） 1 : 1 Shot 2 : 2 Shots… 「Syrup :: 糖浆」 A : Almond 杏仁 C : Caramel 焦糖 CH : Chai 印度茶 S/CL : Signature/Classic 经典糖浆 CN : Cinnamon 肉桂 H : Hazelnut 榛果 I : Irish Cream 爱尔兰奶油 MO : Mocha Syrup 摩卡糖浆 P : Peppermint 薄荷 R : Raspberry 覆盆子糖浆 SFH : Sugar Free Hazelnut 无糖榛子 SFV : Sugar Free Vanilla 无糖香草 V : Vanilla 香草 WM : White Chocolate Mocha Syrup 白巧克力摩卡糖浆 「Milk :: 牛奶」 B : Breve(half-and-half) 一半奶油一半牛奶 E : Eggnog(seasonal) 蛋酒 % : 50% whole, 50% non-fat 全脂50％，无脂50％ N : Nonfat 脱脂 L : Lowfat 低脂 S : Soy 豆奶 O : Organic Milk 有机牛奶 「Custom :: 定制」 CR : Caramel Sauce 焦糖酱 D : Dry 干 DB|2xB : Double Blended 双混合 F : Foamy 泡沫的 H : Hot 热的 HANDOFF : Deliver to customer’s table 送到客户桌边 K : Kid’s Beverage(tiny size, cooler temperature) 小孩类型的… NW : No Water 不要水 NF : No Foamy 不要奶泡 SL : Sweet’n Low 糖精 SP : Splenda 蔗糖素 STRAB : Strawberry Fruit Sauce 草莓水果酱 SR : Sugar in the raw 原糖 VBEAN : Vanilla Bean Powder 香草豆粉 W : Wet 湿 WC : Whipped Cream 奶油 L : Little 少加 X : Extra 多加 = : Equal 等于 / : Delete 去除 「Drink :: 类型」 A : Caffè Americano 美式咖啡 C : Cappuccino 卡布奇诺 CM : Caramel Macchiato 焦糖玛奇朵 E : Espresso 意式浓缩 L : Caffè Latte 拿铁咖啡 M : Café Mocha 摩卡咖啡 FW : Flat White 馥芮白 F : Frappuccino 星冰乐]]></content>
       <categories>
-        <category>Starbucks</category>
+        <category>Starbucksπ</category>
       </categories>
       <tags>
         <tag>星巴克</tag>

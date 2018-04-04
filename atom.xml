@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://oje.pw/"/>
-  <updated>2018-04-04T04:50:14.591Z</updated>
+  <updated>2018-04-04T11:28:30.667Z</updated>
   <id>http://oje.pw/</id>
   
   <author>
@@ -21,21 +21,22 @@
     <link href="http://oje.pw/2018/04/03/music-panama-mattleo/"/>
     <id>http://oje.pw/2018/04/03/music-panama-mattleo/</id>
     <published>2018-04-03T02:48:03.000Z</published>
-    <updated>2018-04-04T04:50:14.591Z</updated>
+    <updated>2018-04-04T11:28:30.667Z</updated>
     
-    <content type="html"><![CDATA[<p><script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.6.0/APlayer.min.js"></script></p><p><script src="https://cdn.jsdelivr.net/npm/meting@1.0.1/dist/Meting.min.js"></script></p><div class="aplayer" data-id="34229976" data-server="netease" data-type="song" data-autoplay="false" data-mode="single"></div>]]></content>
+    <content type="html"><![CDATA[<p><script src="/js/APlayer.min.js"></script></p><p><script src="/js/Meting.min.js"></script></p><div class="aplayer" data-id="34229976" data-server="netease" data-type="song" data-autoplay="false" data-mode="single"></div>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.6.0/APlayer.min.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;script src=&quot;https://cdn.jsdelivr.net/
+        &lt;p&gt;&lt;script src=&quot;/js/APlayer.min.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;div class=&quot;aplayer&quot; data-id=&quot;34229976&quot; d
       
     
     </summary>
     
-      <category term="音乐" scheme="http://oje.pw/categories/%E9%9F%B3%E4%B9%90/"/>
+      <category term="音乐π" scheme="http://oje.pw/categories/%E9%9F%B3%E4%B9%90%CF%80/"/>
     
     
       <category term="Music" scheme="http://oje.pw/tags/Music/"/>
@@ -525,13 +526,13 @@
       <category term="安全π" scheme="http://oje.pw/categories/%E5%AE%89%E5%85%A8%CF%80/"/>
     
     
+      <category term="Linux" scheme="http://oje.pw/tags/Linux/"/>
+    
       <category term="网络安全" scheme="http://oje.pw/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
     
       <category term="Kali" scheme="http://oje.pw/tags/Kali/"/>
     
       <category term="Airmon-ng" scheme="http://oje.pw/tags/Airmon-ng/"/>
-    
-      <category term="Linux" scheme="http://oje.pw/tags/Linux/"/>
     
   </entry>
   
