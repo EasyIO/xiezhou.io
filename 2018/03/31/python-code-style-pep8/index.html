@@ -113,18 +113,18 @@
 
 
 
-<meta name="description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。">
+<meta name="description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。  私有变量 : 小写和一个前导下划线1_private_value">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python代码风格和PEP8">
 <meta property="og:url" content="http://oje.pw/2018/03/31/python-code-style-pep8/index.html">
 <meta property="og:site_name" content="Wish a Starbucks Coffee Here!">
-<meta property="og:description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。">
+<meta property="og:description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。  私有变量 : 小写和一个前导下划线1_private_value">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-01T00:20:14.688Z">
+<meta property="og:updated_time" content="2018-04-04T05:43:49.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python代码风格和PEP8">
-<meta name="twitter:description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。">
+<meta name="twitter:description" content="变量 常量 : 大写加下划线1USER_CONSTANT   对于不会发生改变的全局变量，使用大写加下划线。  私有变量 : 小写和一个前导下划线1_private_value">
 
 
 
@@ -261,6 +261,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -390,8 +400,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/技术π/" itemprop="url" rel="index">
+                    <span itemprop="name">技术π</span>
                   </a>
                 </span>
 
@@ -431,11 +441,12 @@
 <li>常量 : 大写加下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USER_CONSTANT</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>对于不会发生改变的全局变量，使用大写加下划线。<br><a id="more"></a> </p>
+<p>对于不会发生改变的全局变量，使用大写加下划线。</p>
 <ul>
 <li>私有变量 : 小写和一个前导下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_private_value</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<a id="more"></a> 
 <p>Python 中不存在私有变量一说，若是遇到需要保护的变量，使用小写和一个前导下划线。但这只是程序员之间的一个约定，用于警告说明这是一个私有变量，外部类不要去访问它。但实际上，外部类还是可以访问到这个变量。</p>
 <ul>
 <li>内置变量 : 小写，两个前导下划线和两个后置下划线<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__class__</span><br></pre></td></tr></table></figure>
@@ -523,8 +534,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/31/g00gle-search/" rel="prev" title="google search">
-                google search <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/31/g00gle-search/" rel="prev" title="Google Search">
+                Google Search <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -606,7 +617,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -617,7 +628,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -628,7 +639,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -652,24 +663,6 @@
                     <a href="https://www.starbucks.com.cn" target="_blank" title="Starbucks">
                       
                         <i class="fa fa-fw fa-coffee"></i>Starbucks</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://stackoverflow.com" target="_blank" title="Stackoverflow">
-                      
-                        <i class="fa fa-fw fa-stack-overflow"></i>Stackoverflow</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github-alt"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://www.linuxidc.com" target="_blank" title="Linux公社">
-                      
-                        <i class="fa fa-fw fa-linux"></i>Linux公社</a>
                   </span>
                 
             </div>
@@ -708,7 +701,7 @@
 
       
     </div>
-
+    
   </aside>
  
 
