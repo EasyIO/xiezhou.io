@@ -23,17 +23,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Markdown常用命令]]></title>
-    <url>%2F2018%2F04%2F02%2Fmarkdown%2F</url>
-    <content type="text"><![CDATA[# 一级标题 一级标题## 二级标题 二级标题 > 区块引用 区块引用 >嵌套区块>> 嵌套区块>>> 嵌套区块 嵌套区块 嵌套区块 嵌套区块 有序列表 有序列表 有序列表 * * * *** ------- * 无序列表+ 无序列表- 无序列表 无序列表 无序列表 无序列表 THIS IS [链接](https://www.starbucks.com.cn/ “星巴克”).THIS IS 链接. *斜体*斜体**加粗**加粗_斜体_斜体__加粗__加粗\*转义\**转义* ``` bash$ cd```1$ cd ![img](/images/coffe-touch-icon-next.png “logo”) | 链接 | 结果 | 原因 ||:—–|:—:|———-:||文本内容| 是 |同协议同域名同端口||文本内容| 是 |同协议同域名同端口||文本内容| 是 |同协议同域名同端口| 链接 结果 原因 文本内容 是 同协议同域名同端口 文本内容 是 同协议同域名同端口 文本内容 是 同协议同域名同端口]]></content>
-      <categories>
-        <category>技术π</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Cookie参数简介]]></title>
     <url>%2F2018%2F04%2F01%2Fweb-cookie%2F</url>
     <content type="text"><![CDATA[参数 简介 Domain 设置关联cookie的域名 Expires 通过给定一个过期时间来创建一个持久化cookie httponly 避免cookie被js访问 name cookie名称 path 关联到cookie的路径，默认为 / value 值 secure 用于指定cookie需要通过安全socket曾连接传递]]></content>
@@ -174,8 +163,8 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>Git</tag>
         <tag>Centos</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -210,10 +199,10 @@
         <category>安全π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
         <tag>Airmon-ng</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -333,9 +322,9 @@
         <category>安全π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
+        <tag>Linux</tag>
         <tag>SSR</tag>
       </tags>
   </entry>

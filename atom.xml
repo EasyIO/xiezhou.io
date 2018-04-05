@@ -96,30 +96,6 @@
   </entry>
   
   <entry>
-    <title>Markdown常用命令</title>
-    <link href="http://oje.pw/2018/04/02/markdown/"/>
-    <id>http://oje.pw/2018/04/02/markdown/</id>
-    <published>2018-04-02T00:50:55.000Z</published>
-    <updated>2018-04-04T05:24:40.706Z</updated>
-    
-    <content type="html"><![CDATA[<p># 一级标题 </p><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><p><br><br>## 二级标题</p><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><a id="more"></a><p>> 区块引用</p><blockquote><p>区块引用  </p></blockquote><p>>嵌套区块<br>>> 嵌套区块<br>>>> 嵌套区块</p><blockquote><p>嵌套区块</p><blockquote><p>嵌套区块</p><blockquote><p>嵌套区块</p></blockquote></blockquote></blockquote><ol><li>有序列表</li><li>有序列表</li><li>有序列表</li></ol><p>* * *</p><hr><p>***</p><hr><p>-------</p><hr><p>* 无序列表<br>+ 无序列表<br>- 无序列表 </p><ul><li>无序列表</li></ul><ul><li>无序列表</li></ul><ul><li>无序列表 </li></ul><p>THIS IS [链接](<a href="https://www.starbucks.com.cn/" target="_blank" rel="noopener">https://www.starbucks.com.cn/</a> “星巴克”).<br>THIS IS <a href="https://www.starbucks.com.cn/" title="星巴克" target="_blank" rel="noopener">链接</a>.</p><p>*斜体*<br><em>斜体</em><br>**加粗**<br><strong>加粗</strong><br>_斜体_<br><em>斜体</em><br>__加粗__<br><strong>加粗</strong><br>\*转义\*<br>*转义*</p><p>``` bash<br>$ cd<br>```<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span></span><br></pre></td></tr></table></figure></p><p>![img](/images/coffe-touch-icon-next.png “logo”)<br><img src="/images/coffe-touch-icon-next.png" alt="img" title="logo"></p><p>| 链接 | 结果 | 原因 |<br>|:—–|:—:|———-:|<br>|文本内容| <strong><code>是</code></strong> |同协议同域名同端口|<br>|文本内容| <strong><code>是</code></strong> |同协议同域名同端口|<br>|文本内容| <strong><code>是</code></strong> |同协议同域名同端口|</p><table><thead><tr><th style="text-align:left">链接</th><th style="text-align:center">结果</th><th style="text-align:right">原因</th></tr></thead><tbody><tr><td style="text-align:left">文本内容</td><td style="text-align:center"><strong><code>是</code></strong></td><td style="text-align:right">同协议同域名同端口</td></tr><tr><td style="text-align:left">文本内容</td><td style="text-align:center"><strong><code>是</code></strong></td><td style="text-align:right">同协议同域名同端口</td></tr><tr><td style="text-align:left">文本内容</td><td style="text-align:center"><strong><code>是</code></strong></td><td style="text-align:right">同协议同域名同端口</td></tr></tbody></table>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;# 一级标题 &lt;/p&gt;
-&lt;h1 id=&quot;一级标题&quot;&gt;&lt;a href=&quot;#一级标题&quot; class=&quot;headerlink&quot; title=&quot;一级标题&quot;&gt;&lt;/a&gt;一级标题&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;br&gt;## 二级标题&lt;/p&gt;
-&lt;h2 id=&quot;二级标题&quot;&gt;&lt;a href=&quot;#二级标题&quot; class=&quot;headerlink&quot; title=&quot;二级标题&quot;&gt;&lt;/a&gt;二级标题&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="技术π" scheme="http://oje.pw/categories/%E6%8A%80%E6%9C%AF%CF%80/"/>
-    
-    
-      <category term="Markdown" scheme="http://oje.pw/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Cookie参数简介</title>
     <link href="http://oje.pw/2018/04/01/web-cookie/"/>
     <id>http://oje.pw/2018/04/01/web-cookie/</id>
@@ -445,9 +421,9 @@
     
       <category term="Linux" scheme="http://oje.pw/tags/Linux/"/>
     
-      <category term="Git" scheme="http://oje.pw/tags/Git/"/>
-    
       <category term="Centos" scheme="http://oje.pw/tags/Centos/"/>
+    
+      <category term="Git" scheme="http://oje.pw/tags/Git/"/>
     
   </entry>
   
@@ -526,13 +502,13 @@
       <category term="安全π" scheme="http://oje.pw/categories/%E5%AE%89%E5%85%A8%CF%80/"/>
     
     
-      <category term="Linux" scheme="http://oje.pw/tags/Linux/"/>
-    
       <category term="网络安全" scheme="http://oje.pw/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
     
       <category term="Kali" scheme="http://oje.pw/tags/Kali/"/>
     
       <category term="Airmon-ng" scheme="http://oje.pw/tags/Airmon-ng/"/>
+    
+      <category term="Linux" scheme="http://oje.pw/tags/Linux/"/>
     
   </entry>
   
@@ -591,6 +567,30 @@
       <category term="Ftp" scheme="http://oje.pw/tags/Ftp/"/>
     
       <category term="Smaba" scheme="http://oje.pw/tags/Smaba/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mysql简单安装配置</title>
+    <link href="http://oje.pw/2018/04/01/db-mysql-init/"/>
+    <id>http://oje.pw/2018/04/01/db-mysql-init/</id>
+    <published>2018-04-01T04:54:42.000Z</published>
+    <updated>2018-04-04T05:28:07.775Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">my.ini</span><br><span class="line">[mysql]</span><br><span class="line"><span class="comment"># 设置mysql客户端默认字符集</span></span><br><span class="line">default-character-set=utf8 </span><br><span class="line">[mysqld]</span><br><span class="line"><span class="comment">#设置3306端口</span></span><br><span class="line">port = 3306 </span><br><span class="line"><span class="comment"># 设置mysql的安装目录</span></span><br><span class="line">basedir=D:\mysql\mysql-5.6.17-winx64</span><br><span class="line"><span class="comment"># 设置mysql数据库的数据的存放目录</span></span><br><span class="line">datadir=D:\mysql\mysql-5.6.17-winx64\data</span><br><span class="line"><span class="comment"># 允许最大连接数</span></span><br><span class="line">max_connections=200</span><br><span class="line"><span class="comment"># 服务端使用的字符集默认为8比特编码的latin1字符集</span></span><br><span class="line">character-set-server=utf8</span><br><span class="line"><span class="comment"># 创建新表时将使用的默认存储引擎</span></span><br><span class="line">default-storage-engine=INNODB</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="win-mysql"><a href="#win-mysql" class="headerlink" title="win-mysql"></a>win-mysql</h2><h3 id="安装服务"><a href="#安装服务" class="headerlink" title="安装服务"></a>安装服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> D:\mysql\mysql-5.6.17-winx64\bin</span><br><span class="line">$ mysqld install <span class="comment"># 安装服务</span></span><br><span class="line">$ mysqld remove <span class="comment"># 卸载服务</span></span><br></pre></td></tr></table></figure><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ net start mysql <span class="comment"># 启动服务</span></span><br><span class="line"><span class="comment"># 先删除 mysql 下的data文件夹</span></span><br><span class="line">$ mysqld --initialize <span class="comment"># 初始化</span></span><br></pre></td></tr></table></figure><h3 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ net stop MySQL <span class="comment"># 关闭服务</span></span><br><span class="line">$ mysqld --skip-grant-tables <span class="comment"># 用安全模式打开</span></span><br><span class="line">$ mysql -u root -p <span class="comment"># 登录，密码为空，直接回车</span></span><br><span class="line">$ use mysql</span><br><span class="line">$ <span class="built_in">set</span> password <span class="keyword">for</span> root@localhost = password(<span class="string">'123'</span>);</span><br></pre></td></tr></table></figure><h3 id="登入"><a href="#登入" class="headerlink" title="登入"></a>登入</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -u root -p <span class="comment"># 回车输入密码</span></span><br><span class="line">$ mysqladmin -u root -p password 密码 <span class="comment"># 设置密码</span></span><br></pre></td></tr></table></figure><h3 id="远程登入"><a href="#远程登入" class="headerlink" title="远程登入"></a>远程登入</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ use mysql</span><br><span class="line"><span class="comment"># 插入</span></span><br><span class="line">$ GRANT ALL PRIVILEGES ON *.* TO <span class="string">'root'</span>@<span class="string">'%'</span> IDENTIFIED BY <span class="string">'root'</span> WITH GRANT OPTION; </span><br><span class="line"><span class="comment"># 刷新</span></span><br><span class="line">$ flush privileges;</span><br><span class="line"><span class="comment"># 查看是否成功</span></span><br><span class="line">$ select host,user from user;</span><br></pre></td></tr></table></figure><h2 id="linux-mysql"><a href="#linux-mysql" class="headerlink" title="linux-mysql"></a>linux-mysql</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm</span><br><span class="line">$ rpm -ivh mysql-community-release-el7-5.noarch.rpm</span><br><span class="line">$ yum install mysql-community-server</span><br></pre></td></tr></table></figure><h3 id="启动-关闭服务"><a href="#启动-关闭服务" class="headerlink" title="启动/关闭服务"></a>启动/关闭服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ service mysqld restart/stop</span><br></pre></td></tr></table></figure><h3 id="设置密码-1"><a href="#设置密码-1" class="headerlink" title="设置密码"></a>设置密码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -u root <span class="comment"># 首次无密</span></span><br><span class="line">$ use mysql</span><br><span class="line">$ <span class="built_in">set</span> password <span class="keyword">for</span> root@localhost = password(<span class="string">'123'</span>);</span><br></pre></td></tr></table></figure><h3 id="远程登录"><a href="#远程登录" class="headerlink" title="远程登录"></a>远程登录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 把在所有数据库的所有表的所有权限赋值给位于所有IP地址的root用户</span></span><br><span class="line">$ grant all privileges on *.* to root@<span class="string">'%'</span>identified by <span class="string">'password'</span></span><br><span class="line"><span class="comment"># 如果是新用户而不是root，则要先新建用户</span></span><br><span class="line">$ create user <span class="string">'username'</span>@<span class="string">'%'</span> identified by <span class="string">'password'</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;my.ini&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[mysql]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置mysql客户端默认字符集&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;default-character-set=utf8 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[mysqld]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#设置3306端口&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;port = 3306 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置mysql的安装目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;basedir=D:\mysql\mysql-5.6.17-winx64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置mysql数据库的数据的存放目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;datadir=D:\mysql\mysql-5.6.17-winx64\data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 允许最大连接数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;max_connections=200&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 服务端使用的字符集默认为8比特编码的latin1字符集&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;character-set-server=utf8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 创建新表时将使用的默认存储引擎&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;default-storage-engine=INNODB&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="技术π" scheme="http://oje.pw/categories/%E6%8A%80%E6%9C%AF%CF%80/"/>
+    
+    
+      <category term="数据库" scheme="http://oje.pw/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="Mysql" scheme="http://oje.pw/tags/Mysql/"/>
     
   </entry>
   
