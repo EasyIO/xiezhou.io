@@ -163,8 +163,8 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>Centos</tag>
         <tag>Git</tag>
+        <tag>Centos</tag>
       </tags>
   </entry>
   <entry>
@@ -199,10 +199,10 @@
         <category>安全π</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
         <tag>Airmon-ng</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -322,9 +322,9 @@
         <category>安全π</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
-        <tag>Linux</tag>
         <tag>SSR</tag>
       </tags>
   </entry>

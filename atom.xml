@@ -421,9 +421,9 @@
     
       <category term="Linux" scheme="http://oje.pw/tags/Linux/"/>
     
-      <category term="Centos" scheme="http://oje.pw/tags/Centos/"/>
-    
       <category term="Git" scheme="http://oje.pw/tags/Git/"/>
+    
+      <category term="Centos" scheme="http://oje.pw/tags/Centos/"/>
     
   </entry>
   
@@ -502,13 +502,13 @@
       <category term="安全π" scheme="http://oje.pw/categories/%E5%AE%89%E5%85%A8%CF%80/"/>
     
     
+      <category term="Linux" scheme="http://oje.pw/tags/Linux/"/>
+    
       <category term="网络安全" scheme="http://oje.pw/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
     
       <category term="Kali" scheme="http://oje.pw/tags/Kali/"/>
     
       <category term="Airmon-ng" scheme="http://oje.pw/tags/Airmon-ng/"/>
-    
-      <category term="Linux" scheme="http://oje.pw/tags/Linux/"/>
     
   </entry>
   
