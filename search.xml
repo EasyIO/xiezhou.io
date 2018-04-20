@@ -211,9 +211,9 @@
       </categories>
       <tags>
         <tag>Kali</tag>
-        <tag>Airmon-ng</tag>
         <tag>Linux</tag>
         <tag>网络安全</tag>
+        <tag>Airmon-ng</tag>
       </tags>
   </entry>
   <entry>
@@ -335,8 +335,8 @@
       <tags>
         <tag>Kali</tag>
         <tag>Linux</tag>
-        <tag>网络安全</tag>
         <tag>SSR</tag>
+        <tag>网络安全</tag>
       </tags>
   </entry>
   <entry>
