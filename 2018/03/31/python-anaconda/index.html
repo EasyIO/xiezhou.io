@@ -121,7 +121,7 @@
 <meta property="og:site_name" content="Wish a Starbucks Coffee Here!">
 <meta property="og:description" content="创建一个名为python36的环境，指定Python版本是3.61$ conda create --name python36 python=3.6 # conda会为我们自动寻找3.6.x中的最新版本 安装好后，使用activate激活某个环境12$ activate python36 # for Windows$ source activate python36 # for Linux &amp;am">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-04T05:43:21.459Z">
+<meta property="og:updated_time" content="2018-04-20T07:45:43.284Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Anaconda">
 <meta name="twitter:description" content="创建一个名为python36的环境，指定Python版本是3.61$ conda create --name python36 python=3.6 # conda会为我们自动寻找3.6.x中的最新版本 安装好后，使用activate激活某个环境12$ activate python36 # for Windows$ source activate python36 # for Linux &amp;am">
@@ -437,24 +437,23 @@
       
 
       
-        <p>创建一个名为python36的环境，指定Python版本是3.6<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda create --name python36 python=3.6 <span class="comment"># conda会为我们自动寻找3.6.x中的最新版本</span></span><br></pre></td></tr></table></figure></p>
-<p>安装好后，使用activate激活某个环境<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ activate python36 <span class="comment"># for Windows</span></span><br><span class="line">$ <span class="built_in">source</span> activate python36 <span class="comment"># for Linux &amp; Mac</span></span><br></pre></td></tr></table></figure></p>
+        <h4 id="创建一个名为python36的环境，指定Python版本是3-6"><a href="#创建一个名为python36的环境，指定Python版本是3-6" class="headerlink" title="创建一个名为python36的环境，指定Python版本是3.6"></a>创建一个名为python36的环境，指定Python版本是3.6</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda create --name python36 python=3.6 <span class="comment"># conda会为我们自动寻找3.6.x中的最新版本</span></span><br></pre></td></tr></table></figure>
+<h4 id="安装好后，使用activate激活某个环境"><a href="#安装好后，使用activate激活某个环境" class="headerlink" title="安装好后，使用activate激活某个环境"></a>安装好后，使用activate激活某个环境</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ activate python36 <span class="comment"># for Windows</span></span><br><span class="line">$ <span class="built_in">source</span> activate python36 <span class="comment"># for Linux &amp; Mac</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a> 
-<p>查看当前版本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python --version</span><br></pre></td></tr></table></figure></p>
-<p>如果想返回默认的python 2.7环境，运行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ deactivate python27 <span class="comment"># for Windows</span></span><br><span class="line">$ <span class="built_in">source</span> deactivate python27 <span class="comment"># for Linux &amp; Mac</span></span><br></pre></td></tr></table></figure></p>
-<p>删除一个已有的环境<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda remove --name python34 --all</span><br></pre></td></tr></table></figure></p>
-<p>添加Anaconda的TUNA镜像<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br></pre></td></tr></table></figure></p>
-<p>设置搜索时显示通道地址<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda config --<span class="built_in">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure></p>
-<p>查看当前环境下已安装的包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda list</span><br></pre></td></tr></table></figure></p>
-<p>查看某个指定环境的已安装包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda list -n python36</span><br></pre></td></tr></table></figure></p>
-<p>查找package信息<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda search numpy</span><br></pre></td></tr></table></figure></p>
-<p>安装package<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda install -n python36 numpy <span class="comment"># 如果不用-n指定环境名称，则被安装在当前活跃环境</span></span><br></pre></td></tr></table></figure></p>
-<p>更新package<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda update -n python36 numpy</span><br></pre></td></tr></table></figure></p>
-<p>删除package<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda remove -n python36 numpy</span><br></pre></td></tr></table></figure></p>
-<p>更新conda，保持conda最新<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda update conda</span><br></pre></td></tr></table></figure></p>
-<p>更新anaconda<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda update anaconda</span><br></pre></td></tr></table></figure></p>
-<p>更新python<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda update python</span><br></pre></td></tr></table></figure></p>
-
+<h4 id="查看当前版本"><a href="#查看当前版本" class="headerlink" title="查看当前版本"></a>查看当前版本</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python --version</span><br></pre></td></tr></table></figure>
+<h4 id="如果想返回默认的python-2-7环境，运行"><a href="#如果想返回默认的python-2-7环境，运行" class="headerlink" title="如果想返回默认的python 2.7环境，运行"></a>如果想返回默认的python 2.7环境，运行</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ deactivate python27 <span class="comment"># for Windows</span></span><br><span class="line">$ <span class="built_in">source</span> deactivate python27 <span class="comment"># for Linux &amp; Mac</span></span><br></pre></td></tr></table></figure>
+<h4 id="删除一个已有的环境"><a href="#删除一个已有的环境" class="headerlink" title="删除一个已有的环境"></a>删除一个已有的环境</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda remove --name python34 --all</span><br></pre></td></tr></table></figure>
+<h4 id="添加Anaconda的TUNA镜像"><a href="#添加Anaconda的TUNA镜像" class="headerlink" title="添加Anaconda的TUNA镜像"></a>添加Anaconda的TUNA镜像</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br></pre></td></tr></table></figure>
+<h4 id="设置搜索时显示通道地址"><a href="#设置搜索时显示通道地址" class="headerlink" title="设置搜索时显示通道地址"></a>设置搜索时显示通道地址</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda config --<span class="built_in">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure>
+<h4 id="查看当前环境下已安装的包"><a href="#查看当前环境下已安装的包" class="headerlink" title="查看当前环境下已安装的包"></a>查看当前环境下已安装的包</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda list</span><br></pre></td></tr></table></figure>
+<h4 id="查看某个指定环境的已安装包"><a href="#查看某个指定环境的已安装包" class="headerlink" title="查看某个指定环境的已安装包"></a>查看某个指定环境的已安装包</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda list -n python36</span><br></pre></td></tr></table></figure>
+<h4 id="查找package信息"><a href="#查找package信息" class="headerlink" title="查找package信息"></a>查找package信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda search numpy</span><br></pre></td></tr></table></figure>
+<h4 id="安装package"><a href="#安装package" class="headerlink" title="安装package"></a>安装package</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda install -n python36 numpy <span class="comment"># 如果不用-n指定环境名称，则被安装在当前活跃环境</span></span><br></pre></td></tr></table></figure>
+<h4 id="更新package"><a href="#更新package" class="headerlink" title="更新package"></a>更新package</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda update -n python36 numpy</span><br></pre></td></tr></table></figure>
+<h4 id="删除package"><a href="#删除package" class="headerlink" title="删除package"></a>删除package</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda remove -n python36 numpy</span><br></pre></td></tr></table></figure>
+<h4 id="更新conda，保持conda最新"><a href="#更新conda，保持conda最新" class="headerlink" title="更新conda，保持conda最新"></a>更新conda，保持conda最新</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda update conda</span><br></pre></td></tr></table></figure>
+<h4 id="更新anaconda"><a href="#更新anaconda" class="headerlink" title="更新anaconda"></a>更新anaconda</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda update anaconda</span><br></pre></td></tr></table></figure>
+<h4 id="更新python"><a href="#更新python" class="headerlink" title="更新python"></a>更新python</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda update python</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -548,8 +547,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -558,7 +566,7 @@
                 alt="oJe" />
             
               <p class="site-author-name" itemprop="name">星享俱乐部</p>
-              <p class="site-description motion-element" itemprop="description">★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★</p>
+              <p class="site-description motion-element" itemprop="description">★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -568,7 +576,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -630,6 +638,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建一个名为python36的环境，指定Python版本是3-6"><span class="nav-number">1.</span> <span class="nav-text">创建一个名为python36的环境，指定Python版本是3.6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装好后，使用activate激活某个环境"><span class="nav-number">2.</span> <span class="nav-text">安装好后，使用activate激活某个环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看当前版本"><span class="nav-number">3.</span> <span class="nav-text">查看当前版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如果想返回默认的python-2-7环境，运行"><span class="nav-number">4.</span> <span class="nav-text">如果想返回默认的python 2.7环境，运行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除一个已有的环境"><span class="nav-number">5.</span> <span class="nav-text">删除一个已有的环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加Anaconda的TUNA镜像"><span class="nav-number">6.</span> <span class="nav-text">添加Anaconda的TUNA镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置搜索时显示通道地址"><span class="nav-number">7.</span> <span class="nav-text">设置搜索时显示通道地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看当前环境下已安装的包"><span class="nav-number">8.</span> <span class="nav-text">查看当前环境下已安装的包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看某个指定环境的已安装包"><span class="nav-number">9.</span> <span class="nav-text">查看某个指定环境的已安装包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查找package信息"><span class="nav-number">10.</span> <span class="nav-text">查找package信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装package"><span class="nav-number">11.</span> <span class="nav-text">安装package</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新package"><span class="nav-number">12.</span> <span class="nav-text">更新package</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除package"><span class="nav-number">13.</span> <span class="nav-text">删除package</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新conda，保持conda最新"><span class="nav-number">14.</span> <span class="nav-text">更新conda，保持conda最新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新anaconda"><span class="nav-number">15.</span> <span class="nav-text">更新anaconda</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新python"><span class="nav-number">16.</span> <span class="nav-text">更新python</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -100,7 +100,7 @@
 
 
 
-  <meta name="keywords" content="Linux,网络安全,Kali,SSR," />
+  <meta name="keywords" content="Kali,Linux,网络安全,SSR," />
 
 
 
@@ -114,14 +114,14 @@
 
 
 <meta name="description" content="12345678$ vim  /etc/apt/sources.list​#中科大deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contribdeb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib​$ apt-get upda">
-<meta name="keywords" content="Linux,网络安全,Kali,SSR">
+<meta name="keywords" content="Kali,Linux,网络安全,SSR">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kali源更换">
 <meta property="og:url" content="http://oje.pw/2018/04/01/cs-kali-sources-list-and-ssr/index.html">
 <meta property="og:site_name" content="Wish a Starbucks Coffee Here!">
 <meta property="og:description" content="12345678$ vim  /etc/apt/sources.list​#中科大deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contribdeb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib​$ apt-get upda">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-04T05:20:23.232Z">
+<meta property="og:updated_time" content="2018-04-20T07:50:42.214Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kali源更换">
 <meta name="twitter:description" content="12345678$ vim  /etc/apt/sources.list​#中科大deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contribdeb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib​$ apt-get upda">
@@ -439,7 +439,7 @@
       
         <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ vim  /etc/apt/sources.list​</span><br><span class="line"><span class="comment">#中科大</span></span><br><span class="line">deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib​</span><br><span class="line">$ apt-get update &amp;&amp; apt-get upgrade &amp;&amp; apt-get dist-upgrade ​</span><br><span class="line">$ apt-get clean﻿​</span><br><span class="line"><span class="comment"># apt-get dist-upgrade 更新系统以及所有依赖包</span></span><br><span class="line">$ apt-get installopen-vm-tools-desktop fuse <span class="comment">#安装开源vm tools</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h4 id="kali-ss"><a href="#kali-ss" class="headerlink" title="kali-ss"></a>kali-ss</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install qt5-qmake qtbase5-dev libbotan1.10-dev pkg-config debhelper libqrencode-dev libzbar-dev libappindicator-dev cmake <span class="comment"># 安装编译环境</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/shadowsocks/libQtShadowsocks.git <span class="comment">#克隆项目</span></span><br><span class="line">$ dpkg-buildpackage -uc -us -b</span><br><span class="line">$ dpkg -i ../libqtshadowsocks_1.10.0-1_amd64.deb ../libqtshadowsocks-dev_1.10.0-1_amd64.deb</span><br><span class="line"><span class="comment"># 若出错，则更改版本信息</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/shadowsocks/shadowsocks-qt5.git</span><br><span class="line">$ dpkg-buildpackage -uc -us -b</span><br><span class="line">$ dpkg -i ../shadowsocks-qt5_2.8.0-1_amd64.deb</span><br></pre></td></tr></table></figure>
+<h4 id="kali-ss"><a href="#kali-ss" class="headerlink" title="kali-ss"></a>kali-ss</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install qt5-qmake qtbase5-dev libbotan1.10-dev pkg-config debhelper </span><br><span class="line">	libqrencode-dev libzbar-dev libappindicator-dev cmake <span class="comment"># 安装编译环境</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/shadowsocks/libQtShadowsocks.git <span class="comment">#克隆项目</span></span><br><span class="line">$ dpkg-buildpackage -uc -us -b</span><br><span class="line">$ dpkg -i ../libqtshadowsocks_1.10.0-1_amd64.deb ../libqtshadowsocks-dev_1.10.0-1_amd64.deb</span><br><span class="line"><span class="comment"># 若出错，则更改版本信息</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/shadowsocks/shadowsocks-qt5.git</span><br><span class="line">$ dpkg-buildpackage -uc -us -b</span><br><span class="line">$ dpkg -i ../shadowsocks-qt5_2.8.0-1_amd64.deb</span><br></pre></td></tr></table></figure>
 <h4 id="win-ss"><a href="#win-ss" class="headerlink" title="win-ss"></a>win-ss</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br></pre></td></tr></table></figure>
 <h4 id="tor-network-bridge"><a href="#tor-network-bridge" class="headerlink" title="tor-network-bridge"></a>tor-network-bridge</h4><p><a href="https://bridges.torproject.org/bridges?transport=obfs2" target="_blank" rel="noopener">obfs2网桥</a> 、<a href="https://bridges.torproject.org/bridges?transport=obfs3" target="_blank" rel="noopener">obfs3网桥</a>、<a href="https://bridges.torproject.org/bridges?transport=obfs4" target="_blank" rel="noopener">obfs4网桥（推荐）</a> 、<a href="https://bridges.torproject.org/bridges?transport=scramblesuit" target="_blank" rel="noopener">scramblesuit网桥</a></p>
 
@@ -459,11 +459,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Kali/" rel="tag"># Kali</a>
+          
             <a href="/tags/Linux/" rel="tag"># Linux</a>
           
             <a href="/tags/网络安全/" rel="tag"># 网络安全</a>
-          
-            <a href="/tags/Kali/" rel="tag"># Kali</a>
           
             <a href="/tags/SSR/" rel="tag"># SSR</a>
           
@@ -561,7 +561,7 @@
                 alt="oJe" />
             
               <p class="site-author-name" itemprop="name">星享俱乐部</p>
-              <p class="site-description motion-element" itemprop="description">★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★</p>
+              <p class="site-description motion-element" itemprop="description">★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -571,7 +571,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

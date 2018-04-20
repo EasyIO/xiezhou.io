@@ -113,18 +113,18 @@
 
 
 
-<meta name="description" content="1234567891011121314# 修改静态ip$ vim /etc/network/interfaces	auto eth0    iface eth0 inet static    address 192.168.1.100    netmask 255.255.255.0    gateway 192.168.1.1# DNS解析$ vim /etc/resolv.conf    na">
+<meta name="description" content="静态IP1234567891011121314# 静态IP$ vim /etc/network/interfaces	auto eth0    iface eth0 inet static    address 192.168.1.100    netmask 255.255.255.0    gateway 192.168.1.1# DNS解析$ vim /etc/resolv.conf">
 <meta name="keywords" content="Linux,Ubuntu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu静态IP和SSH配置">
 <meta property="og:url" content="http://oje.pw/2018/04/01/linux-ubuntu-ip-xshell/index.html">
 <meta property="og:site_name" content="Wish a Starbucks Coffee Here!">
-<meta property="og:description" content="1234567891011121314# 修改静态ip$ vim /etc/network/interfaces	auto eth0    iface eth0 inet static    address 192.168.1.100    netmask 255.255.255.0    gateway 192.168.1.1# DNS解析$ vim /etc/resolv.conf    na">
+<meta property="og:description" content="静态IP1234567891011121314# 静态IP$ vim /etc/network/interfaces	auto eth0    iface eth0 inet static    address 192.168.1.100    netmask 255.255.255.0    gateway 192.168.1.1# DNS解析$ vim /etc/resolv.conf">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-04T05:32:41.358Z">
+<meta property="og:updated_time" content="2018-04-20T08:07:52.049Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu静态IP和SSH配置">
-<meta name="twitter:description" content="1234567891011121314# 修改静态ip$ vim /etc/network/interfaces	auto eth0    iface eth0 inet static    address 192.168.1.100    netmask 255.255.255.0    gateway 192.168.1.1# DNS解析$ vim /etc/resolv.conf    na">
+<meta name="twitter:description" content="静态IP1234567891011121314# 静态IP$ vim /etc/network/interfaces	auto eth0    iface eth0 inet static    address 192.168.1.100    netmask 255.255.255.0    gateway 192.168.1.1# DNS解析$ vim /etc/resolv.conf">
 
 
 
@@ -437,8 +437,9 @@
       
 
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改静态ip</span></span><br><span class="line">$ vim /etc/network/interfaces</span><br><span class="line">	auto eth0</span><br><span class="line">    iface eth0 inet static</span><br><span class="line">    address 192.168.1.100</span><br><span class="line">    netmask 255.255.255.0</span><br><span class="line">    gateway 192.168.1.1</span><br><span class="line"><span class="comment"># DNS解析</span></span><br><span class="line">$ vim /etc/resolv.conf</span><br><span class="line">    nameserver 192.168.1.1</span><br><span class="line">$ vim /etc/resolvconf/resolv.conf.d/base</span><br><span class="line">    nameserver 192.168.1.1</span><br><span class="line"><span class="comment"># 要将/etc/NetworkManager/目录下的system-connections删除，或者移动到其他目录下</span></span><br><span class="line">$ sudo/etc/init.d/networking restart <span class="comment"># 重启网卡</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装ssh</span></span><br><span class="line">$ sudo apt-get install openssh-server <span class="comment"># 安装</span></span><br><span class="line">$ ps -e |grep ssh <span class="comment"># 查看</span></span><br><span class="line">$ /etc/init.d/ssh start <span class="comment"># 启动</span></span><br><span class="line"><span class="comment"># 如果无法启动</span></span><br><span class="line">$ vim /etc/ssh/sshd_config </span><br><span class="line"><span class="comment"># 将 PermitRootLogin改为yes：</span></span><br><span class="line">$ sudo /etc/init.d/ssh restart</span><br></pre></td></tr></table></figure>
+        <h4 id="静态IP"><a href="#静态IP" class="headerlink" title="静态IP"></a>静态IP</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 静态IP</span></span><br><span class="line">$ vim /etc/network/interfaces</span><br><span class="line">	auto eth0</span><br><span class="line">    iface eth0 inet static</span><br><span class="line">    address 192.168.1.100</span><br><span class="line">    netmask 255.255.255.0</span><br><span class="line">    gateway 192.168.1.1</span><br><span class="line"><span class="comment"># DNS解析</span></span><br><span class="line">$ vim /etc/resolv.conf</span><br><span class="line">    nameserver 192.168.1.1</span><br><span class="line">$ vim /etc/resolvconf/resolv.conf.d/base</span><br><span class="line">    nameserver 192.168.1.1</span><br><span class="line"><span class="comment"># 要将/etc/NetworkManager/目录下的system-connections删除，或者移动到其他目录下</span></span><br><span class="line">$ sudo/etc/init.d/networking restart <span class="comment"># 重启网卡</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="安装SSH"><a href="#安装SSH" class="headerlink" title="安装SSH"></a>安装SSH</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装SSH</span></span><br><span class="line">$ sudo apt-get install openssh-server <span class="comment"># 安装</span></span><br><span class="line">$ ps -e |grep ssh <span class="comment"># 查看</span></span><br><span class="line">$ /etc/init.d/ssh start <span class="comment"># 启动</span></span><br><span class="line"><span class="comment"># 如果无法启动</span></span><br><span class="line">$ vim /etc/ssh/sshd_config </span><br><span class="line"><span class="comment"># 将 PermitRootLogin改为yes：</span></span><br><span class="line">$ sudo /etc/init.d/ssh restart</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -534,8 +535,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -544,7 +554,7 @@
                 alt="oJe" />
             
               <p class="site-author-name" itemprop="name">星享俱乐部</p>
-              <p class="site-description motion-element" itemprop="description">★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★</p>
+              <p class="site-description motion-element" itemprop="description">★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -554,7 +564,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -616,6 +626,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#静态IP"><span class="nav-number">1.</span> <span class="nav-text">静态IP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装SSH"><span class="nav-number">2.</span> <span class="nav-text">安装SSH</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

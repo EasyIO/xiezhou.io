@@ -113,18 +113,18 @@
 
 
 
-<meta name="description" content="123456789101112131415161718192021$ adb devices # 查看设备$ adb install -r &amp;lt;package&amp;gt; #安装apk$ adb uninstall &amp;lt;package&amp;gt; #卸载apk$ adb -s 设备号 install xxx.apk # 从模拟器或手机中复制一个文件或文件夹（递归的）使用：$ adb pull &amp;l">
+<meta name="description" content="12345678910111213141516171819202122232425262728# 查看设备$ adb devices # 安装apk$ adb install -r &amp;lt;package&amp;gt; # 卸载apk$ adb uninstall &amp;lt;package&amp;gt; # 安装应用到指定应用$ adb -s 设备号 install xxx.apk # 从模拟器或手机中复制一个">
 <meta name="keywords" content="ADB,Andriod">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ADB常用命令">
 <meta property="og:url" content="http://oje.pw/2018/04/01/andriod-adb/index.html">
 <meta property="og:site_name" content="Wish a Starbucks Coffee Here!">
-<meta property="og:description" content="123456789101112131415161718192021$ adb devices # 查看设备$ adb install -r &amp;lt;package&amp;gt; #安装apk$ adb uninstall &amp;lt;package&amp;gt; #卸载apk$ adb -s 设备号 install xxx.apk # 从模拟器或手机中复制一个文件或文件夹（递归的）使用：$ adb pull &amp;l">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728# 查看设备$ adb devices # 安装apk$ adb install -r &amp;lt;package&amp;gt; # 卸载apk$ adb uninstall &amp;lt;package&amp;gt; # 安装应用到指定应用$ adb -s 设备号 install xxx.apk # 从模拟器或手机中复制一个">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-04T05:02:46.055Z">
+<meta property="og:updated_time" content="2018-04-20T08:11:48.567Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ADB常用命令">
-<meta name="twitter:description" content="123456789101112131415161718192021$ adb devices # 查看设备$ adb install -r &amp;lt;package&amp;gt; #安装apk$ adb uninstall &amp;lt;package&amp;gt; #卸载apk$ adb -s 设备号 install xxx.apk # 从模拟器或手机中复制一个文件或文件夹（递归的）使用：$ adb pull &amp;l">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728# 查看设备$ adb devices # 安装apk$ adb install -r &amp;lt;package&amp;gt; # 卸载apk$ adb uninstall &amp;lt;package&amp;gt; # 安装应用到指定应用$ adb -s 设备号 install xxx.apk # 从模拟器或手机中复制一个">
 
 
 
@@ -437,7 +437,7 @@
       
 
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ adb devices <span class="comment"># 查看设备</span></span><br><span class="line">$ adb install -r &lt;package&gt; <span class="comment">#安装apk</span></span><br><span class="line">$ adb uninstall &lt;package&gt; <span class="comment">#卸载apk</span></span><br><span class="line">$ adb -s 设备号 install xxx.apk </span><br><span class="line"><span class="comment"># 从模拟器或手机中复制一个文件或文件夹（递归的）使用：</span></span><br><span class="line">$ adb pull &lt;remote&gt; &lt;<span class="built_in">local</span>&gt;</span><br><span class="line"><span class="comment"># 复制一个文件或文件夹（递归的）到模拟器或手机中使用：</span></span><br><span class="line">$ adb push &lt;<span class="built_in">local</span>&gt; &lt;remote&gt;</span><br><span class="line"><span class="comment"># 在这个命令中和引用的是文件或文件夹的路径，在开发用电脑上的是local，在模拟器或手机上的是remote</span></span><br><span class="line">$ adb start-server <span class="comment">#启动adb server</span></span><br><span class="line">$ adb <span class="built_in">kill</span>-server <span class="comment">#停止adb server</span></span><br><span class="line"><span class="comment"># 列出系统应用的所有包名：</span></span><br><span class="line">$ adb shell pm list packages -s</span><br><span class="line"><span class="comment"># 列出除了系统应用的第三方应用包名：</span></span><br><span class="line">$ adb shell pm list packages -3</span><br><span class="line"><span class="comment"># 使用 grep 来过滤：</span></span><br><span class="line">$ adb shell pm list packages | grep qq</span><br><span class="line"><span class="comment"># 清除应用数据与缓存</span></span><br><span class="line">$ adb shell pm clear &lt;packagename&gt;</span><br><span class="line"><span class="comment"># 启动应用</span></span><br><span class="line">$ adb shell am start -n 包名/类名</span><br></pre></td></tr></table></figure>
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看设备</span></span><br><span class="line">$ adb devices </span><br><span class="line"><span class="comment"># 安装apk</span></span><br><span class="line">$ adb install -r &lt;package&gt; </span><br><span class="line"><span class="comment"># 卸载apk</span></span><br><span class="line">$ adb uninstall &lt;package&gt; </span><br><span class="line"><span class="comment"># 安装应用到指定应用</span></span><br><span class="line">$ adb -s 设备号 install xxx.apk </span><br><span class="line"><span class="comment"># 从模拟器或手机中复制一个文件或文件夹（递归的）使用：</span></span><br><span class="line">$ adb pull &lt;remote&gt; &lt;<span class="built_in">local</span>&gt;</span><br><span class="line"><span class="comment"># 复制一个文件或文件夹（递归的）到模拟器或手机中使用：</span></span><br><span class="line">$ adb push &lt;<span class="built_in">local</span>&gt; &lt;remote&gt;</span><br><span class="line"><span class="comment"># 在这个命令中和引用的是文件或文件夹的路径，</span></span><br><span class="line"><span class="comment"># 	在开发用电脑上的是local，在模拟器或手机上的是remote</span></span><br><span class="line"><span class="comment"># 启动adb server</span></span><br><span class="line">$ adb start-server </span><br><span class="line"><span class="comment"># 停止adb server</span></span><br><span class="line">$ adb <span class="built_in">kill</span>-server </span><br><span class="line"><span class="comment"># 列出系统应用的所有包名：</span></span><br><span class="line">$ adb shell pm list packages -s</span><br><span class="line"><span class="comment"># 列出除了系统应用的第三方应用包名：</span></span><br><span class="line">$ adb shell pm list packages -3</span><br><span class="line"><span class="comment"># 使用 grep 来过滤：</span></span><br><span class="line">$ adb shell pm list packages | grep qq</span><br><span class="line"><span class="comment"># 清除应用数据与缓存</span></span><br><span class="line">$ adb shell pm clear &lt;packagename&gt;</span><br><span class="line"><span class="comment"># 启动应用</span></span><br><span class="line">$ adb shell am start -n 包名/类名</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -544,7 +544,7 @@
                 alt="oJe" />
             
               <p class="site-author-name" itemprop="name">星享俱乐部</p>
-              <p class="site-description motion-element" itemprop="description">★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★</p>
+              <p class="site-description motion-element" itemprop="description">★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -554,7 +554,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
