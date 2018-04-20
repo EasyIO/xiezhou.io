@@ -187,9 +187,9 @@
       <category term="安全π" scheme="http://oje.pw/categories/%E5%AE%89%E5%85%A8%CF%80/"/>
     
     
-      <category term="BurpSuite" scheme="http://oje.pw/tags/BurpSuite/"/>
-    
       <category term="网络安全" scheme="http://oje.pw/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="BurpSuite" scheme="http://oje.pw/tags/BurpSuite/"/>
     
   </entry>
   
@@ -429,7 +429,7 @@
     <link href="http://oje.pw/2018/04/01/linux-centos-git-update/"/>
     <id>http://oje.pw/2018/04/01/linux-centos-git-update/</id>
     <published>2018-04-01T08:37:00.000Z</published>
-    <updated>2018-04-20T09:27:50.415Z</updated>
+    <updated>2018-04-20T09:30:01.578Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装编译git时需要的包</span></span><br><span class="line">$ yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel</span><br><span class="line">$ yum install  gcc perl-ExtUtils-MakeMaker</span><br><span class="line"><span class="comment"># 删除已有的git</span></span><br><span class="line">$ yum remove git</span><br><span class="line"><span class="comment"># 下载git源码</span></span><br><span class="line">$ <span class="built_in">cd</span> /usr/src</span><br><span class="line">$ wget https://www.kernel.org/pub/software/scm/git/git-2.0.5.tar.gz</span><br><span class="line">$ tar xzf git-2.0.5.tar.gz</span><br><span class="line"><span class="comment"># 编译安装</span></span><br><span class="line">$ <span class="built_in">cd</span> git-2.0.5</span><br><span class="line">$ make prefix=/usr/<span class="built_in">local</span>/git all</span><br><span class="line">$ make prefix=/usr/<span class="built_in">local</span>/git install</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">"export PATH=<span class="variable">$PATH</span>:/usr/local/git/bin"</span> &gt;&gt; /etc/bashrc</span><br><span class="line">$ <span class="built_in">source</span> /etc/bashrc</span><br><span class="line"><span class="comment"># 检查一下版本号</span></span><br><span class="line">$ git --version</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -449,7 +449,7 @@
     
       <category term="Git" scheme="http://oje.pw/tags/Git/"/>
     
-      <category term="CentOs" scheme="http://oje.pw/tags/CentOs/"/>
+      <category term="CentOS" scheme="http://oje.pw/tags/CentOS/"/>
     
   </entry>
   
@@ -530,11 +530,11 @@
     
       <category term="Linux" scheme="http://oje.pw/tags/Linux/"/>
     
-      <category term="网络安全" scheme="http://oje.pw/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
       <category term="Kali" scheme="http://oje.pw/tags/Kali/"/>
     
       <category term="Airmon-ng" scheme="http://oje.pw/tags/Airmon-ng/"/>
+    
+      <category term="网络安全" scheme="http://oje.pw/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   

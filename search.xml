@@ -53,8 +53,8 @@
         <category>安全π</category>
       </categories>
       <tags>
-        <tag>BurpSuite</tag>
         <tag>网络安全</tag>
+        <tag>BurpSuite</tag>
       </tags>
   </entry>
   <entry>
@@ -175,7 +175,7 @@
       <tags>
         <tag>Linux</tag>
         <tag>Git</tag>
-        <tag>CentOs</tag>
+        <tag>CentOS</tag>
       </tags>
   </entry>
   <entry>
@@ -211,9 +211,9 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>网络安全</tag>
         <tag>Kali</tag>
         <tag>Airmon-ng</tag>
+        <tag>网络安全</tag>
       </tags>
   </entry>
   <entry>
@@ -320,8 +320,8 @@
         <category>安全π</category>
       </categories>
       <tags>
-        <tag>网络安全</tag>
         <tag>Kali</tag>
+        <tag>网络安全</tag>
         <tag>Sqlmap</tag>
       </tags>
   </entry>
@@ -334,8 +334,8 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>网络安全</tag>
         <tag>Kali</tag>
+        <tag>网络安全</tag>
         <tag>SSR</tag>
       </tags>
   </entry>
