@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#106e4b">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/coffe-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="/images/coffe-32x32-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/x-icon" sizes="24x24" href="/images/coffe-32x32-next.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/coffe.svg?v=5.1.4" color="#106e4b">
+
+
+
+
+
+  <meta name="keywords" content="Linux,CentOS," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Wish a Starbucks Coffee Here!" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="关机 (系统的关机、重启以及登出 )的命令12345678$ shutdown -h now # 关闭系统(1) $ init 0 # 关闭系统(2) $ telinit 0 # 关闭系统(3) $ shutdown -h hours:minutes # 按预定时间关闭系统 $ shutdown -c # 取消按预定时间关闭系统 $ shutdown -r now # 重启(1) $ reboot">
+<meta name="keywords" content="Linux,CentOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS常用命令">
+<meta property="og:url" content="http://8oc.cc/2018/04/01/linux-centos-command/index.html">
+<meta property="og:site_name" content="Wish a Starbucks Coffee Here!">
+<meta property="og:description" content="关机 (系统的关机、重启以及登出 )的命令12345678$ shutdown -h now # 关闭系统(1) $ init 0 # 关闭系统(2) $ telinit 0 # 关闭系统(3) $ shutdown -h hours:minutes # 按预定时间关闭系统 $ shutdown -c # 取消按预定时间关闭系统 $ shutdown -r now # 重启(1) $ reboot">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-09-26T05:26:43.067Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CentOS常用命令">
+<meta name="twitter:description" content="关机 (系统的关机、重启以及登出 )的命令12345678$ shutdown -h now # 关闭系统(1) $ init 0 # 关闭系统(2) $ telinit 0 # 关闭系统(3) $ shutdown -h hours:minutes # 按预定时间关闭系统 $ shutdown -c # 取消按预定时间关闭系统 $ shutdown -r now # 重启(1) $ reboot">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://8oc.cc/2018/04/01/linux-centos-command/"/>
+
+
+
+
+
+  <title>CentOS常用命令 | Wish a Starbucks Coffee Here!</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+      <div class="site-meta-headline">
+        <a>
+          <img class="custom-logo-image" src="/images/coffe-48-log.svg"
+               alt="Wish a Starbucks Coffee Here!"/> 
+        </a>
+      </div>
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i ></i></span>
+        <span class="site-title">★★★★★</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">What is your favorite coffee in Starbucks?</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2018/04/01/linux-centos-command/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="8oc">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/coffe-128-right.svg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wish a Starbucks Coffee Here!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CentOS常用命令</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T18:23:54+08:00">
+                2018-04-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          <span class="post-time">
+                <span class="post-meta-divider">|</span>
+             <span class="post-meta-item-text">作者&nbsp;&nbsp;</span>
+                          
+                8oc
+            
+          </span>
+
+
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/运维π/" itemprop="url" rel="index">
+                    <span itemprop="name">运维π</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="关机-系统的关机、重启以及登出-的命令"><a href="#关机-系统的关机、重启以及登出-的命令" class="headerlink" title="关机 (系统的关机、重启以及登出 )的命令"></a>关机 (系统的关机、重启以及登出 )的命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ shutdown -h now <span class="comment"># 关闭系统(1) </span></span><br><span class="line">$ init 0 <span class="comment"># 关闭系统(2) </span></span><br><span class="line">$ telinit 0 <span class="comment"># 关闭系统(3) </span></span><br><span class="line">$ shutdown -h hours:minutes <span class="comment"># 按预定时间关闭系统 </span></span><br><span class="line">$ shutdown -c <span class="comment"># 取消按预定时间关闭系统 </span></span><br><span class="line">$ shutdown -r now <span class="comment"># 重启(1) </span></span><br><span class="line">$ reboot <span class="comment"># 重启(2) </span></span><br><span class="line">$ <span class="built_in">logout</span> <span class="comment"># 注销</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="文件和目录"><a href="#文件和目录" class="headerlink" title="文件和目录"></a>文件和目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /home <span class="comment"># 进入 '/ home' 目录</span></span><br><span class="line">$ <span class="built_in">cd</span> .. <span class="comment"># 返回上一级目录 </span></span><br><span class="line">$ <span class="built_in">cd</span> ../.. <span class="comment"># 返回上两级目录 </span></span><br><span class="line">$ <span class="built_in">cd</span> <span class="comment"># 进入个人的主目录 </span></span><br><span class="line">$ <span class="built_in">cd</span> ~user1 <span class="comment"># 进入个人的主目录 </span></span><br><span class="line">$ <span class="built_in">cd</span> - <span class="comment"># 返回上次所在的目录 </span></span><br><span class="line">$ <span class="built_in">pwd</span> <span class="comment"># 显示工作路径 </span></span><br><span class="line">$ ls <span class="comment"># 查看目录中的文件 </span></span><br><span class="line">$ ls -F <span class="comment"># 查看目录中的文件 </span></span><br><span class="line">$ ls -l <span class="comment"># 显示文件和目录的详细资料 </span></span><br><span class="line">$ ls -a <span class="comment"># 显示隐藏文件  </span></span><br><span class="line">$ mkdir dir1 <span class="comment"># 创建一个叫做 'dir1' 的目录</span></span><br><span class="line">$ mkdir dir1 dir2 <span class="comment"># 同时创建两个目录 </span></span><br><span class="line">$ mkdir -p /tmp/dir1/dir2 <span class="comment"># 创建一个目录树 </span></span><br><span class="line">$ rm -f file1 <span class="comment"># 删除一个叫做 'file1' 的文件' </span></span><br><span class="line">$ rmdir dir1 <span class="comment"># 删除一个叫做 'dir1' 的目录' </span></span><br><span class="line">$ rm -rf dir1 <span class="comment"># 删除一个叫做 'dir1' 的目录并同时删除其内容 </span></span><br><span class="line">$ rm -rf dir1 dir2 <span class="comment"># 同时删除两个目录及它们的内容 </span></span><br><span class="line">$ mv dir1 new_dir <span class="comment"># 重命名/移动 一个目录 </span></span><br><span class="line">$ cp file1 file2 <span class="comment"># 复制一个文件 </span></span><br><span class="line">$ cp dir/* . <span class="comment"># 复制一个目录下的所有文件到当前工作目录 </span></span><br><span class="line">$ cp -a /tmp/dir1 . <span class="comment"># 复制一个目录到当前工作目录 </span></span><br><span class="line">$ cp -a dir1 dir2 <span class="comment"># 复制一个目录 </span></span><br><span class="line">$ ln -s file1 lnk1 <span class="comment"># 创建一个指向文件或目录的软链接 </span></span><br><span class="line">$ ln file1 lnk1 <span class="comment"># 创建一个指向文件或目录的物理链接 </span></span><br><span class="line">$ touch file1 <span class="comment"># 创建一个文件</span></span><br></pre></td></tr></table></figure>
+<h4 id="文件搜索命令"><a href="#文件搜索命令" class="headerlink" title="文件搜索命令"></a>文件搜索命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ find / -name file1 <span class="comment"># 从 '/' 开始进入根文件系统搜索文件和目录 </span></span><br><span class="line">$ find / -user user1 <span class="comment"># 搜索属于用户 'user1' 的文件和目录 </span></span><br><span class="line"><span class="comment"># 在目录 '/ home/user1' 中搜索带有'.bin' 结尾的文件 </span></span><br><span class="line">$ find  /home/user1  -name  \*.bin </span><br><span class="line">$ find /usr/bin -<span class="built_in">type</span> f -atime +100 <span class="comment"># 搜索在过去100天内未被使用过的执行文件 </span></span><br><span class="line">$ find /usr/bin -<span class="built_in">type</span> f -mtime -10 <span class="comment"># 搜索在10天内被创建或者修改过的文件 </span></span><br><span class="line">$ locate \*.ps  <span class="comment"># 寻找以 '.ps' 结尾的文件 - 先运行 'updatedb' 命令 </span></span><br><span class="line">$ whereis file <span class="comment"># 显示一个二进制文件、源码或man的位置 </span></span><br><span class="line">$ <span class="built_in">which</span> file  <span class="comment"># 显示一个二进制文件或可执行文件的完整路径 </span></span><br><span class="line"><span class="comment"># 在当前目录及其子目录所有.c和.h文件中查找 'expr'</span></span><br><span class="line">$ find -name <span class="string">'*.[ch]'</span> | xargs grep -E <span class="string">'expr'</span> </span><br><span class="line"><span class="comment"># 在当前目录及其子目录的常规文件中查找 'expr'</span></span><br><span class="line">$ find -<span class="built_in">type</span> f -print0 | xargs -r0 grep -F <span class="string">'expr'</span> </span><br><span class="line"><span class="comment"># 在当前目录中查找 'expr'</span></span><br><span class="line">$ find -maxdepth 1 -<span class="built_in">type</span> f | xargs grep -F <span class="string">'expr'</span></span><br></pre></td></tr></table></figure>
+<h4 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ cat file1 <span class="comment"># 从第一个字节开始正向查看文件的内容 </span></span><br><span class="line">$ tac file1 <span class="comment"># 从最后一行开始反向查看一个文件的内容 </span></span><br><span class="line">$ more file1 <span class="comment"># 查看一个长文件的内容 </span></span><br><span class="line">$ less file1 <span class="comment"># 类似于 'more' 命令，但是它允许在文件中和正向操作一样的反向操作 </span></span><br><span class="line">$ head -2 file1 <span class="comment"># 查看一个文件的前两行 </span></span><br><span class="line">$ tail -2 file1 <span class="comment"># 查看一个文件的最后两行</span></span><br></pre></td></tr></table></figure>
+<h4 id="打包和解压缩文件"><a href="#打包和解压缩文件" class="headerlink" title="打包和解压缩文件"></a>打包和解压缩文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ bunzip2 file1.bz2 <span class="comment"># 解压一个叫做 'file1.bz2'的文件 </span></span><br><span class="line">$ bzip2 file1 <span class="comment"># 压缩一个叫做 'file1' 的文件 </span></span><br><span class="line">$ gunzip file1.gz <span class="comment"># 解压一个叫做 'file1.gz'的文件 </span></span><br><span class="line">$ gzip file1 <span class="comment"># 压缩一个叫做 'file1'的文件 </span></span><br><span class="line">$ gzip -9 file1 <span class="comment"># 最大程度压缩 </span></span><br><span class="line">$ rar a file1.rar test_file <span class="comment"># 创建一个叫做 'file1.rar' 的包 </span></span><br><span class="line">$ rar a file1.rar file1 file2 dir1 <span class="comment"># 打包 'file1', 'file2' 以及目录 'dir1' </span></span><br><span class="line">$ rar x file1.rar <span class="comment"># 解rar包 </span></span><br><span class="line">$ unrar x file1.rar <span class="comment"># 解rar包 </span></span><br><span class="line">$ tar -cvf archive.tar file1 <span class="comment"># 创建一个非压缩的tar包 </span></span><br><span class="line">$ tar -cvf archive.tar file1 file2 dir1 <span class="comment"># 创建一个包含了 'file1', 'file2' 'dir1'的包 </span></span><br><span class="line">$ tar -tf archive.tar <span class="comment"># 显示一个包中的内容 </span></span><br><span class="line">$ tar -xvf archive.tar <span class="comment"># 释放一个包 </span></span><br><span class="line">$ tar -xvf archive.tar -C /tmp <span class="comment"># 将压缩包释放到 /tmp目录下 （-c是指定目录）</span></span><br><span class="line">$ tar -cvfj archive.tar.bz2 dir1 <span class="comment"># 创建一个bzip2格式的压缩包 </span></span><br><span class="line">$ tar -xvfj archive.tar.bz2 <span class="comment"># 解压一个bzip2格式的压缩包 </span></span><br><span class="line">$ tar -cvfz archive.tar.gz dir1 <span class="comment"># 创建一个gzip格式的压缩包 </span></span><br><span class="line">$ tar -xvfz archive.tar.gz <span class="comment"># 解压一个gzip格式的压缩包 </span></span><br><span class="line">$ zip file1.zip file1 <span class="comment"># 创建一个zip格式的压缩包 </span></span><br><span class="line">$ zip -r file1.zip file1 file2 dir1 <span class="comment"># 将几个文件和目录同时压缩成一个zip格式的压缩包 </span></span><br><span class="line">$ unzip file1.zip <span class="comment"># 解压一个zip格式压缩包</span></span><br></pre></td></tr></table></figure>
+<h4 id="磁盘空间操作的命令"><a href="#磁盘空间操作的命令" class="headerlink" title="磁盘空间操作的命令"></a>磁盘空间操作的命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ df -h <span class="comment"># 显示已经挂载的分区列表 </span></span><br><span class="line">$ ls -lSr |more <span class="comment"># 以尺寸大小排列文件和目录 </span></span><br><span class="line">$ du -sh dir1 <span class="comment"># 估算目录 'dir1' 已经使用的磁盘空间</span></span><br><span class="line">$ du -sk * | sort -rn <span class="comment"># 以容量大小为依据依次显示文件和目录的大小</span></span><br></pre></td></tr></table></figure>
+<h4 id="RPM"><a href="#RPM" class="headerlink" title="RPM"></a>RPM</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">$ rpm -ivh package.rpm <span class="comment"># 安装一个rpm包 </span></span><br><span class="line">$ rpm -ivh --nodeeps package.rpm <span class="comment"># 安装一个rpm包而忽略依赖关系警告 </span></span><br><span class="line">$ rpm -U package.rpm <span class="comment"># 更新一个rpm包但不改变其配置文件 </span></span><br><span class="line">$ rpm -F package.rpm <span class="comment"># 更新一个确定已经安装的rpm包 </span></span><br><span class="line">$ rpm -e package_name.rpm <span class="comment"># 删除一个rpm包 </span></span><br><span class="line">$ rpm -qa <span class="comment"># 显示系统中所有已经安装的rpm包 </span></span><br><span class="line">$ rpm -qa | grep httpd <span class="comment"># 显示所有名称中包含 "httpd" 字样的rpm包 </span></span><br><span class="line">$ rpm -qi package_name <span class="comment"># 获取一个已安装包的特殊信息 </span></span><br><span class="line">$ rpm -ql package_name <span class="comment"># 显示一个已经安装的rpm包提供的文件列表 </span></span><br><span class="line">$ rpm -qc package_name <span class="comment"># 显示一个已经安装的rpm包提供的配置文件列表 </span></span><br><span class="line">$ rpm -q package_name --whatrequires <span class="comment"># 显示与一个rpm包存在依赖关系的列表 </span></span><br><span class="line">$ rpm -q package_name --whatprovides <span class="comment"># 显示一个rpm包所占的体积 </span></span><br><span class="line">$ rpm -q package_name --scripts <span class="comment"># 显示在安装/删除期间所执行的脚本l </span></span><br><span class="line">$ rpm -q package_name --changelog <span class="comment"># 显示一个rpm包的修改历史 </span></span><br><span class="line">$ rpm -qf /etc/httpd/conf/httpd.conf <span class="comment"># 确认所给的文件由哪个rpm包所提供 </span></span><br><span class="line">$ rpm -qp package.rpm -l <span class="comment"># 显示由一个尚未安装的rpm包提供的文件列表 </span></span><br><span class="line">$ rpm --import /media/cdrom/RPM-GPG-KEY <span class="comment"># 导入公钥数字证书 </span></span><br><span class="line">$ rpm --checksig package.rpm <span class="comment"># 确认一个rpm包的完整性 </span></span><br><span class="line">$ rpm -qa gpg-pubkey <span class="comment"># 确认已安装的所有rpm包的完整性 </span></span><br><span class="line"><span class="comment"># 检查文件尺寸、 许可、类型、所有者、群组、MD5检查以及最后修改时间 </span></span><br><span class="line">$ rpm -V package_name </span><br><span class="line">$ rpm -Va <span class="comment"># 检查系统中所有已安装的rpm包- 小心使用 </span></span><br><span class="line">$ rpm -Vp package.rpm <span class="comment"># 确认一个rpm包还未安装 </span></span><br><span class="line"><span class="comment"># 从一个rpm包运行可执行文件 </span></span><br><span class="line">$ rpm2cpio package.rpm | cpio --extract --make-directories *bin* </span><br><span class="line"><span class="comment"># 从一个rpm源码安装一个构建好的包 </span></span><br><span class="line">$ rpm -ivh /usr/src/redhat/RPMS/`arch`/package.rpm </span><br><span class="line"><span class="comment"># 从一个rpm源码构建一个 rpm 包 </span></span><br><span class="line">$ rpmbuild --rebuild package_name.src.rpm</span><br></pre></td></tr></table></figure>
+<h4 id="YUM"><a href="#YUM" class="headerlink" title="YUM"></a>YUM</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ yum install package_name <span class="comment"># 下载并安装一个rpm包 </span></span><br><span class="line"><span class="comment"># 将安装一个rpm包使用你自己的软件仓库为你解决所有依赖关系 </span></span><br><span class="line">$ yum localinstall package_name.rpm </span><br><span class="line">$ yum update package_name.rpm <span class="comment"># 更新当前系统中所有安装的rpm包 </span></span><br><span class="line">$ yum update package_name <span class="comment"># 更新一个rpm包 </span></span><br><span class="line">$ yum remove package_name <span class="comment"># 删除一个rpm包 </span></span><br><span class="line">$ yum list <span class="comment"># 列出当前系统中安装的所有包 </span></span><br><span class="line">$ yum search package_name <span class="comment"># 在rpm仓库中搜寻软件包 </span></span><br><span class="line">$ yum clean packages <span class="comment"># 清理rpm缓存删除下载的包 </span></span><br><span class="line">$ yum clean headers <span class="comment"># 删除所有头文件 </span></span><br><span class="line">$ yum clean all <span class="comment"># 删除所有缓存的包和头文件﻿​</span></span><br></pre></td></tr></table></figure>
+<h4 id="查看系统信息"><a href="#查看系统信息" class="headerlink" title="查看系统信息"></a>查看系统信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ arch <span class="comment"># 显示机器的处理器架构(1) </span></span><br><span class="line">$ uname -m <span class="comment"># 显示机器的处理器架构(2) </span></span><br><span class="line">$ uname -r <span class="comment"># 显示正在使用的内核版本 </span></span><br><span class="line">$ dmidecode -q <span class="comment"># 显示硬件系统部件 - (SMBIOS / DMI) </span></span><br><span class="line">$ hdparm -i /dev/hda <span class="comment"># 罗列一个磁盘的架构特性 </span></span><br><span class="line">$ hdparm -tT /dev/sda <span class="comment"># 在磁盘上执行测试性读取操作 </span></span><br><span class="line">$ cat /proc/cpuinfo <span class="comment"># 显示CPU info的信息 </span></span><br><span class="line">$ cat /proc/interrupts <span class="comment"># 显示中断 </span></span><br><span class="line">$ cat /proc/meminfo <span class="comment"># 校验内存使用 </span></span><br><span class="line">$ cat /proc/swaps <span class="comment"># 显示哪些swap被使用 </span></span><br><span class="line">$ cat /proc/version <span class="comment"># 显示内核的版本 </span></span><br><span class="line">$ cat /proc/net/dev <span class="comment"># 显示网络适配器及统计 </span></span><br><span class="line">$ cat /proc/mounts <span class="comment"># 显示已加载的文件系统 </span></span><br><span class="line">$ lspci -tv <span class="comment"># 罗列 PCI 设备 </span></span><br><span class="line">$ lsusb -tv <span class="comment"># 显示 USB 设备 </span></span><br><span class="line">$ date <span class="comment"># 显示系统日期 </span></span><br><span class="line">$ cal 2007 <span class="comment"># 显示2007年的日历表 </span></span><br><span class="line">$ date 041217002007.00 <span class="comment"># 设置日期和时间 - 月日时分年.秒 </span></span><br><span class="line">$ clock -w <span class="comment"># 将时间修改保存到 BIOS</span></span><br></pre></td></tr></table></figure>
+<h4 id="挂载命令"><a href="#挂载命令" class="headerlink" title="挂载命令"></a>挂载命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 挂载一个叫做hda2的盘  （注：确定目录 '/ mnt/hda2' 已经存在） </span></span><br><span class="line">$ mount /dev/hda2 /mnt/hda2 </span><br><span class="line"><span class="comment"># 卸载一个叫做hda2的盘（先从挂载点 '/ mnt/hda2' 退出）</span></span><br><span class="line">$ umount /dev/hda2  </span><br><span class="line"><span class="comment"># 当设备繁忙时强制卸载 </span></span><br><span class="line">$ fuser -km /mnt/hda2</span><br><span class="line"><span class="comment"># 运行卸载操作而不写入 /etc/mtab 文件（当文件为只读或当磁盘写满时非常有用） </span></span><br><span class="line">$ umount -n /mnt/hda2 <span class="comment"># </span></span><br><span class="line">$ mount /dev/fd0 /mnt/floppy <span class="comment"># 挂载一个软盘 </span></span><br><span class="line">$ mount /dev/cdrom /mnt/cdrom <span class="comment"># 挂载一个光盘</span></span><br><span class="line">$ mount /dev/hdc /mnt/cdrecorder <span class="comment"># 挂载一个cdrw或dvdrom </span></span><br><span class="line">$ mount /dev/hdb /mnt/cdrecorder <span class="comment"># 挂载一个cdrw或dvdrom </span></span><br><span class="line">$ mount -o loop file.iso /mnt/cdrom <span class="comment"># 挂载一个文件或ISO镜像文件 </span></span><br><span class="line">$ mount -t vfat /dev/hda5 /mnt/hda5 <span class="comment"># 挂载一个Windows FAT32文件系统 </span></span><br><span class="line">$ mount /dev/sda1 /mnt/usbdisk <span class="comment"># 挂载一个usb 捷盘或闪存设备</span></span><br><span class="line"><span class="comment"># 挂载一个windows网络共享  </span></span><br><span class="line">$ mount -t smbfs -o username=user,password=pass //WinClient/share /mnt/share</span><br></pre></td></tr></table></figure>
+<h4 id="用户和群组"><a href="#用户和群组" class="headerlink" title="用户和群组"></a>用户和群组</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">$ groupadd group_name <span class="comment"># 创建一个新用户组 </span></span><br><span class="line">$ groupdel group_name <span class="comment"># 删除一个用户组 </span></span><br><span class="line">$ groupmod -n new_group_name old_group_name <span class="comment"># 重命名一个用户组 </span></span><br><span class="line"><span class="comment"># 创建一个属于 "admin" 用户组的用户 </span></span><br><span class="line">$ useradd -c <span class="string">"Name Surname "</span> -g admin -d /home/user1 -s /bin/bash user1 </span><br><span class="line">$ useradd user1 <span class="comment"># 创建一个新用户 </span></span><br><span class="line">$ userdel -r user1 <span class="comment"># 删除一个用户 ( '-r' 同时删除除主目录) </span></span><br><span class="line">$ passwd user1 <span class="comment"># 修改一个用户的口令 (只允许root执行) </span></span><br><span class="line">$ chage -E 2005-12-31 user1 <span class="comment"># 设置用户口令的失效期限 </span></span><br><span class="line">$ ls -lh <span class="comment"># 显示权限 </span></span><br><span class="line"><span class="comment"># 设置目录的所有人(u)、群组(g)以及其他人(o)以读(r)、写(w)和执行(x)的权限 </span></span><br><span class="line">$ chmod 777 directory1</span><br><span class="line"><span class="comment"># 删除群组(g)与其他人(o)对目录的读写执行权限 </span></span><br><span class="line">$ chmod 700 directory1 </span><br><span class="line"><span class="comment"># 改变一个文件的所有人属性，为use1</span></span><br><span class="line">$ chown user1 file1 </span><br><span class="line"><span class="comment"># 改变一个目录的所有人属性并同时改变改目录下所有文件的属性都为use1所有 </span></span><br><span class="line">$ chown -R user1 directory1 </span><br><span class="line"><span class="comment"># 改变文件的群组为group1 </span></span><br><span class="line">$ chgrp group1 file1</span><br><span class="line"><span class="comment"># 改变一个文件的所有人和群组属性，所属组为group1，用户为use1。 </span></span><br><span class="line">$ chown user1:group1 file1 </span><br><span class="line"><span class="comment"># 罗列一个系统中所有使用了SUID控制的文件 </span></span><br><span class="line">$ find / -perm -u+s </span><br><span class="line"><span class="comment"># 设置一个二进制文件的 SUID 位 - 运行该文件的用户也被赋予和所有者同样的权限 </span></span><br><span class="line">$ chmod u+s /bin/file1 </span><br><span class="line"><span class="comment"># 禁用一个二进制文件的 SUID位 </span></span><br><span class="line">$ chmod u<span class="_">-s</span> /bin/file1 </span><br><span class="line">$ chmod g+s /home/public <span class="comment"># 设置一个目录的SGID 位 - 类似SUID ，不过这是针对目录的 </span></span><br><span class="line">$ chmod g<span class="_">-s</span> /home/public <span class="comment"># 禁用一个目录的 SGID 位 </span></span><br><span class="line">$ chmod o+t /home/public <span class="comment"># 设置一个文件的 STIKY 位 - 只允许合法所有人删除文件 </span></span><br><span class="line">$ chmod o-t /home/public <span class="comment"># 禁用一个目录的 STIKY 位</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/CentOS/" rel="tag"># CentOS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/01/linux-centos-port/" rel="next" title="CentOS端口">
+                <i class="fa fa-chevron-left"></i> CentOS端口
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/01/linux-ubuntu-command/" rel="prev" title="Ubuntu常用命令">
+                Ubuntu常用命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/coffe-128-right.svg"
+                alt="8oc" />
+            
+              <p class="site-author-name" itemprop="name">星享俱乐部</p>
+              <p class="site-description motion-element" itemprop="description">★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.starbucks.com.cn" target="_blank" title="Starbucks">
+                      
+                        <i class="fa fa-fw fa-coffee"></i>Starbucks</a>
+                  </span>
+                
+            </div>
+          
+          
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#关机-系统的关机、重启以及登出-的命令"><span class="nav-number">1.</span> <span class="nav-text">关机 (系统的关机、重启以及登出 )的命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件和目录"><span class="nav-number">2.</span> <span class="nav-text">文件和目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件搜索命令"><span class="nav-number">3.</span> <span class="nav-text">文件搜索命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看文件内容"><span class="nav-number">4.</span> <span class="nav-text">查看文件内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打包和解压缩文件"><span class="nav-number">5.</span> <span class="nav-text">打包和解压缩文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#磁盘空间操作的命令"><span class="nav-number">6.</span> <span class="nav-text">磁盘空间操作的命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RPM"><span class="nav-number">7.</span> <span class="nav-text">RPM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#YUM"><span class="nav-number">8.</span> <span class="nav-text">YUM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看系统信息"><span class="nav-number">9.</span> <span class="nav-text">查看系统信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#挂载命令"><span class="nav-number">10.</span> <span class="nav-text">挂载命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户和群组"><span class="nav-number">11.</span> <span class="nav-text">用户和群组</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+      
+    </div>
+    
+  </aside>
+ 
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  <span class="with-love">
+    <i class="fa fa-coffee"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wish a Starbucks Coffee Here!</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" style="display:none;">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv" ></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv" style="display:none;">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv" ></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
