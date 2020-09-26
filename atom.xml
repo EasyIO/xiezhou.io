@@ -107,9 +107,9 @@
       <category term="运维π" scheme="http://8oc.cc/categories/%E8%BF%90%E7%BB%B4%CF%80/"/>
     
     
-      <category term="CentOS" scheme="http://8oc.cc/tags/CentOS/"/>
-    
       <category term="数据库" scheme="http://8oc.cc/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="CentOS" scheme="http://8oc.cc/tags/CentOS/"/>
     
       <category term="Redis" scheme="http://8oc.cc/tags/Redis/"/>
     
@@ -181,9 +181,9 @@
       <category term="DBπ" scheme="http://8oc.cc/categories/DB%CF%80/"/>
     
     
-      <category term="CentOS" scheme="http://8oc.cc/tags/CentOS/"/>
-    
       <category term="数据库" scheme="http://8oc.cc/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="CentOS" scheme="http://8oc.cc/tags/CentOS/"/>
     
       <category term="Mysql" scheme="http://8oc.cc/tags/Mysql/"/>
     
@@ -279,9 +279,9 @@
       <category term="开发π" scheme="http://8oc.cc/categories/%E5%BC%80%E5%8F%91%CF%80/"/>
     
     
-      <category term="log4j" scheme="http://8oc.cc/tags/log4j/"/>
-    
       <category term="Java" scheme="http://8oc.cc/tags/Java/"/>
+    
+      <category term="log4j" scheme="http://8oc.cc/tags/log4j/"/>
     
   </entry>
   

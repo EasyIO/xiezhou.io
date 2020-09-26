@@ -43,8 +43,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>CentOS</tag>
         <tag>数据库</tag>
+        <tag>CentOS</tag>
         <tag>Redis</tag>
       </tags>
   </entry>
@@ -80,8 +80,8 @@
         <category>DBπ</category>
       </categories>
       <tags>
-        <tag>CentOS</tag>
         <tag>数据库</tag>
+        <tag>CentOS</tag>
         <tag>Mysql</tag>
       </tags>
   </entry>
@@ -127,8 +127,8 @@
         <category>开发π</category>
       </categories>
       <tags>
-        <tag>log4j</tag>
         <tag>Java</tag>
+        <tag>log4j</tag>
       </tags>
   </entry>
   <entry>
@@ -255,8 +255,8 @@
         <category>开发π</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>Maven</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -363,10 +363,10 @@
         <category>安全π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
         <tag>Airmon-ng</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -473,9 +473,9 @@
         <category>安全π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
