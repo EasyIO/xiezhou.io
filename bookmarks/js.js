@@ -78,8 +78,8 @@ function browserRedirect() {
     
 var now = -1;
 var resLength = 0;
-var thisSearch = 'https://www.baidu.com/s?wd=';
-var thisSearchIcon = './logo.jpg';
+var thisSearch = 'https://www.google.com/search?q=';
+var thisSearchIcon = './logo_2.jpg';
 var storage = window.localStorage;
 if(!storage.stopHot){
     storage.stopHot = true

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MacBook常用操作]]></title>
+    <url>%2F2020%2F09%2F26%2Fmacbook-set%2F</url>
+    <content type="text"><![CDATA[Brew命令行123456789101112131415brew –help #查看brew的帮助brew install git #安装git软件brew uninstall git #卸载git软件brew search git #搜索git软件brew list #显示已经安装软件列表brew update #更新软件brew upgrade git #更新某具体软件brew [info | home] [FORMULA…] #查看软件信息brew cleanup git #单个软件删除，和upgrade一样brew cleanup #删除所有brew outdated #查看那些已安装的程序需要更新brew home * #用浏览器打开brew info * #显示软件内容信息brew deps * #显示包依赖brew config #查看brew配置 安装123456#安装Brewruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"#更换源git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.gitgit -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.gitgit -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git Quicklook插件1234brew cask install qlstephen #查看没有文件扩展名的纯文本文件brew cask install provisionql #预览iOS的.ipa安装包brew cask install qlmarkdown #预览Markdown文件brew cask install quicklook-json #预览json文件 ITerm2安装123456789101112131415161718192021222324252627282930# 终端输入命令，然后输入密码即可将zsh切换成默认shell$ chsh -s /bin/zsh# 安装oh-my-zshsh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"# 插件git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestionsgit clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting# 刷新source ~/.zshrc# 配置$ zshconfig'source $ZSH/oh-my-zsh.shalias zshconfig="vim ~/.zshrc"alias vimconfig="vim ~/.vimrc"alias ansibleconfig="vim ~/.ansible/ansible.cfg"alias grep='grep --color=auto'alias cls="clear"'#主题使用powerlevel10k'POWERLEVEL9K_MODE='nerdfont-complete'ZSH_THEME="powerlevel10k/powerlevel10k"'#使用颜色配置$ vi ~/.vimrcsyntax enableset background=darkcolorscheme solarized.vim 快捷键 标签 新建标签：command + t关闭标签：command + w切换标签：command + 数字 / command + 左右方向键切换全屏：command + enter查找：command + f 分屏 垂直分屏：command + d水平分屏：command + shift + d切换屏幕：command + option + 方向键 command + [ 或 command + ]查看历史命令：command + ;查看剪贴板历史：command + shift + h 其他 清除当前行：ctrl + u到行首：ctrl + a到行尾：ctrl + e前进后退：ctrl + f/b (相当于左右方向键)上一条命令：ctrl + p搜索命令历史：ctrl + r删除当前光标的字符：ctrl + d删除光标之前的字符：ctrl + h删除光标之前的单词：ctrl + w删除到文本末尾：ctrl + k交换光标处文本：ctrl + t清屏1：command + r清屏2：ctrl + l Python安装123456789101112#安装Pythonbrew search pythonbrew install python@3.8#检测文件夹open /usr/local/Frameworks#没有的话执行 sudo mkdir /usr/local/Frameworks#设置权限sudo chown $(whoami):admin /usr/local/Frameworks#修改默认指向alias python="/usr/local/bin/python3.7"source ~/.bash_profile#查看版本python -V]]></content>
+      <categories>
+        <category>技术π</category>
+      </categories>
+      <tags>
+        <tag>MacBook</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Win10远程连接错误]]></title>
     <url>%2F2020%2F09%2F26%2Fwin10-error%2F</url>
     <content type="text"><![CDATA[12345#Windows10远程报错:由于CredSSP加密Oracle修正1.打开注册表，快捷输⼊ “regedit”;2.找⽂件夹 路径：HKLM(缩写)\Software\Microsoft\Windows\CurrentVersion \Policies\System\CredSSP\Parameters,⼤概到System 后就没有了⾃⼰创建⽂件夹就好;3.然后再最底部⽂件夹⾥⾯ 新建 DWORD（32）位的。⽂件名 “AllowEncryptionOracle”，值：2，保存。]]></content>
@@ -24,7 +35,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[solr安装手册]]></title>
+    <title><![CDATA[Solr安装手册]]></title>
     <url>%2F2020%2F09%2F26%2Fsolr-set%2F</url>
     <content type="text"><![CDATA[单机版1234567891011121314151617181920212223#1、安装linux、jdk、tomcatmkdir /usr/local/solrmkdir /usr/local/solr/solrhomecp -r apache-tomcat-7.0.47 /usr/local/solr/tomcat#2、把solr的压缩包上传到服务器,并解压tar -zxvf solr-4.10.3.tgz.tgz#3、把/root/solr-4.10.3/dist/solr-4.10.3.war包部署到tomcat下。并改名为solr.warcp /root/solr-4.10.3/dist/solr-4.10.3.war /usr/local/solr/tomcat/webapps/solr.war#4、解压war包。启动tomcat⾃动解压。关闭tomcat。删除solr.wartomcat/bin/stratup.sh#5、log相关jar把复制到lib⽬录，/root/solr-4.10.3/example/lib/extcp /root/solr-4.10.3/example/lib/ext/* /usr/local/solr/tomcat/webapps/WEB-INF/lib/#6、Solrhome是存放solr服务器所有配置⽂件的⽬录。在solr-4.10.3/example/solr下cp -r solr /usr/local/solr/solrhome#7、配置tomcat的web.xml，告诉solr服务器solrhome的位置。'&lt;env-entry&gt; &lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt; &lt;env-entry-value&gt;/usr/local/solr/solrhome&lt;/env-entry-value&gt; &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;&lt;/env-entry&gt;'#8、启动tomcat，登⼊地址 http://192.168.7.13x:8080/solr 添加分词器123456789101112131415161718192021222324252627282930#1、上传IK Analyzer 2012FF_hf1⽂件#2、需要把分析器的IKAnalyzer2012FF_u1.jar包添加到solr⼯程中cp IKAnalyzer2012FF_u1.jar /usr/local/solr/tomcat/webapps/solr/WEB-INF/lib/#3、需要把IKAnalyzer需要的扩展词典及停⽤词词典、配置⽂件复制到solr⼯程的classpathcp IKAnalyzer.cfg.xml ext_stopword.dic mydict.dic /usr/local/solr /tomcat/webapps/solr/WEB-INF/classes'注意：扩展词典及停⽤词词典的字符集必须是utf-8。不能使⽤windows记事本编辑。'#4、配置fieldType。需要在solrhome/collection1/conf/schema.xml中配置。'技巧：使⽤vi、vim跳转到⽂档开头gg。跳转到⽂档末尾：G''&lt;fieldType name="text_ik" class="solr.TextField"&gt;&lt;analyzer class="org.wltea.analyzer.lucene.IKAnalyzer"/&gt;&lt;/fieldType&gt;'#业务字段配置'&lt;field name="item_title" type="text_ik" indexed="true" stored="true"/&gt;&lt;field name="item_sell_point" type="text_ik" indexed="true" stored="true"/&gt;&lt;field name="item_price" type="long" indexed="true" stored="true"/&gt;&lt;field name="item_image" type="string" indexed="false" stored="true" /&gt;&lt;field name="item_category_name" type="string" indexed="true" stored="true" /&gt;&lt;field name="item_desc" type="text_ik" indexed="true" stored="false" /&gt;&lt;field name="item_keywords" type="text_ik" indexed="true" stored="false" multiValued="true"/&gt;&lt;copyField source="item_title" dest="item_keywords"/&gt;&lt;copyField source="item_sell_point" dest="item_keywords"/&gt;&lt;copyField source="item_category_name" dest="item_keywords"/&gt;&lt;copyField source="item_desc" dest="item_keywords"/&gt;'#5、重启tomcat SolrCloud集群版Zookeeper集群的搭建12345678910111213141516171819202122232425#需要三个zookeeper节点，四个solr节点#上传、安装zookeepertar -zxf zookeeper-3.4.6.tar.gz#在/usr/local/⽬录下创建⼀个solrcloud⽬录。把zookeeper解压后的⽂件夹复制#到此⽬录下三份。分别命名为zookeeper1、2、3mkdir /usr/local/solrcloudmv zookeeper-3.4.6 /usr/local/solrcloud/zookeeper1#配置zookeeper'1、在每个zookeeper⽂件夹下创建⼀个data⽬录mkdir zookeeper/data2、在data⽂件夹下创建⼀个⽂件名称为myid，⽂件的内容就是此zookeeper的编号1、2、3 echo 1 &gt;&gt; myid3、把zookeeper1下conf⽬录下的zoo_sample.cfg⽂件复制⼀份改名为zoo.cfg4、修改zoo.cfg的配置dataDir=/usr/local/solrcloud/zookeeper1/data #data⽬录路径clientPort=2181 #客户端连接的端⼝#集群中节点信息，包括ip地址及投票、选举的端⼝server.1=192.168.7.130:2881:3881server.2=192.168.7.130:2882:3882server.3=192.168.7.130:2883:38835、启动zookpeeker，进⼊zookeeper1/bin⽬录下启动：./zkServer.sh start关闭：./zkServer.sh stop查看状态：./zkServer.sh status' Solr实例的搭建1234567891011121314151617181920212223242526272829303132333435363738394041424344454647481、把solrhome中的配置⽂件上传到zookeeper集群。使⽤zookeeper的客户端上传'客户端命令位置：cd /root/solr-4.10.3/example/scripts/cloud-scripts'#上传配置⽂件'./zkcli.sh -zkhost 192.168.7.130:2181,192.168.7.130:2182,192.168.7.130:2183 -cmd upconfig -confdir /usr/local/solrcloud/solrhome1/collection1/conf -confname myconf'#查看是否上传成功'[root@bogon bin]# ./zkCli.shConnecting to localhost:2181[zk: localhost:2181(CONNECTED) 0] ls /[configs, zookeeper][zk: localhost:2181(CONNECTED) 1] ls /configs[myconf][zk: localhost:2181(CONNECTED) 2] ls /configs/myconf''创建四个solr和四个tomcat，tomcat中每个web.xml,需要修改solrhome的位置'2、修改solrhome下的solr.xml⽂件，指定当前实例运⾏的ip地址及端⼝号'&lt;solrcloud&gt; &lt;str name="host"&gt;$&#123;host:192.168.7.130&#125;&lt;/str&gt; &lt;int name="hostPort"&gt;$&#123;jetty.port:8080&#125;&lt;/int&gt; &lt;str name="hostContext"&gt;$&#123;hostContext:solr&#125;&lt;/str&gt; &lt;int name="zkClientTimeout"&gt;$&#123;zkClientTimeout:30000&#125;&lt;/int&gt; &lt;bool name="genericCoreNodeNames"&gt;$&#123;genericCoreNodeNames:true&#125;&lt;/bool&gt;&lt;/solrcloud&gt;'3、修改每⼀台solr的tomcat 的 bin⽬录下catalina.sh⽂件中加⼊DzkHost指定zookeeper服务器地址：'JAVA_OPTS="-DzkHost=192.168.7.130:2181,192.168.7.130:2182,192.168.7.130:2183"'4、重新启动tomcat，此时⼀个主节点多个备份节点，集群只有⼀⽚。5、创建⼀个两⽚的collection，每⽚是⼀主⼀备。'http://192.168.7.130:8080/solr/admin/collections?action=CREATE&amp;name=collection2&amp;numShards=2&amp;replicationFactor=2'6、删除collection1'http://192.168.7.130:8080/solr/admin/collections?action=DELETE&amp;name=collection1'#安装完成]]></content>
       <categories>
@@ -110,7 +121,7 @@
   </entry>
   <entry>
     <title><![CDATA[轻量级运维]]></title>
-    <url>%2F2020%2F09%2F26%2Ffast-yuwei%2F</url>
+    <url>%2F2020%2F09%2F26%2Ffast-yunwei%2F</url>
     <content type="text"><![CDATA[CentOS时区设置1234#查看当前时区设置ls -l /etc/localtime#修改时区ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime Tomcat时区更改1234#在catalina.sh 第⼀⾏家⼀下⼀下脚本JAVA_OPTS='-Xms1024m -Xmx1024m -XX:PermSize=256M -XX:MaxNewSize=512m -XX:MaxPermSize=512m'JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF8 -Duser.timezone=GMT+08" Tomcat端口更改1234#在server.xml更改&lt;Connector port="8088" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" URIEncoding="UTF-8" /&gt; JDK安装123456789101112131415mkdir /usr/javatar -zxvf jdk-8u152-linux-x64.tar.gz#编辑profile⽂件vim /etc/profile向⽂件⾥⾯追加以下内容：#set java environmentJAVA_HOME=/usr/java/jdk1.7.0_79JRE_HOME=$JAVA_HOME/jrePATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/binCLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/libexport JAVA_HOME JRE_HOME PATH CLASSPATH#使配置⽂件⽣效：source /etc/profilejava -version 防火墙firewall(弃用)12345678910111213141516171819202122232425262728#1、查看firewall服务状态systemctl status firewalld#2、查看firewall的状态firewall-cmd --state#3、开启、重启、关闭、firewalld.service服务# 开启service firewalld start# 重启service firewalld restart# 关闭service firewalld stop#4、查看防⽕墙规则firewall-cmd --list-all#5、查询、开放、关闭端⼝# 查询端⼝是否开放firewall-cmd --query-port=8080/tcp# 开放80端⼝firewall-cmd --permanent --add-port=80/tcpfirewall-cmd --permanent --add-port=8088/tcpfirewall-cmd --permanent --add-port=3306/tcp# 移除端⼝firewall-cmd --permanent --remove-port=8080/tcp#重启防⽕墙(修改配置后要重启防⽕墙)firewall-cmd --reload# 参数解释#1、firwall-cmd：是Linux提供的操作firewall的⼀个⼯具；#2、--permanent：表示设置为持久；#3、--add-port：标识添加的端⼝； ActiveMQ安装123456789101112tar -zxvf apache-activemq-5.14.0-bin.tar.gz./activemq start#(使⽤IPtables防⽕墙)添加防⽕墙的端⼝8161和61616firewall-cmd --add-port=8161/tcpfirewall-cmd --add-port=6161/tcp查看添加的端⼝firewall-cmd --list-all命令：重启防⽕墙systemctl restart firewalld查看防⽕墙状态firewall-cmd --state#重启防⽕墙(修改配置后要重启防⽕墙)firewall-cmd --reload 后台运行nohup123456ps -ef|grep socsi-pay-app-payfor.jarps -ef|grep socsi-pay-app-order-polling.jarps -ef|grep socsi-pay-app-notify.jarnohup java -jar socsi-pay-app-payfor.jar 1&gt;/dev/null 2&gt;&amp;1 &amp;nohup java -jar socsi-pay-app-notify.jar 1&gt;/dev/null 2&gt;&amp;1 &amp;nohup java -jar socsi-pay-app-order-polling.jar 1&gt;/dev/null 2&gt;&amp;1&amp; ngrok1http://127.0.0.1:4040/http/in]]></content>
       <categories>
         <category>运维π</category>
@@ -243,8 +254,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>CentOS</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -290,8 +301,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>CentOS</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -302,8 +313,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>CentOS</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -314,8 +325,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>CentOS</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -326,8 +337,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>CentOS</tag>
+        <tag>Linux</tag>
         <tag>Git</tag>
       </tags>
   </entry>
@@ -339,8 +350,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>CentOS</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -363,9 +374,9 @@
         <category>安全π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
+        <tag>Linux</tag>
         <tag>Airmon-ng</tag>
       </tags>
   </entry>
@@ -422,7 +433,7 @@
   <entry>
     <title><![CDATA[Hexo]]></title>
     <url>%2F2018%2F04%2F01%2Fhexo-learning%2F</url>
-    <content type="text"><![CDATA[12345678# 安装hexo$ npm install -g hexo-cli​# 文件夹初始化$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install# next主体$ git clone https://github.com/iissnan/hexo-theme-next themes/next 常用插件1234567891011# 安装 less# 主题默认使用 less 作为 css 预处理工具。$ npm install hexo-renderer-less --save# 安装 feed# 用于生成 rss。$ npm install hexo-generator-feed --save# 安装 json-content# 用于生成静态站点数据，用作站内搜索的数据源。$ npm install hexo-generator-json-content --save$ npm install hexo-deployer-git --save` hexo命令1234567891011121314$ hexo new post title$ hexo -d 提交只git$ hexo -w 监视文章文件变动$ hexo -s 启动服务$ hexo -g 生成页面$ hexo list &lt;type&gt;$ hexo --safe 安全模式$ hexo --debug 调试模式$ hexl --slient 简洁模式# 重新安装hexo-util $ npm install -- save-dev hexo-util# 如果出现# Block-scoped declarations (let, const, function, class) not yet supported outside strict mode$ 'use strict' 其他插件12345678910# hexo-addlink：在文章最末添加永久链接及版权声明，建议安装# hexo-generator-search: 本地搜索# hexo-index-anything: 更改首页为任意的页面# hexo-encrypt：加密你的博客# hexo-ruby-character 文字拼音# hexo Tag Cloud 标签云# hexo-uuid# sitemap 站点地图$ npm install hexo-generator-searchdb --save$ npm uninstall ​ 踩坑12345678#1.node版本过高，导致报错brew uninstall nodebrew install node@12brew link --overwrite --force node@12#2.大小写敏感git config core.ignorecase false#3.tag-404先删除/public下的tag文件夹，提交到远程仓库。再重新hexo g d。]]></content>
+    <content type="text"><![CDATA[12345678# 安装hexo$ npm install -g hexo-cli​# 文件夹初始化$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install# next主题$ git clone https://github.com/iissnan/hexo-theme-next themes/next 常用插件1234567891011# 安装 less# 主题默认使用 less 作为 css 预处理工具。$ npm install hexo-renderer-less --save# 安装 feed# 用于生成 rss。$ npm install hexo-generator-feed --save# 安装 json-content# 用于生成静态站点数据，用作站内搜索的数据源。$ npm install hexo-generator-json-content --save$ npm install hexo-deployer-git --save` hexo命令1234567891011121314$ hexo new post title$ hexo -d 提交只git$ hexo -w 监视文章文件变动$ hexo -s 启动服务$ hexo -g 生成页面$ hexo list &lt;type&gt;$ hexo --safe 安全模式$ hexo --debug 调试模式$ hexl --slient 简洁模式# 重新安装hexo-util $ npm install -- save-dev hexo-util# 如果出现# Block-scoped declarations (let, const, function, class) not yet supported outside strict mode$ 'use strict' 其他插件12345678910# hexo-addlink：在文章最末添加永久链接及版权声明，建议安装# hexo-generator-search: 本地搜索# hexo-index-anything: 更改首页为任意的页面# hexo-encrypt：加密你的博客# hexo-ruby-character 文字拼音# hexo Tag Cloud 标签云# hexo-uuid# sitemap 站点地图$ npm install hexo-generator-searchdb --save$ npm uninstall ​ 踩坑12345678#1.node版本过高，导致报错brew uninstall nodebrew install node@12brew link --overwrite --force node@12#2.大小写敏感git config core.ignorecase false#3.tag-404先删除/public下的tag文件夹，提交到远程仓库。再重新hexo g d。]]></content>
       <categories>
         <category>技术π</category>
       </categories>
@@ -473,9 +484,9 @@
         <category>安全π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
