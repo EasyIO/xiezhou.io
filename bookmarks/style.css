@@ -284,15 +284,15 @@
 		font-weight: bold;
 	}
 	header .logo img {
-		width: 25px;
+		width: 0px;
 	}
-	header .logo img {
+/*	header .logo img {
 		animation: donghua 1.7s linear infinite;
 		-webkit-animation: donghua 1.7s linear infinite;
 		-moz-animation: donghua 1.7s linear infinite;
 		-o-animation: donghua 1.7s linear infinite;
 		-ms-animation: donghua 1.7s linear infinite;
-	}
+	}*/
 	header .nav {
 		width: 100%;
 		margin-left: 25px;
