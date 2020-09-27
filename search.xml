@@ -43,8 +43,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>CentOS</tag>
+        <tag>数据库</tag>
         <tag>Redis</tag>
       </tags>
   </entry>
@@ -80,8 +80,8 @@
         <category>DBπ</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>CentOS</tag>
+        <tag>数据库</tag>
         <tag>Mysql</tag>
       </tags>
   </entry>
@@ -127,8 +127,8 @@
         <category>开发π</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>log4j</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -255,8 +255,8 @@
         <category>开发π</category>
       </categories>
       <tags>
-        <tag>Maven</tag>
         <tag>Java</tag>
+        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
@@ -363,10 +363,10 @@
         <category>安全π</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
         <tag>Airmon-ng</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -422,7 +422,7 @@
   <entry>
     <title><![CDATA[Hexo]]></title>
     <url>%2F2018%2F04%2F01%2Fhexo-learning%2F</url>
-    <content type="text"><![CDATA[12345$ npm install -g hexo-cli​ #hexo$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install$ git clone https://github.com/iissnan/hexo-theme-next themes/next 常用插件1234567891011# 安装 less# 主题默认使用 less 作为 css 预处理工具。$ npm install hexo-renderer-less --save# 安装 feed# 用于生成 rss。$ npm install hexo-generator-feed --save# 安装 json-content# 用于生成静态站点数据，用作站内搜索的数据源。$ npm install hexo-generator-json-content --save$ npm install hexo-deployer-git --save` hexo命令1234567891011121314$ hexo new post title$ hexo -d 提交只git$ hexo -w 监视文章文件变动$ hexo -s 启动服务$ hexo -g 生成页面$ hexo list &lt;type&gt;$ hexo --safe 安全模式$ hexo --debug 调试模式$ hexl --slient 简洁模式# 重新安装hexo-util $ npm install -- save-dev hexo-util# 如果出现# Block-scoped declarations (let, const, function, class) not yet supported outside strict mode$ 'use strict' 其他插件12345678910# hexo-addlink：在文章最末添加永久链接及版权声明，建议安装# hexo-generator-search: 本地搜索# hexo-index-anything: 更改首页为任意的页面# hexo-encrypt：加密你的博客# hexo-ruby-character 文字拼音# hexo Tag Cloud 标签云# hexo-uuid# sitemap 站点地图$ npm install hexo-generator-searchdb --save$ npm uninstall ​]]></content>
+    <content type="text"><![CDATA[12345678# 安装hexo$ npm install -g hexo-cli​# 文件夹初始化$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install# next主体$ git clone https://github.com/iissnan/hexo-theme-next themes/next 常用插件1234567891011# 安装 less# 主题默认使用 less 作为 css 预处理工具。$ npm install hexo-renderer-less --save# 安装 feed# 用于生成 rss。$ npm install hexo-generator-feed --save# 安装 json-content# 用于生成静态站点数据，用作站内搜索的数据源。$ npm install hexo-generator-json-content --save$ npm install hexo-deployer-git --save` hexo命令1234567891011121314$ hexo new post title$ hexo -d 提交只git$ hexo -w 监视文章文件变动$ hexo -s 启动服务$ hexo -g 生成页面$ hexo list &lt;type&gt;$ hexo --safe 安全模式$ hexo --debug 调试模式$ hexl --slient 简洁模式# 重新安装hexo-util $ npm install -- save-dev hexo-util# 如果出现# Block-scoped declarations (let, const, function, class) not yet supported outside strict mode$ 'use strict' 其他插件12345678910# hexo-addlink：在文章最末添加永久链接及版权声明，建议安装# hexo-generator-search: 本地搜索# hexo-index-anything: 更改首页为任意的页面# hexo-encrypt：加密你的博客# hexo-ruby-character 文字拼音# hexo Tag Cloud 标签云# hexo-uuid# sitemap 站点地图$ npm install hexo-generator-searchdb --save$ npm uninstall ​ 踩坑12345678#1.node版本过高，导致报错brew uninstall nodebrew install node@12brew link --overwrite --force node@12#2.大小写敏感git config core.ignorecase false#3.tag-404先删除/public下的tag文件夹，提交到远程仓库。再重新hexo g d。]]></content>
       <categories>
         <category>技术π</category>
       </categories>
@@ -473,9 +473,9 @@
         <category>安全π</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
