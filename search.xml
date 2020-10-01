@@ -122,7 +122,7 @@
   <entry>
     <title><![CDATA[轻量级运维]]></title>
     <url>%2F2020%2F09%2F26%2Ffast-yunwei%2F</url>
-    <content type="text"><![CDATA[CentOS时区设置1234#查看当前时区设置ls -l /etc/localtime#修改时区ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime Tomcat时区更改1234#在catalina.sh 第⼀⾏家⼀下⼀下脚本JAVA_OPTS='-Xms1024m -Xmx1024m -XX:PermSize=256M -XX:MaxNewSize=512m -XX:MaxPermSize=512m'JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF8 -Duser.timezone=GMT+08" Tomcat端口更改1234#在server.xml更改&lt;Connector port="8088" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" URIEncoding="UTF-8" /&gt; JDK安装123456789101112131415mkdir /usr/javatar -zxvf jdk-8u152-linux-x64.tar.gz#编辑profile⽂件vim /etc/profile向⽂件⾥⾯追加以下内容：#set java environmentJAVA_HOME=/usr/java/jdk1.7.0_79JRE_HOME=$JAVA_HOME/jrePATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/binCLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/libexport JAVA_HOME JRE_HOME PATH CLASSPATH#使配置⽂件⽣效：source /etc/profilejava -version 防火墙firewall(弃用)12345678910111213141516171819202122232425262728#1、查看firewall服务状态systemctl status firewalld#2、查看firewall的状态firewall-cmd --state#3、开启、重启、关闭、firewalld.service服务# 开启service firewalld start# 重启service firewalld restart# 关闭service firewalld stop#4、查看防⽕墙规则firewall-cmd --list-all#5、查询、开放、关闭端⼝# 查询端⼝是否开放firewall-cmd --query-port=8080/tcp# 开放80端⼝firewall-cmd --permanent --add-port=80/tcpfirewall-cmd --permanent --add-port=8088/tcpfirewall-cmd --permanent --add-port=3306/tcp# 移除端⼝firewall-cmd --permanent --remove-port=8080/tcp#重启防⽕墙(修改配置后要重启防⽕墙)firewall-cmd --reload# 参数解释#1、firwall-cmd：是Linux提供的操作firewall的⼀个⼯具；#2、--permanent：表示设置为持久；#3、--add-port：标识添加的端⼝； ActiveMQ安装123456789101112tar -zxvf apache-activemq-5.14.0-bin.tar.gz./activemq start#(使⽤IPtables防⽕墙)添加防⽕墙的端⼝8161和61616firewall-cmd --add-port=8161/tcpfirewall-cmd --add-port=6161/tcp查看添加的端⼝firewall-cmd --list-all命令：重启防⽕墙systemctl restart firewalld查看防⽕墙状态firewall-cmd --state#重启防⽕墙(修改配置后要重启防⽕墙)firewall-cmd --reload 后台运行nohup123456ps -ef|grep socsi-pay-app-payfor.jarps -ef|grep socsi-pay-app-order-polling.jarps -ef|grep socsi-pay-app-notify.jarnohup java -jar socsi-pay-app-payfor.jar 1&gt;/dev/null 2&gt;&amp;1 &amp;nohup java -jar socsi-pay-app-notify.jar 1&gt;/dev/null 2&gt;&amp;1 &amp;nohup java -jar socsi-pay-app-order-polling.jar 1&gt;/dev/null 2&gt;&amp;1&amp; ngrok1http://127.0.0.1:4040/http/in]]></content>
+    <content type="text"><![CDATA[CentOS时区设置1234#查看当前时区设置ls -l /etc/localtime#修改时区ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime Tomcat时区更改1234#在catalina.sh 第⼀⾏家⼀下⼀下脚本JAVA_OPTS='-Xms1024m -Xmx1024m -XX:PermSize=256M -XX:MaxNewSize=512m -XX:MaxPermSize=512m'JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF8 -Duser.timezone=GMT+08" Tomcat端口更改1234#在server.xml更改&lt;Connector port="8088" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" URIEncoding="UTF-8" /&gt; JDK安装123456789101112131415mkdir /usr/javatar -zxvf jdk-8u152-linux-x64.tar.gz#编辑profile⽂件vim /etc/profile向⽂件⾥⾯追加以下内容：#set java environmentJAVA_HOME=/usr/java/jdk1.7.0_79JRE_HOME=$JAVA_HOME/jrePATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/binCLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/libexport JAVA_HOME JRE_HOME PATH CLASSPATH#使配置⽂件⽣效：source /etc/profilejava -version 防火墙firewall(弃用)12345678910111213141516171819202122232425262728#1、查看firewall服务状态systemctl status firewalld#2、查看firewall的状态firewall-cmd --state#3、开启、重启、关闭、firewalld.service服务# 开启service firewalld start# 重启service firewalld restart# 关闭service firewalld stop#4、查看防⽕墙规则firewall-cmd --list-all#5、查询、开放、关闭端⼝# 查询端⼝是否开放firewall-cmd --query-port=8080/tcp# 开放80端⼝firewall-cmd --permanent --add-port=80/tcpfirewall-cmd --permanent --add-port=8088/tcpfirewall-cmd --permanent --add-port=3306/tcp# 移除端⼝firewall-cmd --permanent --remove-port=8080/tcp#重启防⽕墙(修改配置后要重启防⽕墙)firewall-cmd --reload# 参数解释#1、firwall-cmd：是Linux提供的操作firewall的⼀个⼯具；#2、--permanent：表示设置为持久；#3、--add-port：标识添加的端⼝； ActiveMQ安装123456789101112tar -zxvf apache-activemq-5.14.0-bin.tar.gz./activemq start#(使⽤IPtables防⽕墙)添加防⽕墙的端⼝8161和61616firewall-cmd --add-port=8161/tcpfirewall-cmd --add-port=6161/tcp查看添加的端⼝firewall-cmd --list-all命令：重启防⽕墙systemctl restart firewalld查看防⽕墙状态firewall-cmd --state#重启防⽕墙(修改配置后要重启防⽕墙)firewall-cmd --reload 后台运行nohup123456ps -ef|grep xxx-pay-app-payfor.jarps -ef|grep xxx-pay-app-order-polling.jarps -ef|grep xxx-pay-app-notify.jarnohup java -jar xxx-pay-app-payfor.jar 1&gt;/dev/null 2&gt;&amp;1 &amp;nohup java -jar xxx-pay-app-notify.jar 1&gt;/dev/null 2&gt;&amp;1 &amp;nohup java -jar xxx-pay-app-order-polling.jar 1&gt;/dev/null 2&gt;&amp;1&amp; ngrok1http://127.0.0.1:4040/http/in]]></content>
       <categories>
         <category>运维π</category>
       </categories>
@@ -254,8 +254,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>CentOS</tag>
         <tag>Linux</tag>
+        <tag>CentOS</tag>
       </tags>
   </entry>
   <entry>
@@ -301,8 +301,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>CentOS</tag>
         <tag>Linux</tag>
+        <tag>CentOS</tag>
       </tags>
   </entry>
   <entry>
@@ -313,8 +313,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>CentOS</tag>
         <tag>Linux</tag>
+        <tag>CentOS</tag>
       </tags>
   </entry>
   <entry>
@@ -325,8 +325,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>CentOS</tag>
         <tag>Linux</tag>
+        <tag>CentOS</tag>
       </tags>
   </entry>
   <entry>
@@ -337,8 +337,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>CentOS</tag>
         <tag>Linux</tag>
+        <tag>CentOS</tag>
         <tag>Git</tag>
       </tags>
   </entry>
@@ -350,8 +350,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>CentOS</tag>
         <tag>Linux</tag>
+        <tag>CentOS</tag>
       </tags>
   </entry>
   <entry>
@@ -374,9 +374,9 @@
         <category>安全π</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
-        <tag>Linux</tag>
         <tag>Airmon-ng</tag>
       </tags>
   </entry>
@@ -433,7 +433,7 @@
   <entry>
     <title><![CDATA[Hexo]]></title>
     <url>%2F2018%2F04%2F01%2Fhexo-learning%2F</url>
-    <content type="text"><![CDATA[12345678# 安装hexo$ npm install -g hexo-cli​# 文件夹初始化$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install# next主题$ git clone https://github.com/iissnan/hexo-theme-next themes/next 常用插件1234567891011# 安装 less# 主题默认使用 less 作为 css 预处理工具。$ npm install hexo-renderer-less --save# 安装 feed# 用于生成 rss。$ npm install hexo-generator-feed --save# 安装 json-content# 用于生成静态站点数据，用作站内搜索的数据源。$ npm install hexo-generator-json-content --save$ npm install hexo-deployer-git --save` hexo命令1234567891011121314$ hexo new post title$ hexo -d 提交只git$ hexo -w 监视文章文件变动$ hexo -s 启动服务$ hexo -g 生成页面$ hexo list &lt;type&gt;$ hexo --safe 安全模式$ hexo --debug 调试模式$ hexl --slient 简洁模式# 重新安装hexo-util $ npm install -- save-dev hexo-util# 如果出现# Block-scoped declarations (let, const, function, class) not yet supported outside strict mode$ 'use strict' 其他插件12345678910# hexo-addlink：在文章最末添加永久链接及版权声明，建议安装# hexo-generator-search: 本地搜索# hexo-index-anything: 更改首页为任意的页面# hexo-encrypt：加密你的博客# hexo-ruby-character 文字拼音# hexo Tag Cloud 标签云# hexo-uuid# sitemap 站点地图$ npm install hexo-generator-searchdb --save$ npm uninstall ​ 踩坑12345678#1.node版本过高，导致报错brew uninstall nodebrew install node@12brew link --overwrite --force node@12#2.大小写敏感git config core.ignorecase false#3.tag-404先删除/public下的tag文件夹，提交到远程仓库。再重新hexo g d。]]></content>
+    <content type="text"><![CDATA[12345678# 安装Hexo$ npm install -g hexo-cli​# 文件夹初始化$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install# next主题$ git clone https://github.com/iissnan/hexo-theme-next themes/next 常用插件12345678# 安装less，主题默认使用less作为css预处理工具。$ npm install hexo-renderer-less --save# 安装feed，用于生成rss。$ npm install hexo-generator-feed --save# 安装json-content，用于生成静态站点数据，用作站内搜索的数据源。$ npm install hexo-generator-json-content --save# 远程推送$ npm install hexo-deployer-git --save hexo命令1234567891011121314$ hexo new post title #生成新页$ hexo -d #提交给git$ hexo -w #监视文章文件变动$ hexo -s #启动服务$ hexo -g #生成页面$ hexo list &lt;type&gt;$ hexo --safe #安全模式$ hexo --debug #调试模式$ hexl --slient #简洁模式# 重新安装hexo-util $ npm install -- save-dev hexo-util# 如果出现# Block-scoped declarations (let, const, function, class) not yet supported outside strict mode$ 'use strict' 其他插件12345678910# hexo-addlink：在文章最末添加永久链接及版权声明，建议安装# hexo-generator-search: 本地搜索# hexo-index-anything: 更改首页为任意的页面# hexo-encrypt：加密你的博客# hexo-ruby-character 文字拼音# hexo Tag Cloud 标签云# hexo-uuid# sitemap 站点地图$ npm install hexo-generator-searchdb --save$ npm uninstall ​ 踩坑12345678#1.node版本过高，导致报错brew uninstall nodebrew install node@12brew link --overwrite --force node@12#2.大小写敏感git config core.ignorecase false#3.tag-404先删除/public下的tag文件夹，提交到远程仓库。再重新hexo g d。]]></content>
       <categories>
         <category>技术π</category>
       </categories>
@@ -444,7 +444,7 @@
   <entry>
     <title><![CDATA[Git]]></title>
     <url>%2F2018%2F04%2F01%2Fgit%2F</url>
-    <content type="text"><![CDATA[12$ git config --global user.name "name"$ git config --global user.email "***@**.com" 12$ ssh-keygen -t rsa -C "email"$ ssh -T git@git.oschina.net $ ssh -T git@github.com 查看信息1$ git config --list 文本编辑器1$ git config --global core.editor emacs 代码比较1$ git config --global merge.tool vimdiff 创建版本库123456789101112131415161718192021222324252627282930# 选择一个合适的地方，创建一个空目录：$ mkdir xxoo$ cd xxoo$ pwd# 把这个目录变成Git可以管理的仓库：$ git init# 1.把文件添加到仓库$ git add readme.txt# 2.把文件提交到仓库$ git commit -m "wrote a readme file"# 检查文件状态$ git status# 忽略某些文件$ cat .gitignore *.[oa] *~# 查看尚未暂存的文件更新了哪些部分$ git diff# 要看已经暂存起来的文件和上次提交时的快照之间的差异$ git diff - staged# 提交更新$ git commit -m "xxx"# 跳过使用暂存区域$ git commit -a -m "xxx"# 移除文件 如果删除之前修改过并且已经放到暂存区域的话，则必须要用强删除选项 -f$ git rm xxx# 仅是从跟踪清单中删除$ git rm --cached XXX# 日志$ git log --pretty=oneline 版本123456789101112# 版本回退 git 用head表示当前版本 head^上一个版本$ git reset --hard HEAD^# 回到任意版本$ git reset --hard commitId# 用来记录你的每一次命令：$ git reflog# 撤销修改(文件在工作区的修改全部撤销)# 一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；# 一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。$ git checkout -- file# 暂存区的修改撤销掉（unstage），重新放回工作区$ git reset HEAD file 远程仓库github1234567$ git remote add origin git@oschina.net:***/***.git# 本地库push到github （第一次用-u，后面就不用）$ git push -u origin master # 克隆别人项目(mycode 自定义目录名称)$ git clone git://url mycode# 查看远程仓库(详情)$ git remote -v 分支管理12345678910111213141516171819202122232425262728# 参数表示创建并切换$ git checkout -b dev# 查看当前分支 *$ git branch# 切换分支$ git checkout master# 合并分支$ git merge dev# 删除分支$ git branch -d dev# 强行删除未合并分支$ git branch -D name# 分支合并图$ git log --graph --pretty=oneline --abbrev-commit# 禁用fast forward$ git merge --no--ff -m "xxoo" dev# 1.可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：# 2.创建bug分支，临时分支# 3.切回分支 查看工作区# 4.回复工作区$ git stash$ git checkout -b issue-101$ git stash list$ git stash apply $ git stash drop# 或者$ git stash pop# 多次stash，再恢复指定stash$ git stash apply stash&#123;*&#125; 推送分支到远程(多人管理)12345$ git push origin master# git pull把最新的提交从origin/dev抓下来，然后，在本地合并，解决冲突，再推送$ git pull# git pull也失败了，原因是没有指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接：$ git branch --set-upstream dev origin/dev 标签123456789101112131415# 打标签+id$ git tag v1.0 123456# 查看标签详情$ git show v1.0# 还可以创建带有说明的标签，用-a指定标签名，-m指定说明文字：$ git tag -a v1.0 -m 'xxoo' 123456# 删除$ git tag -d v1.0# 推到远程,一次性推送全部尚未推送到远程的本地标签：$ git push origin v1.0$ git push origin --tags# 如果标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除：$ git tag -d v1.0# 然后，从远程删除。删除命令也是push，但是格式如下：$ git push origin :refs/tags/v1.0 推送失败12345$ cd to .git/config$ vim vonfig # url = $ git pull --rebase origin master# 执行上面代码后可以看到本地代码库中多了README.md文件]]></content>
+    <content type="text"><![CDATA[123# 设置用户名和邮箱$ git config --global user.name "name"$ git config --global user.email "***@**.com" 1234# 生成公钥$ ssh-keygen -t rsa -C "email"$ ssh -T git@git.oschina.net $ ssh -T git@github.com 查看信息1$ git config --list 文本编辑器1$ git config --global core.editor emacs 代码比较1$ git config --global merge.tool vimdiff 创建版本库123456789101112131415161718192021222324252627282930# 选择一个合适的地方，创建一个空目录：$ mkdir xxoo$ cd xxoo$ pwd# 把这个目录变成Git可以管理的仓库：$ git init# 1.把文件添加到仓库$ git add readme.txt# 2.把文件提交到仓库$ git commit -m "wrote a readme file"# 检查文件状态$ git status# 忽略某些文件$ cat .gitignore *.[oa] *~# 查看尚未暂存的文件更新了哪些部分$ git diff# 要看已经暂存起来的文件和上次提交时的快照之间的差异$ git diff - staged# 提交更新$ git commit -m "xxx"# 跳过使用暂存区域$ git commit -a -m "xxx"# 移除文件 如果删除之前修改过并且已经放到暂存区域的话，则必须要用强删除选项 -f$ git rm xxx# 仅是从跟踪清单中删除$ git rm --cached XXX# 日志$ git log --pretty=oneline 版本123456789101112# 版本回退 git 用head表示当前版本 head^上一个版本$ git reset --hard HEAD^# 回到任意版本$ git reset --hard commitId# 用来记录你的每一次命令：$ git reflog# 撤销修改(文件在工作区的修改全部撤销)# 一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；# 一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。$ git checkout -- file# 暂存区的修改撤销掉（unstage），重新放回工作区$ git reset HEAD file 远程仓库github1234567$ git remote add origin git@oschina.net:***/***.git# 本地库push到github （第一次用-u，后面就不用）$ git push -u origin master # 克隆别人项目(mycode 自定义目录名称)$ git clone git://url mycode# 查看远程仓库(详情)$ git remote -v 分支管理12345678910111213141516171819202122232425262728# 参数表示创建并切换$ git checkout -b dev# 查看当前分支 *$ git branch# 切换分支$ git checkout master# 合并分支$ git merge dev# 删除分支$ git branch -d dev# 强行删除未合并分支$ git branch -D name# 分支合并图$ git log --graph --pretty=oneline --abbrev-commit# 禁用fast forward$ git merge --no--ff -m "xxoo" dev# 1.可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：# 2.创建bug分支，临时分支# 3.切回分支 查看工作区# 4.回复工作区$ git stash$ git checkout -b issue-101$ git stash list$ git stash apply $ git stash drop# 或者$ git stash pop# 多次stash，再恢复指定stash$ git stash apply stash&#123;*&#125; 推送分支到远程(多人管理)12345$ git push origin master# git pull把最新的提交从origin/dev抓下来，然后，在本地合并，解决冲突，再推送$ git pull# git pull也失败了，原因是没有指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接：$ git branch --set-upstream dev origin/dev 标签123456789101112131415# 打标签+id$ git tag v1.0 123456# 查看标签详情$ git show v1.0# 还可以创建带有说明的标签，用-a指定标签名，-m指定说明文字：$ git tag -a v1.0 -m 'xxoo' 123456# 删除$ git tag -d v1.0# 推到远程,一次性推送全部尚未推送到远程的本地标签：$ git push origin v1.0$ git push origin --tags# 如果标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除：$ git tag -d v1.0# 然后，从远程删除。删除命令也是push，但是格式如下：$ git push origin :refs/tags/v1.0 推送失败12345$ cd to .git/config$ vim vonfig # url = $ git pull --rebase origin master# 执行上面代码后可以看到本地代码库中多了README.md文件]]></content>
       <categories>
         <category>运维π</category>
       </categories>
@@ -484,9 +484,9 @@
         <category>安全π</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -525,7 +525,7 @@
   <entry>
     <title><![CDATA[Anaconda]]></title>
     <url>%2F2018%2F03%2F31%2Fpython-anaconda%2F</url>
-    <content type="text"><![CDATA[创建一个名为python36的环境，指定Python版本是3.61$ conda create --name python36 python=3.6 # conda会为我们自动寻找3.6.x中的最新版本 安装好后，使用activate激活某个环境12$ activate python36 # for Windows$ source activate python36 # for Linux &amp; Mac 查看当前版本1$ python --version 如果想返回默认的python 2.7环境，运行12$ deactivate python27 # for Windows$ source deactivate python27 # for Linux &amp; Mac 删除一个已有的环境1$ conda remove --name python34 --all 添加Anaconda的TUNA镜像1$ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ 设置搜索时显示通道地址1$ conda config --set show_channel_urls yes 查看当前环境下已安装的包1$ conda list 查看某个指定环境的已安装包1$ conda list -n python36 查找package信息1$ conda search numpy 安装package1$ conda install -n python36 numpy # 如果不用-n指定环境名称，则被安装在当前活跃环境 更新package1$ conda update -n python36 numpy 删除package1$ conda remove -n python36 numpy 更新conda，保持conda最新1$ conda update conda 更新anaconda1$ conda update anaconda 更新python1$ conda update python]]></content>
+    <content type="text"><![CDATA[添加Anaconda的TUNA镜像1$ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ 设置搜索时显示通道地址1$ conda config --set show_channel_urls yes 创建一个名为python36的环境，指定Python版本是3.61$ conda create --name python36 python=3.6 # conda会为我们自动寻找3.6.x中的最新版本 安装好后，使用activate激活某个环境12$ activate python36 # for Windows$ source activate python36 # for Linux &amp; Mac 查看当前版本1$ python --version 如果想返回默认的python 2.7环境，运行12$ deactivate python27 # for Windows$ source deactivate python27 # for Linux &amp; Mac 删除一个已有的环境1$ conda remove --name python34 --all 查看当前环境下已安装的包1$ conda list 查看某个指定环境的已安装包1$ conda list -n python36 查找package信息1$ conda search *包名 安装package1$ conda install -n python36 *包名 # 如果不用-n指定环境名称，则被安装在当前活跃环境 更新package1$ conda update -n python36 *包名 删除package1$ conda remove -n python36 *包名 更新conda，保持conda最新1$ conda update conda 更新anaconda1$ conda update anaconda 更新python1$ conda update python]]></content>
       <categories>
         <category>技术π</category>
       </categories>

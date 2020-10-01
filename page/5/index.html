@@ -1072,8 +1072,8 @@
 
       
         
-          <h4 id="创建一个名为python36的环境，指定Python版本是3-6"><a href="#创建一个名为python36的环境，指定Python版本是3-6" class="headerlink" title="创建一个名为python36的环境，指定Python版本是3.6"></a>创建一个名为python36的环境，指定Python版本是3.6</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda create --name python36 python=3.6 <span class="comment"># conda会为我们自动寻找3.6.x中的最新版本</span></span><br></pre></td></tr></table></figure>
-<h4 id="安装好后，使用activate激活某个环境"><a href="#安装好后，使用activate激活某个环境" class="headerlink" title="安装好后，使用activate激活某个环境"></a>安装好后，使用activate激活某个环境</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ activate python36 <span class="comment"># for Windows</span></span><br><span class="line">$ <span class="built_in">source</span> activate python36 <span class="comment"># for Linux &amp; Mac</span></span><br></pre></td></tr></table></figure>
+          <h4 id="添加Anaconda的TUNA镜像"><a href="#添加Anaconda的TUNA镜像" class="headerlink" title="添加Anaconda的TUNA镜像"></a>添加Anaconda的TUNA镜像</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br></pre></td></tr></table></figure>
+<h4 id="设置搜索时显示通道地址"><a href="#设置搜索时显示通道地址" class="headerlink" title="设置搜索时显示通道地址"></a>设置搜索时显示通道地址</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda config --<span class="built_in">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/31/python-anaconda/#more" rel="contents">
