@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Jmeter使用教程]]></title>
+    <url>%2F2021%2F04%2F24%2Fapache-jmeter-learning%2F</url>
+    <content type="text"><![CDATA[常用12345./jmeter -n -t XX.jmx -l report/01-result.jtl -e -o report#日志文件配置修改log4j2.xml文件在jmeter所在bin目录下修改log4j2.xml，修改方式如下：修改，level也可以为info,error等，一般jmter执行日志设置成debug 基础知识12345678910111213RPS ：每秒发送请求数QPS（TPS）：每秒钟request/事务 数量RT : 响应时间并发用户 : vuHPS（Hits Per Second） ：每秒点击次数，单位是次/秒。TPS（Transaction per Second）：系统每秒处理交易数，单位是笔/秒。QPS（Query per Second）：系统每秒处理查询次数，单位是次/秒。 对于互联网业务中，如果某些业务有且仅有一个请求连接，那么TPS=QPS=HPS，一般情况下用TPS来衡量整个业务流程，用QPS来衡量接口查询次数，用HPS来表示对服务器单击请求。测试指标一般分为业务指标、资源指标、应用指标、前端指标。业务指标：如并发用户数、TPS（系统每秒处理事务数）、成功率、响应时间。资源指标：如CPU资源利用率、内存利用率、I/O、内核参数（信号量、打开文件数）等。应用指标：如空闲线程数、数据库连接数、GC/FULL GC次数、函数耗时等。前端指标：如页面加载时间、网络时间（DNS、连接时间、传输时间等）。 Jmeter命令行模式123456789101112131415161718192021222324252627282930313233343536373839jmeter -n -t &lt;testplan filename&gt; -l &lt;listener filename&gt;示例： jmeter -n -t testplan.jmx -l test.jtl1、执行测试脚本jmeter -n -t JMeter分布式测试示例.jmx2、指定结果文件及日志路径jmeter -n -t JMeter分布式测试示例.jmx -l report\01-result.csv -j report\01-log.log3、分布式（远程）执行默认服务器列表jmeter -n -t JMeter分布式测试示例.jmx -r -l report\01-result.csv -j report\01-log.log4、分布式（远程）执行执行服务器列表jmeter -n -t JMeter分布式测试示例.jmx -R 10.9.215.47:1029 -l report\01-result.csv -j report\01-log.log5、导出图形结果jmeter -n -t "Thread Group.jmx" -l 111.jtl -e -o report动态线程$&#123;P(threadNum,)&#125; 获取线程组属性$&#123;P(cycle,)&#125; 获取迭代次数属性$&#123;__P(time,)&#125; 获取时间属性jmeter -JthreadNum=10 -Jtime=10 -n -t "Thread Group.jmx" -l 111.jtl -e -o report具体的含义如下：-h 帮助 -&gt; 打印出有用的信息并退出-n 非 GUI 模式 -&gt; 在非 GUI 模式下运行 JMeter-t 测试文件 -&gt; 要运行的 JMeter 测试脚本文件-l 日志文件 -&gt; 记录结果的文件-r 远程执行 -&gt; 在Jmter.properties文件中指定的所有远程服务器-H 代理主机 -&gt; 设置 JMeter 使用的代理主机-P 代理端口 -&gt; 设置 JMeter 使用的代理主机的端口号-e，--reportatendofloadtests 负载测试后生成报告仪表板-o，--reportoutputfolder &lt;参数&gt; 报告仪表板的输出文件夹-j，--jmeterlogfile &lt;参数&gt;jmeter运行日志文件（jmeter.log）-f，-forceDeleteResultFile 强制删除现有结果文件和Web报告文件夹，如果在开始测试之前-L，--loglevel &lt;参数&gt; = &lt;值&gt;[category =]级别，例如jorphan = INFO，jmeter.util = DEBUG或com.example.foo =警告-R，--remotestart &lt;参数&gt;启动这些远程服务器（覆盖remote_hosts）-X，--remoteexit在测试结束时退出远程服务器（非GUI）-g，--reportonly &lt;参数&gt;仅从测试结果文件生成报告仪表板-e，--reportatendofloadtests 负载测试后生成报告仪表板-o，--reportoutputfolder &lt;参数&gt;报告仪表板的输出文件夹 参数文件123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354关键配置说明jmeter.properties 配置说明主要包含以下几个方面的配置：SSL 配置：重点关注下面几个配置# 指定 HTTPS 协议层 # 指定 HTTPS 协议层 https.default.protocol=TLS # 指定 SSL 版本，实际应用中可能需要修改 https.default.protocol=SSLv3 # 设置启动的协议 https.socket.protocols=SSLv2Hello SSLv3 TLSv1 # 缓存控制，控制 SSL 是否可以在多个迭代中重用 https.use.cached.ssl.context=trueJMeter 测试项目自动备份配置 # 设置是否启用自动备份，默认是 true jmeter.gui.action.save.backup_on_save=true # 设置自动备份目录，默认备份至 JMeter 根目录的 backups下 jmeter.gui.action.save.backup_directory= # 设置自动备份项目数，默认为最近 10 个 jmeter.gui.action.save.keep_backup_max_count=10分布式 #主控机 #jmeter.properties #配置远程主机的 IP，默认为本机。用逗号","可以设置多个远程主机 remote_hosts=127.0.0.1 #多个远程主机指定示例如下,其中:后为端口 remote_hosts=127.0.0.1:1099,127.0.0.1:1200,127.0.0.1:1300 #jmeter.bat set rmi_host=-Djava.rmi.server.hostname=本机 ip #执行机 #Jmeter.properties remote_hosts=&#123;slave IP&#125; server.rmi.ssl.disable=true #保证远程连接通畅 #开放三个默认端口 server_port = 1098 server.rmi.port=1098 server.rmi.localport = 1098 #jmeter-server RMI_HOST_DEF=-Djava.rmi.server.hostname=&#123;slave IP&#125;日志管理配置 # 设置日志格式 log_format_type=default # 设置日志输出级别 log_level.jmeter=INFO # 设置 junit 日志输出级别 log_level.jmeter.junit=DEBUG # 设置日志输出目标文件，默认为 jmeter.log log_file=jmeter.logjmeter.bat 关键配置修改 set HEAP=-Xms1g -Xmx1g -XX:MaxMetaspaceSize=256m]]></content>
+      <categories>
+        <category>技术π</category>
+      </categories>
+      <tags>
+        <tag>性能测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Fiddler教程]]></title>
     <url>%2F2021%2F04%2F22%2Ffiddler-learning%2F</url>
     <content type="text"><![CDATA[接口延时：delay121. AutoResponder 点击‘add rule’2. 设置延时时间 *delay:5000 单个断点12341. bpu在请求开始时中断2. bpafter在响应到达时中断3. bps中断HTTP响应状态为指定字符的全部session响应4. bpv/bpm中断指定请求方式的全部session响应 请求前断点（before request): bpu123451. 刷新请求页面：http://www.baidu.com2. 命令行输入：bpu 接口 例如：bpu /api/xxx3. 再次刷新请求页面，获取断点，可以修改任意请求参数4. 修改完成后点击Break On Response，Run to Completion5. 取消断点，在命令行输入： bpu 回车 响应后断点（after response): bpafter123451. 刷新请求页面：http://www.baidu.com2. 命令行输入：bpafter 接口 例如：bpafter /api/xxx3. 再次刷新请求页面，获取断点，可以修改任意返回数据4. 修改完成后点击Run to Completion5. 取消断点，在命令行输入： bpafter 回车 全局断点1234fiddler菜单栏-&gt;rules-&gt;automatic Breakpoints-&gt;选择断点方式，这种方式下设定的断点会对之后的所有HTTP请求有效。有两个断点位置：1. before request：发送请求之后，但是Fiddler代理中转之前，这时可以修改请求的数据。2. after response：服务器相应之后，但是在Fiddler将响应中转给客户端之前。这时可以修改响应的结果。3. 消除断点：点击Rules-&gt;Automatic Breakpoint-&gt;Disabled]]></content>
@@ -31,8 +42,8 @@
         <category>技术π</category>
       </categories>
       <tags>
-        <tag>Apache</tag>
         <tag>性能测试</tag>
+        <tag>Apache</tag>
       </tags>
   </entry>
   <entry>
@@ -252,8 +263,8 @@
         <category>安全π</category>
       </categories>
       <tags>
-        <tag>网络安全</tag>
         <tag>BurpSuite</tag>
+        <tag>网络安全</tag>
       </tags>
   </entry>
   <entry>
@@ -410,9 +421,9 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+        <tag>网络安全</tag>
         <tag>Kali</tag>
         <tag>Airmon-ng</tag>
-        <tag>网络安全</tag>
       </tags>
   </entry>
   <entry>
@@ -506,8 +517,8 @@
         <category>安全π</category>
       </categories>
       <tags>
-        <tag>Kali</tag>
         <tag>网络安全</tag>
+        <tag>Kali</tag>
         <tag>Sqlmap</tag>
       </tags>
   </entry>
@@ -520,8 +531,8 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>Kali</tag>
         <tag>网络安全</tag>
+        <tag>Kali</tag>
       </tags>
   </entry>
   <entry>
