@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[常用的linux]]></title>
+    <title><![CDATA[常用的linux工具]]></title>
     <url>%2F2021%2F06%2F16%2Flinux-centos-useful%2F</url>
     <content type="text"><![CDATA[Tcpdump12345678# 混杂模式ifconfig ens192 promisc,设置网卡eth0为混杂模式ifconfig ens192 -promisc 取消网卡eth0的混杂模式# tcpdump -抓取主机192.25.0.1和主机192.25.0.2或者192.25.0.3通信sudo -s tcpdump -i ens192 'host 192.25.0.1 and (192.25.0.2 or 192.25.0.3) -w tcpdump-report/0330001.cap#查看文件tcpdump -r xxx.cap WC-l12#grep的or写法\|cat prod-access.log |grep "xxx"|grep "xxx\|xxx\|xxx"|wc -l 连接数12345678# mqtt笔记cd /utcloud/utbroker/logsnetstat -apl|grep 9005#连接数netstat -n|grep ^tcp|awk '&#123;print $NF&#125;'|sort -nr|uniq -c#统计netstat -apn|grep 9005|wc -llsof -i|grep 9005 内存分析perf123456perf topperf --helpperf listperf recordperf report perf report -i perf.data //-i表示文件输入 增加端口数量123456vi /etc/sysctl.conf/sbin/sysctl -pnet.ipv4.ip_local_port_range=10000 60000***service iptables stopcat /proc/sys/net/ipv4/ip_local_port_range 9000 65500 mock程序后台运行1234nohup python3 /home/mock/project/japronto/main.py 1&gt;/dev/null 2&gt;&amp;1 &amp;#输入exit退出终端，关闭shell***python3 /home/mock/project/japronto/main.py***nohup python -u xx.py &gt; log.out 2&gt;&amp;1 &amp; 服务器信息12345678910111213141516#CPU信息：lscpu#内存：cat /proc/meminfo | grep MemTotal#磁盘：fdisk -l | grep Diskdf -hl#内核：uname -auname -r#物理cpu个数cat /proc/cpuinfo|grep "cores"|uniq#查看逻辑cpu个数cat /proc/cpuinfo|grep "processor" |wc -l#cpu核数cat /proc/cpuinfo|grep "physical id"|sort|uniq| wc -l Supervisor123456789101112#更改 Supervisor 启动时的配置文件路径。#1.停止 Supervisor 所有的监控对象supervisorctl stop all#2.停止 kill -9 supervisord 进程#3.修改配置文件vim /etc/supervisord.conf#4.修改 tmp 路径，我常用的路径为 /home/supervisor ，最终结果为/tmp/supervisor.sock =&gt; /home/supervisor/supervisor.sock#5.重新启动 supervisord 。****supervisorctl status****supervisorctl restart xxx]]></content>
       <categories>
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>CentOS</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -84,8 +84,8 @@
         <category>技术π</category>
       </categories>
       <tags>
-        <tag>Apache</tag>
         <tag>性能测试</tag>
+        <tag>Apache</tag>
       </tags>
   </entry>
   <entry>
@@ -342,8 +342,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>CentOS</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -389,8 +389,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>CentOS</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -401,8 +401,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>CentOS</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -413,8 +413,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>CentOS</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -425,8 +425,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>CentOS</tag>
+        <tag>Linux</tag>
         <tag>Git</tag>
       </tags>
   </entry>
@@ -438,8 +438,8 @@
         <category>运维π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>CentOS</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -462,10 +462,10 @@
         <category>安全π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
         <tag>Airmon-ng</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -572,9 +572,9 @@
         <category>安全π</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
