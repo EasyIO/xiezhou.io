@@ -337,6 +337,474 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2021/06/16/linux-centos-useful/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="8oc">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/coffe-128-right.svg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wish a Starbucks Coffee Here!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/06/16/linux-centos-useful/" itemprop="url">常用的linux</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-16T20:33:20+08:00">
+                2021-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          <span class="post-time">
+                <span class="post-meta-divider">|</span>
+             <span class="post-meta-item-text">作者&nbsp;&nbsp;</span>
+                          
+                8oc
+            
+          </span>
+
+
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/运维π/" itemprop="url" rel="index">
+                    <span itemprop="name">运维π</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Tcpdump"><a href="#Tcpdump" class="headerlink" title="Tcpdump"></a>Tcpdump</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 混杂模式</span></span><br><span class="line">ifconfig ens192 promisc,设置网卡eth0为混杂模式</span><br><span class="line">ifconfig ens192 -promisc 取消网卡eth0的混杂模式</span><br><span class="line"></span><br><span class="line"><span class="comment"># tcpdump -抓取主机192.25.0.1和主机192.25.0.2或者192.25.0.3通信</span></span><br><span class="line">sudo -s tcpdump -i ens192 <span class="string">'host 192.25.0.1 and  (192.25.0.2 or 192.25.0.3) -w tcpdump-report/0330001.cap</span></span><br><span class="line"><span class="string">#查看文件</span></span><br><span class="line"><span class="string">tcpdump -r xxx.cap</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/06/16/linux-centos-useful/#more" rel="contents">
+              ♨ 阅读全文 ♨
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2021/06/16/nginx-ip/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="8oc">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/coffe-128-right.svg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wish a Starbucks Coffee Here!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/06/16/nginx-ip/" itemprop="url">Nginx限制IP配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-16T20:22:39+08:00">
+                2021-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          <span class="post-time">
+                <span class="post-meta-divider">|</span>
+             <span class="post-meta-item-text">作者&nbsp;&nbsp;</span>
+                          
+                8oc
+            
+          </span>
+
+
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术π/" itemprop="url" rel="index">
+                    <span itemprop="name">技术π</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="多站点统一限IP"><a href="#多站点统一限IP" class="headerlink" title="多站点统一限IP"></a>多站点统一限IP</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim nginx.conf</span><br><span class="line">allow 127.0.0.1;</span><br><span class="line">deny all;</span><br><span class="line"><span class="comment"># 以上代码解释：</span></span><br><span class="line"><span class="comment"># deny all; 限制所有的ip</span></span><br><span class="line"><span class="comment"># allow ip;   除了 这个ip意外</span></span><br><span class="line"><span class="comment"># 处理allow 以外的ip，全都禁止访问</span></span><br><span class="line"><span class="comment"># 注意：多站点统一限ip,需要将以上内容直接写在server&#123;&#125;的外围</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/06/16/nginx-ip/#more" rel="contents">
+              ♨ 阅读全文 ♨
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2021/06/16/useful-sql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="8oc">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/coffe-128-right.svg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wish a Starbucks Coffee Here!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/06/16/useful-sql/" itemprop="url">常用的SQL</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-16T20:08:57+08:00">
+                2021-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          <span class="post-time">
+                <span class="post-meta-divider">|</span>
+             <span class="post-meta-item-text">作者&nbsp;&nbsp;</span>
+                          
+                网络
+            
+          </span>
+
+
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术π/" itemprop="url" rel="index">
+                    <span itemprop="name">技术π</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="常用的SQL"><a href="#常用的SQL" class="headerlink" title="常用的SQL"></a>常用的SQL</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">--消耗cpu最高的10条语句</span><br><span class="line">select * from (select address,hash_value,</span><br><span class="line">                      round(cpu_time/1000000) cpu_time_s,</span><br><span class="line">                      round(cpu_time/decode(executions,0,1,executions)/1000000,2) cpu_time_per,</span><br><span class="line">                      executions,</span><br><span class="line">                      SQL_TEXT</span><br><span class="line">               from v<span class="variable">$sqlarea</span> </span><br><span class="line">               order by cpu_time_s desc) </span><br><span class="line"><span class="built_in">where</span> rownum &lt;= 10; </span><br><span class="line"></span><br><span class="line">--查询前10条性能差的sql语句</span><br><span class="line">SELECT * FROM (select PARSING_USER_ID,EXECUTIONS,SORTS,COMMAND_TYPE,DISK_READS,sql_text FROM v<span class="variable">$sqlarea</span>  </span><br><span class="line">order BY disk_reads DESC )<span class="built_in">where</span> ROWNUM&lt;10 ; </span><br><span class="line"></span><br><span class="line">--查询最占资源的sql</span><br><span class="line">select b.username username,a.disk_reads reads,a.executions <span class="built_in">exec</span>,  </span><br><span class="line">    a.disk_reads/decode(a.executions,0,1,a.executions) rds_exec_ratio,  </span><br><span class="line">    a.sql_text statement  </span><br><span class="line">    from v<span class="variable">$sqlarea</span> a,dba_users b  </span><br><span class="line">    <span class="built_in">where</span> a.parsing_user_id=b.user_id  </span><br><span class="line">    and a.disk_reads&gt;100000;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/06/16/useful-sql/#more" rel="contents">
+              ♨ 阅读全文 ♨
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://8oc.cc/2021/06/15/bookmark-demo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -439,10 +907,14 @@
 
       
         
-          
-            <h2 id="导航模板"><a href="#导航模板" class="headerlink" title="导航模板"></a>导航模板</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;!-- import CSS --&gt;</span><br><span class="line">    &lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"https://unpkg.com/element-ui/lib/theme-chalk/index.css"</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;style&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">      &lt;el-container&gt;</span><br><span class="line">        &lt;el-aside width=<span class="string">"200px"</span>&gt;</span><br><span class="line">        &lt;/el-aside&gt;</span><br><span class="line">        &lt;el-container&gt;</span><br><span class="line">          &lt;el-header&gt;</span><br><span class="line">            &lt;el-menu</span><br><span class="line">                    default-active=<span class="string">"1"</span></span><br><span class="line">                    class=<span class="string">"el-menu-demo"</span></span><br><span class="line">                    mode=<span class="string">"horizontal"</span></span><br><span class="line">            &gt;</span><br><span class="line">              &lt;!-- 起始 --&gt;</span><br><span class="line">              &lt;el-menu-item index=<span class="string">"1"</span>&gt;&lt;a</span><br><span class="line">                      href=<span class="string">"www.xxx.com"</span></span><br><span class="line">                      target=<span class="string">"_blank"</span></span><br><span class="line">              &gt;xxx&lt;/a&gt;</span><br><span class="line">              &lt;/el-menu-item&gt;</span><br><span class="line">              &lt;!-- 终止 --&gt;</span><br><span class="line">            &lt;/el-menu&gt;</span><br><span class="line">          &lt;/el-header&gt;</span><br><span class="line">          &lt;el-main&gt;</span><br><span class="line">            &lt;el-card&gt;</span><br><span class="line">              &lt;el-tabs&gt;</span><br><span class="line">                &lt;!-- 起始 --&gt;</span><br><span class="line">                &lt;el-tab-pane label=<span class="string">"xxx"</span>&gt;</span><br><span class="line">                  &lt;el-table</span><br><span class="line">                          :data=<span class="string">"tableData1"</span></span><br><span class="line">                          @row-click=<span class="string">"click"</span></span><br><span class="line">                          @row-dblclick=<span class="string">"dblclick"</span></span><br><span class="line">                          style=<span class="string">"width: 100%"</span></span><br><span class="line">                  &gt;</span><br><span class="line">                    &lt;el-table-column</span><br><span class="line">                            <span class="built_in">type</span>=<span class="string">"index"</span></span><br><span class="line">                            label=<span class="string">"ID"</span></span><br><span class="line">                    &gt;&lt;/el-table-column&gt;</span><br><span class="line">                    &lt;el-table-column</span><br><span class="line">                            prop=<span class="string">"name"</span></span><br><span class="line">                            label=<span class="string">"名称"</span></span><br><span class="line">                            show-overflow-tooltip</span><br><span class="line">                    &gt;&lt;/el-table-column&gt;</span><br><span class="line">                    &lt;el-table-column</span><br><span class="line">                            prop=<span class="string">"url"</span></span><br><span class="line">                            label=<span class="string">"地址"</span></span><br><span class="line">                            show-overflow-tooltip</span><br><span class="line">                    &gt;&lt;/el-table-column&gt;</span><br><span class="line">                  &lt;/el-table&gt;</span><br><span class="line"></span><br><span class="line">                &lt;/el-tab-pane&gt;</span><br><span class="line">                &lt;!-- 终止 --&gt;</span><br><span class="line">              &lt;/el-tabs&gt;</span><br><span class="line">            &lt;/el-card&gt;</span><br><span class="line"></span><br><span class="line">          &lt;/el-main&gt;</span><br><span class="line">        &lt;/el-container&gt;</span><br><span class="line">        &lt;el-aside width=<span class="string">"200px"</span>&gt;&lt;/el-aside&gt;</span><br><span class="line">      &lt;/el-container&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">  &lt;!-- import Vue before Element --&gt;</span><br><span class="line">&lt;script src=<span class="string">"https://unpkg.com/vue/dist/vue.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;!--&lt;script src=<span class="string">"https://cdn.bootcss.com/vue/2.6.10/vue.min.js"</span>&gt;&lt;/script&gt;--&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- import JavaScript --&gt;</span><br><span class="line">&lt;script src=<span class="string">"https://unpkg.com/element-ui/lib/index.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;!--&lt;script src=<span class="string">"https://cdn.bootcss.com/element-ui/2.7.2/index.js"</span>&gt;&lt;/script&gt;--&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">      el: <span class="string">'#app'</span>,</span><br><span class="line">      data: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        <span class="built_in">return</span> &#123;</span><br><span class="line">          visible: <span class="literal">false</span>,</span><br><span class="line">          activeName: <span class="string">'second'</span>,</span><br><span class="line">          tableData1: [</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            &#123;</span><br><span class="line">              <span class="string">"name"</span>:<span class="string">"xxx"</span>,</span><br><span class="line">              <span class="string">"url"</span>:<span class="string">"xxx"</span></span><br><span class="line">            &#125;</span><br><span class="line">          ],</span><br><span class="line">          tableData2: [</span><br><span class="line">            &#123;</span><br><span class="line">              <span class="string">"name"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">              <span class="string">"url"</span>: <span class="string">"xxx"</span></span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">          ],</span><br><span class="line">                    </span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        dblclick(row, event, column) &#123;</span><br><span class="line">          window.open(row.url);</span><br><span class="line">        &#125;,</span><br><span class="line">        click(row, event, column) &#123;</span><br><span class="line">          this.<span class="variable">$notify</span>.info(&#123;</span><br><span class="line">            title: <span class="string">"小提示"</span>,</span><br><span class="line">            message: <span class="string">"双击当前行可以直接打开页面"</span>,</span><br><span class="line">            duration: 2000</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-          
+          <h2 id="导航模板"><a href="#导航模板" class="headerlink" title="导航模板"></a>导航模板</h2>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/06/15/bookmark-demo/#more" rel="contents">
+              ♨ 阅读全文 ♨
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1288,7 +1760,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/26/win10-error/" itemprop="url">Win10远程连接错误</a></h1>
+                <a class="post-title-link" href="/2020/09/26/win10-error/" itemprop="url">Windows</a></h1>
         
 
         <div class="post-meta">
@@ -1372,477 +1844,9 @@
       
         
           
-            <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Windows10远程报错:由于CredSSP加密Oracle修正</span></span><br><span class="line">1.打开注册表，快捷输⼊ “regedit”;</span><br><span class="line">2.找⽂件夹 路径：HKLM(缩写)\Software\Microsoft\Windows\CurrentVersion</span><br><span class="line">	\Policies\System\CredSSP\Parameters,⼤概到System 后就没有了⾃⼰创建⽂件夹就好;</span><br><span class="line">3.然后再最底部⽂件夹⾥⾯ 新建 DWORD（32）位的。⽂件名 “AllowEncryptionOracle”，值：2，保存。</span><br></pre></td></tr></table></figure>
-
+            <h2 id="Win10远程连接错误"><a href="#Win10远程连接错误" class="headerlink" title="Win10远程连接错误"></a>Win10远程连接错误</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Windows10远程报错:由于CredSSP加密Oracle修正</span></span><br><span class="line">1.打开注册表，快捷输⼊ “regedit”;</span><br><span class="line">2.找⽂件夹 路径：HKLM(缩写)\Software\Microsoft\Windows\CurrentVersion</span><br><span class="line">	\Policies\System\CredSSP\Parameters,⼤概到System 后就没有了⾃⼰创建⽂件夹就好;</span><br><span class="line">3.然后再最底部⽂件夹⾥⾯ 新建 DWORD（32）位的。⽂件名 “AllowEncryptionOracle”，值：2，保存。</span><br></pre></td></tr></table></figure>
+<h2 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">win自带MD5校验</span><br><span class="line">win / CertUtil -hashfile 文件路径 [算法] MD5</span><br></pre></td></tr></table></figure>
           
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2020/09/26/chrome-hotkey/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="8oc">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/coffe-128-right.svg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wish a Starbucks Coffee Here!">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/26/chrome-hotkey/" itemprop="url">Chrome快捷键</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-26T15:30:36+08:00">
-                2020-09-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          <span class="post-time">
-                <span class="post-meta-divider">|</span>
-             <span class="post-meta-item-text">作者&nbsp;&nbsp;</span>
-                          
-                8oc
-            
-          </span>
-
-
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术π/" itemprop="url" rel="index">
-                    <span itemprop="name">技术π</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="标签页和窗口快捷键"><a href="#标签页和窗口快捷键" class="headerlink" title="标签页和窗口快捷键"></a>标签页和窗口快捷键</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+n 		<span class="comment">#打开新窗口</span></span><br><span class="line">Ctrl+t 		<span class="comment">#打开新的标签页，并跳转到该标签页</span></span><br><span class="line">Ctrl+Shift+t 	<span class="comment">#重新打开最后关闭的标签页，并跳转到该标签页</span></span><br><span class="line">Ctrl+Tab 	<span class="comment">#跳转到下一个打开的标签页</span></span><br><span class="line">Ctrl+Shift+Tab 	<span class="comment">#跳转到上一个打开的标签页</span></span><br><span class="line">Alt+← 		<span class="comment">#历史记录上一页</span></span><br><span class="line">Alt+→ 		<span class="comment">#历史记录下一页</span></span><br><span class="line">Ctrl+w 		<span class="comment">#关闭当前标签页</span></span><br><span class="line">Ctrl+1 到 Ctrl+8跳转到特定标签页，Ctrl+9跳转到最后一个标签页</span><br><span class="line">Alt+Home 	<span class="comment">#在当前标签页中打开主页</span></span><br><span class="line">Ctrl+Shift+w 	<span class="comment">#关闭所有打开的标签页和浏览器</span></span><br><span class="line">Ctrl+Shift+q 	<span class="comment">#退出Chrome浏览器</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/09/26/chrome-hotkey/#more" rel="contents">
-              ♨ 阅读全文 ♨
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2020/09/26/solr-set/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="8oc">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/coffe-128-right.svg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wish a Starbucks Coffee Here!">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/26/solr-set/" itemprop="url">Solr安装手册</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-26T15:19:17+08:00">
-                2020-09-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          <span class="post-time">
-                <span class="post-meta-divider">|</span>
-             <span class="post-meta-item-text">作者&nbsp;&nbsp;</span>
-                          
-                8oc
-            
-          </span>
-
-
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/运维π/" itemprop="url" rel="index">
-                    <span itemprop="name">运维π</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="单机版"><a href="#单机版" class="headerlink" title="单机版"></a>单机版</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1、安装linux、jdk、tomcat</span></span><br><span class="line">mkdir /usr/<span class="built_in">local</span>/solr</span><br><span class="line">mkdir /usr/<span class="built_in">local</span>/solr/solrhome</span><br><span class="line">cp -r apache-tomcat-7.0.47 /usr/<span class="built_in">local</span>/solr/tomcat</span><br><span class="line"><span class="comment">#2、把solr的压缩包上传到服务器,并解压</span></span><br><span class="line">tar -zxvf solr-4.10.3.tgz.tgz</span><br><span class="line"><span class="comment">#3、把/root/solr-4.10.3/dist/solr-4.10.3.war包部署到tomcat下。并改名为solr.war</span></span><br><span class="line">cp /root/solr-4.10.3/dist/solr-4.10.3.war /usr/<span class="built_in">local</span>/solr/tomcat/webapps/solr.war</span><br><span class="line"><span class="comment">#4、解压war包。启动tomcat⾃动解压。关闭tomcat。删除solr.war</span></span><br><span class="line">tomcat/bin/stratup.sh</span><br><span class="line"><span class="comment">#5、log相关jar把复制到lib⽬录，/root/solr-4.10.3/example/lib/ext</span></span><br><span class="line">cp /root/solr-4.10.3/example/lib/ext/* /usr/<span class="built_in">local</span>/solr/tomcat/webapps/WEB-INF/lib/</span><br><span class="line"><span class="comment">#6、Solrhome是存放solr服务器所有配置⽂件的⽬录。在solr-4.10.3/example/solr下</span></span><br><span class="line">cp -r solr /usr/<span class="built_in">local</span>/solr/solrhome</span><br><span class="line"><span class="comment">#7、配置tomcat的web.xml，告诉solr服务器solrhome的位置。</span></span><br><span class="line"><span class="string">'</span></span><br><span class="line"><span class="string">&lt;env-entry&gt;</span></span><br><span class="line"><span class="string">	&lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;</span></span><br><span class="line"><span class="string">	&lt;env-entry-value&gt;/usr/local/solr/solrhome&lt;/env-entry-value&gt;</span></span><br><span class="line"><span class="string">	&lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;</span></span><br><span class="line"><span class="string">&lt;/env-entry&gt;</span></span><br><span class="line"><span class="string">'</span></span><br><span class="line"><span class="comment">#8、启动tomcat，登⼊地址 http://192.168.7.13x:8080/solr</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/09/26/solr-set/#more" rel="contents">
-              ♨ 阅读全文 ♨
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2020/09/26/redis-set/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="8oc">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/coffe-128-right.svg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wish a Starbucks Coffee Here!">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/26/redis-set/" itemprop="url">Redis安装手册</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-26T15:07:53+08:00">
-                2020-09-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          <span class="post-time">
-                <span class="post-meta-divider">|</span>
-             <span class="post-meta-item-text">作者&nbsp;&nbsp;</span>
-                          
-                8oc
-            
-          </span>
-
-
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/运维π/" itemprop="url" rel="index">
-                    <span itemprop="name">运维π</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="单机版"><a href="#单机版" class="headerlink" title="单机版"></a>单机版</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装redis</span></span><br><span class="line">yum intall gcc-c++</span><br><span class="line">tar -zxvf redis-3.0.0.tar.gz</span><br><span class="line"><span class="built_in">cd</span> redis-3.0.0</span><br><span class="line">Make</span><br><span class="line">make install PREFIX=/usr/<span class="built_in">local</span>/redis</span><br><span class="line"><span class="comment">#启动redis</span></span><br><span class="line"><span class="comment">#修改redis.conf⽂件</span></span><br><span class="line"><span class="string">'</span></span><br><span class="line"><span class="string">daemmonize yes</span></span><br><span class="line"><span class="string">'</span></span><br><span class="line">./redis-server redis.conf</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/09/26/redis-set/#more" rel="contents">
-              ♨ 阅读全文 ♨
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -1930,7 +1934,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-count">55</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1952,7 +1956,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

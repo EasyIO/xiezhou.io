@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[常用的linux]]></title>
+    <url>%2F2021%2F06%2F16%2Flinux-centos-useful%2F</url>
+    <content type="text"><![CDATA[Tcpdump12345678# 混杂模式ifconfig ens192 promisc,设置网卡eth0为混杂模式ifconfig ens192 -promisc 取消网卡eth0的混杂模式# tcpdump -抓取主机192.25.0.1和主机192.25.0.2或者192.25.0.3通信sudo -s tcpdump -i ens192 'host 192.25.0.1 and (192.25.0.2 or 192.25.0.3) -w tcpdump-report/0330001.cap#查看文件tcpdump -r xxx.cap WC-l12#grep的or写法\|cat prod-access.log |grep "xxx"|grep "xxx\|xxx\|xxx"|wc -l 连接数12345678# mqtt笔记cd /utcloud/utbroker/logsnetstat -apl|grep 9005#连接数netstat -n|grep ^tcp|awk '&#123;print $NF&#125;'|sort -nr|uniq -c#统计netstat -apn|grep 9005|wc -llsof -i|grep 9005 内存分析perf123456perf topperf --helpperf listperf recordperf report perf report -i perf.data //-i表示文件输入 增加端口数量123456vi /etc/sysctl.conf/sbin/sysctl -pnet.ipv4.ip_local_port_range=10000 60000***service iptables stopcat /proc/sys/net/ipv4/ip_local_port_range 9000 65500 mock程序后台运行1234nohup python3 /home/mock/project/japronto/main.py 1&gt;/dev/null 2&gt;&amp;1 &amp;#输入exit退出终端，关闭shell***python3 /home/mock/project/japronto/main.py***nohup python -u xx.py &gt; log.out 2&gt;&amp;1 &amp; 服务器信息12345678910111213141516#CPU信息：lscpu#内存：cat /proc/meminfo | grep MemTotal#磁盘：fdisk -l | grep Diskdf -hl#内核：uname -auname -r#物理cpu个数cat /proc/cpuinfo|grep "cores"|uniq#查看逻辑cpu个数cat /proc/cpuinfo|grep "processor" |wc -l#cpu核数cat /proc/cpuinfo|grep "physical id"|sort|uniq| wc -l Supervisor123456789101112#更改 Supervisor 启动时的配置文件路径。#1.停止 Supervisor 所有的监控对象supervisorctl stop all#2.停止 kill -9 supervisord 进程#3.修改配置文件vim /etc/supervisord.conf#4.修改 tmp 路径，我常用的路径为 /home/supervisor ，最终结果为/tmp/supervisor.sock =&gt; /home/supervisor/supervisor.sock#5.重新启动 supervisord 。****supervisorctl status****supervisorctl restart xxx]]></content>
+      <categories>
+        <category>运维π</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>CentOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Nginx限制IP配置]]></title>
+    <url>%2F2021%2F06%2F16%2Fnginx-ip%2F</url>
+    <content type="text"><![CDATA[多站点统一限IP12345678vim nginx.confallow 127.0.0.1;deny all;# 以上代码解释：# deny all; 限制所有的ip# allow ip; 除了 这个ip意外# 处理allow 以外的ip，全都禁止访问# 注意：多站点统一限ip,需要将以上内容直接写在server&#123;&#125;的外围 站点限IP1234567891011121314vim www.XXX.confserver&#123; server_name www.XXX.com; location ~ / # 不是 ~ /\. &#123; allow 127.0.0.1; deny all; &#125;&#125; # 以上代码解释：# deny all; 限制所有的ip# allow ip; 除了 这个ip意外# www.xxx.com的域名只允许allow的ip访问，其他全都禁止访问# 注意：单站点统一限ip,需要将以上内容直接写在 某一域名配置的server&#123;&#125;内 站点限项目路径访问12345678910vim www.XXX.conflocation ^~ /process-bar/ &#123; deny all;&#125;# 以上代码解释：# ^~ /process-bar/ 以/process-bar/ 开头的项目路径# deny all; 限制所有的ip# www.xxx.com的域名，以/process-bar/ 开头的项目路径，禁止所有ip访问# 注意：单站点统一限制访问项目路径,需要将以上内容直接写在 某一域名配置的server&#123;&#125;内]]></content>
+      <categories>
+        <category>技术π</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[常用的SQL]]></title>
+    <url>%2F2021%2F06%2F16%2Fuseful-sql%2F</url>
+    <content type="text"><![CDATA[常用的SQL123456789101112131415161718192021--消耗cpu最高的10条语句select * from (select address,hash_value, round(cpu_time/1000000) cpu_time_s, round(cpu_time/decode(executions,0,1,executions)/1000000,2) cpu_time_per, executions, SQL_TEXT from v$sqlarea order by cpu_time_s desc) where rownum &lt;= 10; --查询前10条性能差的sql语句SELECT * FROM (select PARSING_USER_ID,EXECUTIONS,SORTS,COMMAND_TYPE,DISK_READS,sql_text FROM v$sqlarea order BY disk_reads DESC )where ROWNUM&lt;10 ; --查询最占资源的sqlselect b.username username,a.disk_reads reads,a.executions exec, a.disk_reads/decode(a.executions,0,1,a.executions) rds_exec_ratio, a.sql_text statement from v$sqlarea a,dba_users b where a.parsing_user_id=b.user_id and a.disk_reads&gt;100000; 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134---查询指定时间内的racle执行的SQL语句SELECT SYSTIMESTAMP FROM dual;select b.SQL_TEXT,b.FIRST_LOAD_TIME,b.SQL_FULLTEXT,b.PARSING_SCHEMA_NAME from v$sqlarea bwhere b.FIRST_LOAD_TIME between '2018-03-14/09:43:24' and '2018-03-14/09:50:00' order by b.FIRST_LOAD_TIME; ---查询oracle正在执行的sqlselect a.username, a.sid,b.SQL_TEXT, b.SQL_FULLTEXT from v$session a, v$sqlarea b where a.sql_address = b.address;---查询被锁的sqlSELECT object_name, machine, s.sid, s.serial# FROM gv$locked_object l, dba_objects o, gv$session s WHERE l.object_id = o.object_id AND l.session_id = s.sid; ---挂号主键冲突处理 select * from user_constraints a,USER_CONS_COLUMNS b where a.CONSTRAINT_TYPE='P' and a. constraint_name=b.constraint_name and a.constraint_name='PK_REFUND_APPLY';--EMR.IX_PRESC_NO ---查找索引对应的表 select index_name,table_name from user_indexes WHERE index_name ='PK_PCA_PATIENT_SERVICE_CARD_IN' ; --PKG_PCA_CARD---1. 就可以在session级别跳过无效索引作查询。alter session set skip_unusable_indexes=true;--2. 分区索引应适用user_ind_partitions。--3. 状态分4种：-- N/A说明这个是分区索引需要查user_ind_partitions或者user_ind_subpartitions来确定每个分区是否可用；-- VAILD说明这个索引可用；--- UNUSABLE说明这个索引不可用；-- USABLE 说明这个索引的分区是可用的。--- 查询当前索引的状态：select distinct status from user_indexes;---查询那个索引无效：select index_name from user_indexes where status &lt;&gt; 'VALID' AND index_name LIKE 'PK_REFUND_APPLY';--- 详细讲解可参考：http://www.sudu.cn/info/html/edu/20071225/20526.html。---批量rebuild下：select 'alter index '||index_name||' rebuild online;' from user_indexes where status &lt;&gt; 'VALID' and index_name not like'%$$';---查询表中是否有重复的记录SELECT ID,COUNT(1) FROM REFUND_APPLY GROUP BY ID HAVING COUNT(1)&gt;1;---去除表中的重复记录，但去除后需要把对应的索引，主外键添加到表中CREATE TABLE test_table AS SELECT DISTINCT * FROM bms.REFUND_APPLY_DETAIL;DROP TABLE bms.REFUND_APPLY_DETAIL;ALTER TABLE test_table RENAME TO REFUND_APPLY_DETAIL;---恢复索引DROP INDEX PK_REFUND_APPLY;alter index PK_REFUND_APPLY rebuild online;alter index PK_REFUND_APPLY rebuild partition PK_REFUND_APPLY (online);---解除索引和表的关联alter TABLE bms.REFUND_APPLY drop constraint PK_REFUND_APPLY---（索引名）---查询索引的分区SELECT * FROM dba_tab_partitions WHERE table_owner = 'BMS' AND TABLE_NAME LIKE '%REFUND_APPLY%'SELECT * FROM dba_ind_partitions WHERE INDEX_NAME ='PK_REFUND_APPLY' ---批量解锁sqlselect Distinct 'alter system kill session '||chr(39)||b.sid||','||b.serial#||chr(39)||';' As cmd,b.username,b.logon_time from v$locked_object a,v$session b where a.session_id=b.sid --解锁SQL，根据查询出被锁表的SID和SERIAL解锁ALTER system kill session 'SID, SERIAL'; ALTER system kill session '3207, 693'; ---查看哪些用户连到了DB上，使用什么Program连接SELECT s.sid, --Session identifier s.serial#,--Session serial number. Used to uniquely identify a session's objects. p.spid, --Operating system process identifier p.pid, --Oracle process identifier s.username,--Oracle DB username s.osuser,--Operating system client user name s.TERMINAL,--Operating system terminal name s.program,--Operating system program name s.STATUS--Status of the session.ACTIVE,INACTIVE,KILLED,CACHED,SNIPED FROM v$session s,v$process p WHERE p.addr = s.paddr AND s.type != 'BACKGROUND';--查看表空间使用率SELECT a.tablespace_name "表空间名", total / 1024 / 1024 "表空间大小单位M", free / 1024 / 1024 "表空间剩余大小单位M", (total - free) / 1024 / 1024 "表空间使用大小单位M", Round((total - free) / total, 4) * 100 "使用率 [[%]]"FROM (SELECT tablespace_name,Sum(bytes) free FROM DBA_FREE_SPACE GROUP BY tablespace_name) a, (SELECT tablespace_name, Sum(bytes) total FROM DBA_DATA_FILES GROUP BY tablespace_name) bWHERE a.tablespace_name = b.tablespace_name;--查看当前用户下的表名及对应的表空间select segment_name table_name,tablespace_name,bytesfrom user_segments where segment_type = 'TABLE' AND segment_name LIKE '%LOG%' ; --- empward.datSELECT bed_id,bed_code,nursing_unit_code,ward_code FROM pts.BED_INFO WHERE status_code!='A'AND nursing_unit_code='213415' ORDER BY bed_code ---oracle断开用户select 'alter system kill session '''||sid||','||serial#||''';' from v$session;---当前的连接数select count(*) from v$session; SELECT COUNT(*) FROM v$process;----并发连接数Select count(*) from v$session where status='ACTIVE';--数据库允许的最大连接数select value from v$parameter where name = 'processes' ;---最大连接 show parameter processes;----查看不同用户的连接数select username,count(username) from v$session where username is not null group by username;--重启数据库:shutdown immediate;startup;]]></content>
+      <categories>
+        <category>技术π</category>
+      </categories>
+      <tags>
+        <tag>Oracle</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[导航模板]]></title>
     <url>%2F2021%2F06%2F15%2Fbookmark-demo%2F</url>
-    <content type="text"><![CDATA[导航模板123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119&lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="UTF-8"&gt; &lt;!-- import CSS --&gt; &lt;link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"&gt; &lt;style&gt; &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div id="app"&gt; &lt;el-container&gt; &lt;el-aside width="200px"&gt; &lt;/el-aside&gt; &lt;el-container&gt; &lt;el-header&gt; &lt;el-menu default-active="1" class="el-menu-demo" mode="horizontal" &gt; &lt;!-- 起始 --&gt; &lt;el-menu-item index="1"&gt;&lt;a href="www.xxx.com" target="_blank" &gt;xxx&lt;/a&gt; &lt;/el-menu-item&gt; &lt;!-- 终止 --&gt; &lt;/el-menu&gt; &lt;/el-header&gt; &lt;el-main&gt; &lt;el-card&gt; &lt;el-tabs&gt; &lt;!-- 起始 --&gt; &lt;el-tab-pane label="xxx"&gt; &lt;el-table :data="tableData1" @row-click="click" @row-dblclick="dblclick" style="width: 100%" &gt; &lt;el-table-column type="index" label="ID" &gt;&lt;/el-table-column&gt; &lt;el-table-column prop="name" label="名称" show-overflow-tooltip &gt;&lt;/el-table-column&gt; &lt;el-table-column prop="url" label="地址" show-overflow-tooltip &gt;&lt;/el-table-column&gt; &lt;/el-table&gt; &lt;/el-tab-pane&gt; &lt;!-- 终止 --&gt; &lt;/el-tabs&gt; &lt;/el-card&gt; &lt;/el-main&gt; &lt;/el-container&gt; &lt;el-aside width="200px"&gt;&lt;/el-aside&gt; &lt;/el-container&gt; &lt;/div&gt; &lt;/body&gt; &lt;!-- import Vue before Element --&gt;&lt;script src="https://unpkg.com/vue/dist/vue.js"&gt;&lt;/script&gt;&lt;!--&lt;script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"&gt;&lt;/script&gt;--&gt;&lt;!-- import JavaScript --&gt;&lt;script src="https://unpkg.com/element-ui/lib/index.js"&gt;&lt;/script&gt;&lt;!--&lt;script src="https://cdn.bootcss.com/element-ui/2.7.2/index.js"&gt;&lt;/script&gt;--&gt; &lt;script&gt; new Vue(&#123; el: '#app', data: function () &#123; return &#123; visible: false, activeName: 'second', tableData1: [ &#123; "name":"xxx", "url":"xxx" &#125; ], tableData2: [ &#123; "name": "xxx", "url": "xxx" &#125; ], &#125; &#125;, methods: &#123; dblclick(row, event, column) &#123; window.open(row.url); &#125;, click(row, event, column) &#123; this.$notify.info(&#123; title: "小提示", message: "双击当前行可以直接打开页面", duration: 2000 &#125;); &#125;, &#125;, &#125;) &lt;/script&gt;&lt;/html&gt;]]></content>
+    <content type="text"><![CDATA[导航模板 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119&lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="UTF-8"&gt; &lt;!-- import CSS --&gt; &lt;link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"&gt; &lt;style&gt; &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div id="app"&gt; &lt;el-container&gt; &lt;el-aside width="200px"&gt; &lt;/el-aside&gt; &lt;el-container&gt; &lt;el-header&gt; &lt;el-menu default-active="1" class="el-menu-demo" mode="horizontal" &gt; &lt;!-- 起始 --&gt; &lt;el-menu-item index="1"&gt;&lt;a href="www.xxx.com" target="_blank" &gt;xxx&lt;/a&gt; &lt;/el-menu-item&gt; &lt;!-- 终止 --&gt; &lt;/el-menu&gt; &lt;/el-header&gt; &lt;el-main&gt; &lt;el-card&gt; &lt;el-tabs&gt; &lt;!-- 起始 --&gt; &lt;el-tab-pane label="xxx"&gt; &lt;el-table :data="tableData1" @row-click="click" @row-dblclick="dblclick" style="width: 100%" &gt; &lt;el-table-column type="index" label="ID" &gt;&lt;/el-table-column&gt; &lt;el-table-column prop="name" label="名称" show-overflow-tooltip &gt;&lt;/el-table-column&gt; &lt;el-table-column prop="url" label="地址" show-overflow-tooltip &gt;&lt;/el-table-column&gt; &lt;/el-table&gt; &lt;/el-tab-pane&gt; &lt;!-- 终止 --&gt; &lt;/el-tabs&gt; &lt;/el-card&gt; &lt;/el-main&gt; &lt;/el-container&gt; &lt;el-aside width="200px"&gt;&lt;/el-aside&gt; &lt;/el-container&gt; &lt;/div&gt; &lt;/body&gt; &lt;!-- import Vue before Element --&gt;&lt;script src="https://unpkg.com/vue/dist/vue.js"&gt;&lt;/script&gt;&lt;!--&lt;script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"&gt;&lt;/script&gt;--&gt;&lt;!-- import JavaScript --&gt;&lt;script src="https://unpkg.com/element-ui/lib/index.js"&gt;&lt;/script&gt;&lt;!--&lt;script src="https://cdn.bootcss.com/element-ui/2.7.2/index.js"&gt;&lt;/script&gt;--&gt; &lt;script&gt; new Vue(&#123; el: '#app', data: function () &#123; return &#123; visible: false, activeName: 'second', tableData1: [ &#123; "name":"xxx", "url":"xxx" &#125; ], tableData2: [ &#123; "name": "xxx", "url": "xxx" &#125; ], &#125; &#125;, methods: &#123; dblclick(row, event, column) &#123; window.open(row.url); &#125;, click(row, event, column) &#123; this.$notify.info(&#123; title: "小提示", message: "双击当前行可以直接打开页面", duration: 2000 &#125;); &#125;, &#125;, &#125;) &lt;/script&gt;&lt;/html&gt;]]></content>
       <categories>
         <category>技术π</category>
       </categories>
@@ -50,8 +84,8 @@
         <category>技术π</category>
       </categories>
       <tags>
-        <tag>性能测试</tag>
         <tag>Apache</tag>
+        <tag>性能测试</tag>
       </tags>
   </entry>
   <entry>
@@ -66,9 +100,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Win10远程连接错误]]></title>
+    <title><![CDATA[Windows]]></title>
     <url>%2F2020%2F09%2F26%2Fwin10-error%2F</url>
-    <content type="text"><![CDATA[12345#Windows10远程报错:由于CredSSP加密Oracle修正1.打开注册表，快捷输⼊ “regedit”;2.找⽂件夹 路径：HKLM(缩写)\Software\Microsoft\Windows\CurrentVersion \Policies\System\CredSSP\Parameters,⼤概到System 后就没有了⾃⼰创建⽂件夹就好;3.然后再最底部⽂件夹⾥⾯ 新建 DWORD（32）位的。⽂件名 “AllowEncryptionOracle”，值：2，保存。]]></content>
+    <content type="text"><![CDATA[Win10远程连接错误12345#Windows10远程报错:由于CredSSP加密Oracle修正1.打开注册表，快捷输⼊ “regedit”;2.找⽂件夹 路径：HKLM(缩写)\Software\Microsoft\Windows\CurrentVersion \Policies\System\CredSSP\Parameters,⼤概到System 后就没有了⾃⼰创建⽂件夹就好;3.然后再最底部⽂件夹⾥⾯ 新建 DWORD（32）位的。⽂件名 “AllowEncryptionOracle”，值：2，保存。 MD512win自带MD5校验win / CertUtil -hashfile 文件路径 [算法] MD5]]></content>
       <categories>
         <category>技术π</category>
       </categories>
@@ -428,10 +462,10 @@
         <category>安全π</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
         <tag>Airmon-ng</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -538,9 +572,9 @@
         <category>安全π</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>网络安全</tag>
         <tag>Kali</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
