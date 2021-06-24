@@ -337,7 +337,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2020/09/26/java-idea-hot-key/">
+    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2020/09/26/dev-log4j-set/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="8oc">
@@ -356,7 +356,163 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/26/java-idea-hot-key/" itemprop="url">IDEA快捷键</a></h1>
+                <a class="post-title-link" href="/2020/09/26/dev-log4j-set/" itemprop="url">log4j.properties 详解与配置步骤</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-26T12:16:46+08:00">
+                2020-09-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          <span class="post-time">
+                <span class="post-meta-divider">|</span>
+             <span class="post-meta-item-text">作者&nbsp;&nbsp;</span>
+                          
+                8oc
+            
+          </span>
+
+
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术π/" itemprop="url" rel="index">
+                    <span itemprop="name">技术π</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#配置根⽬录</span></span><br><span class="line">log4j.rootLogger = DEBUG, stdout, R</span><br><span class="line"><span class="comment">#控制台输出</span></span><br><span class="line">log4j.appender.stdout=org.apache.log4j.ConsoleAppender</span><br><span class="line"><span class="comment">#可以灵活地指定布局模式</span></span><br><span class="line">log4j.appender.stdout.layout=org.apache.log4j.PatternLayout</span><br><span class="line"><span class="comment">#输出格式</span></span><br><span class="line">log4j.appender.stdout.layout.ConversionPattern=%-d&#123;yyyy-MM-dd HH:</span><br><span class="line">mm:ss,SSS&#125; [%t] [%c]-[%p] %m%n</span><br><span class="line"><span class="comment">#写⼊到⽂件（⽂件⼤⼩到达指定尺⼨的时候产⽣⼀个新的⽂件）</span></span><br><span class="line">log4j.appender.R=org.apache.log4j.RollingFileAppender</span><br><span class="line"><span class="comment">#设置⽇志名，默认存储在tomcat/bin⽬录下</span></span><br><span class="line">log4j.appender.R.File=taotao.log</span><br><span class="line"><span class="comment">#⽂件⼤⼩（KB, MB 或者是 GB）</span></span><br><span class="line">log4j.appender.R.MaxFileSize=100KB</span><br><span class="line"><span class="comment">#设置备份</span></span><br><span class="line">log4j.appender.R.MaxBackupIndex=1</span><br><span class="line"><span class="comment">#可以灵活地指定布局模式</span></span><br><span class="line">log4j.appender.R.layout=org.apache.log4j.PatternLayout</span><br><span class="line"><span class="comment">#输出格式</span></span><br><span class="line">log4j.appender.R.layout.ConversionPattern=%-d&#123;yyyy-MM-dd HH:mm:ss</span><br><span class="line">,SSS&#125; [%t] [%c]-[%p] %m%n</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/09/26/dev-log4j-set/#more" rel="contents">
+              ♨ 阅读全文 ♨
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2020/09/26/dev-idea-hotkey/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="8oc">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/coffe-128-right.svg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wish a Starbucks Coffee Here!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/26/dev-idea-hotkey/" itemprop="url">IDEA快捷键</a></h1>
         
 
         <div class="post-meta">
@@ -401,8 +557,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/开发π/" itemprop="url" rel="index">
-                    <span itemprop="name">开发π</span>
+                  <a href="/categories/技术π/" itemprop="url" rel="index">
+                    <span itemprop="name">技术π</span>
                   </a>
                 </span>
 
@@ -442,7 +598,7 @@
           <h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Ctrl＋E 		<span class="comment">#显示最近编辑的⽂件列表</span></span><br><span class="line">Shift＋Click 		<span class="comment">#关闭⽂件</span></span><br><span class="line">Ctrl＋[ ]   		<span class="comment">#跳到⼤括号的开头结尾</span></span><br><span class="line">Ctrl＋Shift＋Backspace 	<span class="comment">#跳转到上次编辑的地⽅</span></span><br><span class="line">Ctrl＋F12		<span class="comment">#显示当前⽂件的结构</span></span><br><span class="line">Ctrl＋F7 		<span class="comment">#查询当前元素在当前⽂件中的引⽤，然后按F3可以选择</span></span><br><span class="line">Ctrl＋N 		<span class="comment">#快速打开类</span></span><br><span class="line">Ctrl＋Shift＋N 		<span class="comment">#快速打开⽂件</span></span><br><span class="line">Alt＋Q 			<span class="comment">#看到当前⽅法的声明</span></span><br><span class="line">Ctrl＋W 		<span class="comment">#选择单词继⽽语句继⽽⾏继⽽函数</span></span><br><span class="line">Alt＋F1 		<span class="comment">#将正在编辑的元素在各个⾯板中定位</span></span><br><span class="line">Ctrl＋P 		<span class="comment">#显示参数信息</span></span><br><span class="line">Ctrl＋Shift＋Insert 	<span class="comment">#选择剪贴板内容并插⼊</span></span><br><span class="line">Alt＋Insert 		<span class="comment">#⽣成构造器/Getter/Setter等</span></span><br><span class="line">Ctrl＋Alt＋V 		<span class="comment">#引⼊变量。例如把括号内的SQL赋成⼀个变量</span></span><br><span class="line">Ctrl＋Alt＋T		<span class="comment">#把代码包在⼀块内，例如try/catch</span></span><br><span class="line">Alt＋Up/Down 		<span class="comment">#⽅法间快速移动</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/09/26/java-idea-hot-key/#more" rel="contents">
+            <a class="btn" href="/2020/09/26/dev-idea-hotkey/#more" rel="contents">
               ♨ 阅读全文 ♨
             </a>
           </div>
@@ -493,7 +649,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2020/09/26/eclipse-template/">
+    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2020/09/26/dev-eclipse-template/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="8oc">
@@ -512,7 +668,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/26/eclipse-template/" itemprop="url">Eclipse Java注释模板设置详解以及版权声明</a></h1>
+                <a class="post-title-link" href="/2020/09/26/dev-eclipse-template/" itemprop="url">Eclipse Java注释模板设置详解以及版权声明</a></h1>
         
 
         <div class="post-meta">
@@ -538,7 +694,7 @@
                 <span class="post-meta-divider">|</span>
              <span class="post-meta-item-text">作者&nbsp;&nbsp;</span>
                           
-                80c
+                8oc
             
           </span>
 
@@ -557,8 +713,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/开发π/" itemprop="url" rel="index">
-                    <span itemprop="name">开发π</span>
+                  <a href="/categories/技术π/" itemprop="url" rel="index">
+                    <span itemprop="name">技术π</span>
                   </a>
                 </span>
 
@@ -598,7 +754,7 @@
           <h2 id="文件-Files-注释标签"><a href="#文件-Files-注释标签" class="headerlink" title="文件(Files)注释标签"></a>文件(Files)注释标签</h2><p>编辑注释模板的方法：Window-&gt;Preference-&gt;Java-&gt;Code Style-&gt;Code Template 然后展开Comments节点就是所有需设置注释的元素啦。现就每一个元素逐一介绍：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">* All rights Reserved, Designed By www.bt0a.com</span><br><span class="line">* @Title: <span class="variable">$&#123;file_name&#125;</span></span><br><span class="line">* @Package <span class="variable">$&#123;package_name&#125;</span></span><br><span class="line">* @Description: <span class="variable">$&#123;todo&#125;</span>(⽤⼀句话描述该⽂件做什么)</span><br><span class="line">* @author: zcc</span><br><span class="line">* @date: <span class="variable">$&#123;date&#125;</span> <span class="variable">$&#123;time&#125;</span></span><br><span class="line">* @version V1.0</span><br><span class="line">*</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/09/26/eclipse-template/#more" rel="contents">
+            <a class="btn" href="/2020/09/26/dev-eclipse-template/#more" rel="contents">
               ♨ 阅读全文 ♨
             </a>
           </div>
@@ -649,7 +805,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2020/09/26/eclipse-hotkey/">
+    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2020/09/26/dev-eclipse-hotkey/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="8oc">
@@ -668,7 +824,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/26/eclipse-hotkey/" itemprop="url">Eclipse 快捷键</a></h1>
+                <a class="post-title-link" href="/2020/09/26/dev-eclipse-hotkey/" itemprop="url">Eclipse 快捷键</a></h1>
         
 
         <div class="post-meta">
@@ -713,8 +869,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/开发π/" itemprop="url" rel="index">
-                    <span itemprop="name">开发π</span>
+                  <a href="/categories/技术π/" itemprop="url" rel="index">
+                    <span itemprop="name">技术π</span>
                   </a>
                 </span>
 
@@ -754,7 +910,7 @@
           <h2 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+1			<span class="comment">#快速修复</span></span><br><span class="line">Ctrl+.			<span class="comment">#定位到错误点</span></span><br><span class="line">Ctrl+Shift+F		<span class="comment">#格式化当前代码</span></span><br><span class="line">Ctrl+Shift+M		<span class="comment">#添加类的import导⼊</span></span><br><span class="line">Ctrl+Shift+O		<span class="comment">#组织类的import导⼊</span></span><br><span class="line">Ctrl+Y 	  		<span class="comment">#重做（与撤销Ctrl+Z相反）</span></span><br><span class="line">Ctrl+D 	  		<span class="comment">#删除当前⾏或者多⾏</span></span><br><span class="line">Alt+!	  		<span class="comment">#当前⾏和下⾯⼀⾏交互位置</span></span><br><span class="line">Alt+↑	  		<span class="comment">#当前⾏和上⾯⼀⾏交互位置（同上）</span></span><br><span class="line">Ctrl+Alt+!		<span class="comment">#复制当前⾏到下⼀⾏（复制增加）</span></span><br><span class="line">Ctrl+Alt+↑		<span class="comment">#复制当前⾏到上⼀⾏（复制增加）</span></span><br><span class="line">Shift+Enter     	<span class="comment">#在当前⾏的下⼀⾏插⼊空⾏</span></span><br><span class="line">Ctrl+<span class="built_in">shift</span>+enter 	<span class="comment">#在当前⾏之前插⼊空⽩⾏</span></span><br><span class="line">Ctrl+/    		<span class="comment">#注释当前⾏,再按则取消注释</span></span><br><span class="line">Ctrl+<span class="built_in">shift</span>+x 		<span class="comment">#英⽂字⺟⼤⼩写的转换</span></span><br><span class="line">Ctrl+Q   		<span class="comment">#定位到最后编辑的地⽅</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/09/26/eclipse-hotkey/#more" rel="contents">
+            <a class="btn" href="/2020/09/26/dev-eclipse-hotkey/#more" rel="contents">
               ♨ 阅读全文 ♨
             </a>
           </div>
@@ -805,7 +961,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2020/09/24/txt2Excel/">
+    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2020/09/24/py-txt2Excel/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="8oc">
@@ -824,7 +980,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/24/txt2Excel/" itemprop="url">txt2Excel.py</a></h1>
+                <a class="post-title-link" href="/2020/09/24/py-txt2Excel/" itemprop="url">txt2Excel.py</a></h1>
         
 
         <div class="post-meta">
@@ -869,8 +1025,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Codeπ/" itemprop="url" rel="index">
-                    <span itemprop="name">Codeπ</span>
+                  <a href="/categories/技术π/" itemprop="url" rel="index">
+                    <span itemprop="name">技术π</span>
                   </a>
                 </span>
 
@@ -1021,8 +1177,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术π/" itemprop="url" rel="index">
-                    <span itemprop="name">技术π</span>
+                  <a href="/categories/运维π/" itemprop="url" rel="index">
+                    <span itemprop="name">运维π</span>
                   </a>
                 </span>
 
@@ -1143,7 +1299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2018/04/01/web-cookie/">
+    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2018/04/01/dev-web-cookie/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="8oc">
@@ -1162,7 +1318,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/01/web-cookie/" itemprop="url">Cookie参数简介</a></h1>
+                <a class="post-title-link" href="/2018/04/01/dev-web-cookie/" itemprop="url">Cookie参数简介</a></h1>
         
 
         <div class="post-meta">
@@ -1396,8 +1552,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/安全π/" itemprop="url" rel="index">
-                    <span itemprop="name">安全π</span>
+                  <a href="/categories/技术π/" itemprop="url" rel="index">
+                    <span itemprop="name">技术π</span>
                   </a>
                 </span>
 
@@ -1819,158 +1975,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2018/04/01/linux-centos-clean-boot/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="8oc">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/coffe-128-right.svg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wish a Starbucks Coffee Here!">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/01/linux-centos-clean-boot/" itemprop="url">CentOS clean boot</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T19:29:42+08:00">
-                2018-04-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          <span class="post-time">
-                <span class="post-meta-divider">|</span>
-             <span class="post-meta-item-text">作者&nbsp;&nbsp;</span>
-                          
-                8oc
-            
-          </span>
-
-
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/运维π/" itemprop="url" rel="index">
-                    <span itemprop="name">运维π</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.使用如下命令查询目前安装在系统里的全部内核（kernel）</span></span><br><span class="line">$ rpm -q kernel</span><br><span class="line"><span class="comment"># 2.查询当前使用的内核（kernel）版本</span></span><br><span class="line">$ uname -a</span><br><span class="line"><span class="comment"># 3.删除除当前内核以外所有的内核</span></span><br><span class="line">$ rpm -e <span class="string">'内核版本号'</span></span><br><span class="line">$ rpm -e kernel-2.6.32-358.el6.i686</span><br><span class="line"><span class="comment"># 4.使用命令df -h 查看/boot分区的使用情况。</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2025,7 +2029,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-count">56</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2036,7 +2040,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2047,7 +2051,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

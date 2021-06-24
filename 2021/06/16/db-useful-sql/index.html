@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#106e4b">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/coffe-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="/images/coffe-32x32-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/x-icon" sizes="24x24" href="/images/coffe-32x32-next.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/coffe.svg?v=5.1.4" color="#106e4b">
+
+
+
+
+
+  <meta name="keywords" content="Oracle," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Wish a Starbucks Coffee Here!" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="常用的SQL123456789101112131415161718192021--消耗cpu最高的10条语句select * from (select address,hash_value,                      round(cpu_time/1000000) cpu_time_s,                      round(cpu_time/decode(exec">
+<meta name="keywords" content="Oracle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用的SQL">
+<meta property="og:url" content="http://8oc.cc/2021/06/16/db-useful-sql/index.html">
+<meta property="og:site_name" content="Wish a Starbucks Coffee Here!">
+<meta property="og:description" content="常用的SQL123456789101112131415161718192021--消耗cpu最高的10条语句select * from (select address,hash_value,                      round(cpu_time/1000000) cpu_time_s,                      round(cpu_time/decode(exec">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-06-24T13:17:08.222Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常用的SQL">
+<meta name="twitter:description" content="常用的SQL123456789101112131415161718192021--消耗cpu最高的10条语句select * from (select address,hash_value,                      round(cpu_time/1000000) cpu_time_s,                      round(cpu_time/decode(exec">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://8oc.cc/2021/06/16/db-useful-sql/"/>
+
+
+
+
+
+  <title>常用的SQL | Wish a Starbucks Coffee Here!</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+      <div class="site-meta-headline">
+        <a>
+          <img class="custom-logo-image" src="/images/coffe-48-log.svg"
+               alt="Wish a Starbucks Coffee Here!"/> 
+        </a>
+      </div>
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i ></i></span>
+        <span class="site-title">★★★★★</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">What is your favorite coffee in Starbucks?</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-bookmarks">
+          <a href="/bookmarks/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            导航
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://8oc.cc/2021/06/16/db-useful-sql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="8oc">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/coffe-128-right.svg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wish a Starbucks Coffee Here!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">常用的SQL</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-16T20:08:57+08:00">
+                2021-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          <span class="post-time">
+                <span class="post-meta-divider">|</span>
+             <span class="post-meta-item-text">作者&nbsp;&nbsp;</span>
+                          
+                网络
+            
+          </span>
+
+
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术π/" itemprop="url" rel="index">
+                    <span itemprop="name">技术π</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="常用的SQL"><a href="#常用的SQL" class="headerlink" title="常用的SQL"></a>常用的SQL</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">--消耗cpu最高的10条语句</span><br><span class="line">select * from (select address,hash_value,</span><br><span class="line">                      round(cpu_time/1000000) cpu_time_s,</span><br><span class="line">                      round(cpu_time/decode(executions,0,1,executions)/1000000,2) cpu_time_per,</span><br><span class="line">                      executions,</span><br><span class="line">                      SQL_TEXT</span><br><span class="line">               from v<span class="variable">$sqlarea</span> </span><br><span class="line">               order by cpu_time_s desc) </span><br><span class="line"><span class="built_in">where</span> rownum &lt;= 10; </span><br><span class="line"></span><br><span class="line">--查询前10条性能差的sql语句</span><br><span class="line">SELECT * FROM (select PARSING_USER_ID,EXECUTIONS,SORTS,COMMAND_TYPE,DISK_READS,sql_text FROM v<span class="variable">$sqlarea</span>  </span><br><span class="line">order BY disk_reads DESC )<span class="built_in">where</span> ROWNUM&lt;10 ; </span><br><span class="line"></span><br><span class="line">--查询最占资源的sql</span><br><span class="line">select b.username username,a.disk_reads reads,a.executions <span class="built_in">exec</span>,  </span><br><span class="line">    a.disk_reads/decode(a.executions,0,1,a.executions) rds_exec_ratio,  </span><br><span class="line">    a.sql_text statement  </span><br><span class="line">    from v<span class="variable">$sqlarea</span> a,dba_users b  </span><br><span class="line">    <span class="built_in">where</span> a.parsing_user_id=b.user_id  </span><br><span class="line">    and a.disk_reads&gt;100000;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br></pre></td><td class="code"><pre><span class="line">---查询指定时间内的racle执行的SQL语句</span><br><span class="line">SELECT SYSTIMESTAMP FROM dual;</span><br><span class="line">select b.SQL_TEXT,b.FIRST_LOAD_TIME,b.SQL_FULLTEXT,b.PARSING_SCHEMA_NAME</span><br><span class="line">  from v<span class="variable">$sqlarea</span> b</span><br><span class="line"><span class="built_in">where</span> b.FIRST_LOAD_TIME between <span class="string">'2018-03-14/09:43:24'</span> and</span><br><span class="line">       <span class="string">'2018-03-14/09:50:00'</span> order by b.FIRST_LOAD_TIME; </span><br><span class="line"></span><br><span class="line">---查询oracle正在执行的sql</span><br><span class="line">select a.username, a.sid,b.SQL_TEXT, b.SQL_FULLTEXT</span><br><span class="line">  from v<span class="variable">$session</span> a, v<span class="variable">$sqlarea</span> b </span><br><span class="line"><span class="built_in">where</span> a.sql_address = b.address;</span><br><span class="line"></span><br><span class="line">---查询被锁的sql</span><br><span class="line">SELECT object_name, machine, s.sid, s.serial<span class="comment"># </span></span><br><span class="line">FROM gv<span class="variable">$locked_object</span> l, dba_objects o, gv<span class="variable">$session</span> s </span><br><span class="line">WHERE l.object_id　= o.object_id </span><br><span class="line">AND l.session_id = s.sid; </span><br><span class="line"></span><br><span class="line">---挂号主键冲突处理     </span><br><span class="line">select *</span><br><span class="line">        from user_constraints  a,USER_CONS_COLUMNS b</span><br><span class="line">        <span class="built_in">where</span>  a.CONSTRAINT_TYPE=<span class="string">'P'</span></span><br><span class="line">              and a. constraint_name=b.constraint_name </span><br><span class="line">               and a.constraint_name=<span class="string">'PK_REFUND_APPLY'</span>;--EMR.IX_PRESC_NO</span><br><span class="line">                                         </span><br><span class="line">---查找索引对应的表               </span><br><span class="line">select index_name,table_name from user_indexes WHERE index_name =<span class="string">'PK_PCA_PATIENT_SERVICE_CARD_IN'</span> ;  --PKG_PCA_CARD</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">---1. 就可以在session级别跳过无效索引作查询。</span><br><span class="line">alter session <span class="built_in">set</span> skip_unusable_indexes=<span class="literal">true</span>;</span><br><span class="line">--2. 分区索引应适用user_ind_partitions。</span><br><span class="line">--3. 状态分4种：</span><br><span class="line">--    N/A说明这个是分区索引需要查user_ind_partitions或者user_ind_subpartitions来确定每个分区是否可用；</span><br><span class="line">--    VAILD说明这个索引可用；</span><br><span class="line">---   UNUSABLE说明这个索引不可用；</span><br><span class="line">--    USABLE 说明这个索引的分区是可用的。</span><br><span class="line"></span><br><span class="line">--- 查询当前索引的状态：</span><br><span class="line">select distinct status from user_indexes;</span><br><span class="line"></span><br><span class="line">---查询那个索引无效：</span><br><span class="line">select index_name from  user_indexes <span class="built_in">where</span> status &lt;&gt; <span class="string">'VALID'</span> AND index_name LIKE <span class="string">'PK_REFUND_APPLY'</span>;</span><br><span class="line"></span><br><span class="line">--- 详细讲解可参考：http://www.sudu.cn/info/html/edu/20071225/20526.html。</span><br><span class="line"></span><br><span class="line">---批量rebuild下：</span><br><span class="line">select <span class="string">'alter index '</span>||index_name||<span class="string">' rebuild online;'</span> from  user_indexes <span class="built_in">where</span> status &lt;&gt; <span class="string">'VALID'</span> and index_name not like<span class="string">'%$$'</span>;</span><br><span class="line"></span><br><span class="line">---查询表中是否有重复的记录</span><br><span class="line"></span><br><span class="line">SELECT ID,COUNT(1) FROM REFUND_APPLY GROUP BY ID HAVING COUNT(1)&gt;1;</span><br><span class="line"></span><br><span class="line">---去除表中的重复记录，但去除后需要把对应的索引，主外键添加到表中</span><br><span class="line">CREATE TABLE  test_table AS </span><br><span class="line">  SELECT DISTINCT * FROM bms.REFUND_APPLY_DETAIL;</span><br><span class="line">DROP TABLE bms.REFUND_APPLY_DETAIL;</span><br><span class="line">ALTER TABLE test_table RENAME TO REFUND_APPLY_DETAIL;</span><br><span class="line"></span><br><span class="line">---恢复索引</span><br><span class="line">DROP INDEX PK_REFUND_APPLY;</span><br><span class="line">alter index PK_REFUND_APPLY rebuild online;</span><br><span class="line">alter index PK_REFUND_APPLY rebuild partition PK_REFUND_APPLY (online);</span><br><span class="line"></span><br><span class="line">---解除索引和表的关联</span><br><span class="line">alter TABLE bms.REFUND_APPLY drop constraint PK_REFUND_APPLY---（索引名）</span><br><span class="line"></span><br><span class="line">---查询索引的分区</span><br><span class="line">SELECT * FROM  dba_tab_partitions WHERE table_owner = <span class="string">'BMS'</span> AND TABLE_NAME LIKE  <span class="string">'%REFUND_APPLY%'</span></span><br><span class="line">SELECT * FROM  dba_ind_partitions WHERE INDEX_NAME =<span class="string">'PK_REFUND_APPLY'</span></span><br><span class="line">               </span><br><span class="line">---批量解锁sql</span><br><span class="line">select Distinct <span class="string">'alter system kill session '</span>||chr(39)||b.sid||<span class="string">','</span>||b.serial<span class="comment">#||chr(39)||';' As cmd,b.username,b.logon_time from v$locked_object a,v$session b where a.session_id=b.sid </span></span><br><span class="line">         </span><br><span class="line">--解锁SQL，根据查询出被锁表的SID和SERIAL解锁</span><br><span class="line">ALTER system <span class="built_in">kill</span> session <span class="string">'SID, SERIAL'</span>; </span><br><span class="line"></span><br><span class="line">ALTER system <span class="built_in">kill</span> session <span class="string">'3207, 693'</span>; </span><br><span class="line"></span><br><span class="line">---查看哪些用户连到了DB上，使用什么Program连接</span><br><span class="line">SELECT s.sid, --Session identifier  </span><br><span class="line">       s.serial<span class="comment">#,--Session serial number. Used to uniquely identify a session's objects.  </span></span><br><span class="line">       p.spid, --Operating system process identifier  </span><br><span class="line">       p.pid, --Oracle process identifier  </span><br><span class="line">       s.username,--Oracle DB username  </span><br><span class="line">       s.osuser,--Operating system client user name  </span><br><span class="line">       s.TERMINAL,--Operating system terminal name  </span><br><span class="line">       s.program,--Operating system program name  </span><br><span class="line">       s.STATUS--Status of the session.ACTIVE,INACTIVE,KILLED,CACHED,SNIPED     </span><br><span class="line">FROM   v<span class="variable">$session</span> s,v<span class="variable">$process</span> p  </span><br><span class="line">WHERE   p.addr = s.paddr  </span><br><span class="line">AND s.type != <span class="string">'BACKGROUND'</span>;</span><br><span class="line"></span><br><span class="line">--查看表空间使用率</span><br><span class="line">SELECT a.tablespace_name <span class="string">"表空间名"</span>,</span><br><span class="line">        total / 1024 / 1024 <span class="string">"表空间大小单位M"</span>,</span><br><span class="line">        free / 1024 / 1024 <span class="string">"表空间剩余大小单位M"</span>,</span><br><span class="line">        (total - free) / 1024 / 1024 <span class="string">"表空间使用大小单位M"</span>,</span><br><span class="line">        Round((total - free) / total, 4) * 100 <span class="string">"使用率   [[%]]"</span>FROM (SELECT tablespace_name,Sum(bytes) free FROM DBA_FREE_SPACE GROUP BY tablespace_name) a,</span><br><span class="line">         (SELECT tablespace_name, Sum(bytes) total</span><br><span class="line">          FROM DBA_DATA_FILES</span><br><span class="line">          GROUP BY tablespace_name) b</span><br><span class="line">WHERE a.tablespace_name = b.tablespace_name;</span><br><span class="line"></span><br><span class="line">--查看当前用户下的表名及对应的表空间</span><br><span class="line">select segment_name table_name,tablespace_name,bytes</span><br><span class="line">from user_segments </span><br><span class="line"><span class="built_in">where</span> segment_type = <span class="string">'TABLE'</span> AND segment_name LIKE <span class="string">'%LOG%'</span> ; </span><br><span class="line"></span><br><span class="line">--- empward.dat</span><br><span class="line">SELECT bed_id,bed_code,nursing_unit_code,ward_code FROM pts.BED_INFO  WHERE status_code!=<span class="string">'A'</span>AND nursing_unit_code=<span class="string">'213415'</span> ORDER BY bed_code  </span><br><span class="line"></span><br><span class="line">---oracle断开用户</span><br><span class="line">select <span class="string">'alter system kill session '</span><span class="string">''</span>||sid||<span class="string">','</span>||serial<span class="comment">#||''';' from v$session;</span></span><br><span class="line"></span><br><span class="line">---当前的连接数</span><br><span class="line">select count(*) from v<span class="variable">$session</span>; </span><br><span class="line">SELECT COUNT(*) FROM v<span class="variable">$process</span>;</span><br><span class="line"></span><br><span class="line">----并发连接数</span><br><span class="line">Select count(*) from v<span class="variable">$session</span> <span class="built_in">where</span> status=<span class="string">'ACTIVE'</span>;</span><br><span class="line"></span><br><span class="line">--数据库允许的最大连接数</span><br><span class="line">select value from v<span class="variable">$parameter</span> <span class="built_in">where</span> name = <span class="string">'processes'</span> ;</span><br><span class="line"></span><br><span class="line">---最大连接 </span><br><span class="line">show parameter processes;</span><br><span class="line"></span><br><span class="line">----查看不同用户的连接数</span><br><span class="line">select username,count(username) from v<span class="variable">$session</span> <span class="built_in">where</span> username is not null group by username;</span><br><span class="line"></span><br><span class="line">--重启数据库:</span><br><span class="line">shutdown immediate;</span><br><span class="line">startup;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Oracle/" rel="tag"># Oracle</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/06/15/dev-bookmark-demo/" rel="next" title="导航模板">
+                <i class="fa fa-chevron-left"></i> 导航模板
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/06/16/ops-nginx-ip/" rel="prev" title="Nginx限制IP配置">
+                Nginx限制IP配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/coffe-128-right.svg"
+                alt="8oc" />
+            
+              <p class="site-author-name" itemprop="name">星享俱乐部</p>
+              <p class="site-description motion-element" itemprop="description">★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/>★★★★★★★★★★<br/></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.starbucks.com.cn" target="_blank" title="Starbucks">
+                      
+                        <i class="fa fa-fw fa-coffee"></i>Starbucks</a>
+                  </span>
+                
+            </div>
+          
+          
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用的SQL"><span class="nav-number">1.</span> <span class="nav-text">常用的SQL</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+      
+    </div>
+    
+  </aside>
+ 
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  <span class="with-love">
+    <i class="fa fa-coffee"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wish a Starbucks Coffee Here!</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" style="display:none;">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv" ></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv" style="display:none;">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv" ></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
